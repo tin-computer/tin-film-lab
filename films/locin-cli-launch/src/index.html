@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>LocIn · CLI launch · music preview</title>
+<style>
+@font-face{font-family:Geist;src:url('../refs/fonts/geist-sans-regular.woff2')}
+@font-face{font-family:Geist;src:url('../refs/fonts/geist-sans-bold.woff2');font-weight:700}
+@font-face{font-family:Mono;src:url('../refs/fonts/geist-mono-regular.woff2')}
+html,body{margin:0;background:#ece9df;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style><canvas id="film" width="1600" height="900"></canvas>
+<script src="../../tin-launch/tools/lib/motion.js"></script>
+<script src="../../../music/tools/music.js"></script>
+<script src="../music-cut/cue.js"></script>
+<script>
+const {clamp,lerp,sp,P}=Motion,M=Music(CUE),T=(bar,beat=1)=>M.time(bar,beat);
+const g=document.querySelector('canvas').getContext('2d');
+const paper='#ece9df',ink='#1b1b1f',blue='#1c38ea',white='#fffdf6';
+const assets={loci:'../refs/locin-tin-character.svg',logo:'../refs/locin.svg'};
+const im={};
+const ready=Promise.all([document.fonts.load('700 80px Geist'),document.fonts.load('40px Geist'),document.fonts.load('40px Mono'),...Object.entries(assets).map(([k,src])=>new Promise((ok,no)=>{const a=im[k]=new Image();a.onload=ok;a.onerror=()=>no(new Error('Missing '+src));a.src=src}))]);
+const translations=[['en','Create project'],['tr','Proje oluştur'],['de','Projekt erstellen'],['fr','Créer un projet']];
+const cues={extract:T(3),languages:T(5),files:T(7),close:T(9)};
+window.FILM={width:1600,height:900,duration:20,events:Object.entries(cues).map(([name,t])=>({name,t}))};
+function rect(x,y,w,h,c){g.fillStyle=c;g.fillRect(x,y,w,h)}
+function text(s,x,y,size=60,color=ink,font='Geist',weight=400){g.fillStyle=color;g.font=`${weight} ${size}px ${font}`;g.textBaseline='alphabetic';g.fillText(s,x,y)}
+function rule(x,y,w,color=ink){rect(x,y,w,2,color)}
+function mascot(x,y,size,t){g.save();g.translate(x,y-5*M.pulse(t));g.rotate(Math.sin(t*Math.PI/CUE.bar)*.018);g.drawImage(im.loci,-size/2,-size/2,size,size);g.restore()}
+function identity(color=ink){g.drawImage(im.logo,90,72,64,64);text('LocIn',173,119,40,color,'Geist',700)}
+function slip(x,y,w,h,lang,label,rot=0){
+ g.save();g.translate(x,y);g.rotate(rot);rect(-w/2+8,-h/2+10,w,h,'#00000015');rect(-w/2,-h/2,w,h,white);
+ g.fillStyle='#d8d5c9';g.beginPath();g.moveTo(w/2-33,-h/2);g.lineTo(w/2-33,-h/2+33);g.lineTo(w/2,-h/2+33);g.fill();
+ text(lang+'.json',-w/2+34,-h/2+58,28,blue,'Mono');rule(-w/2+32,-h/2+78,w-64,'#ceccc4');
+ const size=Math.min(62,(w-68)/Math.max(label.length*.54,1));text(label,-w/2+34,25,size,ink,'Geist',700);
+ text('project.create',-w/2+34,h/2-27,24,'#66665c','Mono');g.restore();
+}
+function opening(t){
+ rect(0,0,1600,900,paper);identity();
+ const enter=sp(t,'heavy'),pull=P(t,T(2,3),CUE.beat*2);
+ g.save();g.translate(652,460+35*(1-enter));g.rotate(-.055+.04*P(t,0,T(2,3)));
+ const zoom=1+.03*P(t,0,T(2,3));g.scale(zoom,zoom);
+ rect(-463,-221,950,456,'#00000012');rect(-475,-233,950,456,white);
+ text('ProjectButton.tsx',-415,-171,28,'#65655e','Mono');
+ for(let i=0;i<3;i++)rect(-412,-120+i*33,230+i*92,9,'#dfdcd1');
+ text('{',-418,157,213,ink,'Mono');text('}',341,157,213,ink,'Mono');
+ const lift=sp(t-T(1,3),'snappy');
+ g.save();g.translate(0,-18*lift);g.rotate(-.02*lift);
+ rect(-284,6,599,96,blue);text('Create project',-249,70,54,white,'Mono');g.restore();g.restore();
+ mascot(1266,611,365,t);
+ text('Code → languages',106,808,51,ink,'Geist',700);
+ if(pull){rect(0,900*(1-pull),1600,900*pull,blue)}
+}
+function extract(t){
+ rect(0,0,1600,900,blue);
+ const p=clamp(sp(t-cues.extract,'heavy'));
+ g.save();g.translate(800,361+45*(1-p));g.rotate(-.018*(1-p));
+ rect(-682,-176,1364,346,white);text('ProjectButton.tsx',-625,-109,29,'#64645e','Mono');rule(-625,-77,1250,'#d6d4ca');
+ const keyed=t>=T(4);
+ const show=keyed?clamp(sp(t-T(4),'snappy')):1;
+ g.save();
+ text(keyed?'<button>{t("project.create")}</button>':'<button>Create project</button>',-625,39,47,ink,'Mono');g.restore();
+ if(keyed){rect(-250,65,507*show,5,blue)}g.restore();
+ const command=Motion.typed('$ locin flow --full',t,T(3,2),38);
+ text(command,190,685,65,white,'Mono');
+ if(t>=T(4)){
+  const u=P(t,T(4),CUE.beat*3);g.save();g.translate(1180,lerp(442,670,u));g.rotate(.07*Math.sin(u*Math.PI));
+  rect(-164,-47,328,94,white);text('project.create',-141,11,31,blue,'Mono');g.restore();
+ }
+ text('Example · configured project',191,810,27,'#d5daff');
+}
+function languages(t){
+ rect(0,0,1600,900,paper);
+ text('$ locin flow --full',105,138,42,ink,'Mono');
+ text('Example',1330,138,28,'#66665c');
+ const spread=clamp(sp(t-cues.languages,'heavy'));
+ g.strokeStyle=blue;g.lineWidth=5;
+ g.beginPath();g.moveTo(800,245);g.lineTo(800,304);g.lineTo(322,304);g.moveTo(800,304);g.lineTo(1278,304);g.stroke();
+ for(let i=0;i<3;i++){g.beginPath();g.moveTo(322+i*478,304);g.lineTo(322+i*478,352);g.stroke()}
+ rect(628,187,344,70,blue);text('project.create',652,232,33,white,'Mono');
+ translations.slice(1).forEach(([locale,label],i)=>{
+  if(t<T(5,1+i))return;
+  const p=i===0?1:clamp(sp(t-T(5,1+i),'snappy'));
+  g.save();g.translate(lerp(800,322+i*478,spread),lerp(680,515+Math.abs(i-1)*20,p));g.scale(.12+.88*p,1);
+  slip(0,0,430,293,locale,label,(i-1)*.055*spread);g.restore();
+ });
+ const turn=clamp(sp(t-T(6),'playful'));mascot(1328,786+210*(1-turn),208,t);
+ text('locales/',105,799,43,blue,'Mono');
+}
+function files(t){
+ rect(0,0,1600,900,paper);
+ const gather=P(t,cues.files,CUE.beat*1.5);
+ const i=Math.min(2,Math.max(0,Math.floor((t-T(7,3))/(CUE.beat*2))));
+ g.save();g.beginPath();g.rect(100,700-500*gather,490,500*gather);g.clip();
+ rect(105,214,251,82,blue);rect(105,290,470,402,blue);text('locales/',143,267,39,white,'Mono');
+ translations.slice(1).forEach(([locale,label],j)=>{
+  if(gather===1){rect(133,333+j*101,410,80,j===i?white:'#3c53ef');text(locale+'.json',159,387+j*101,39,j===i?blue:white,'Mono')}
+ });
+ g.restore();
+ const [locale,label]=translations[i+1];
+ g.save();g.beginPath();g.rect(650,210,800*gather,535);g.clip();g.translate(1036,464);
+ rect(-336,-214,740,475,'#00000012');rect(-348,-226,740,475,white);
+ text(locale+'.json',-298,-161,34,blue,'Mono');rule(-298,-123,627,'#d5d1c7');
+ text('{',-298,-35,51,ink,'Mono');text('"project.create":',-269,22,40,ink,'Mono');
+ text('"'+label+'"',-269,98,51,ink,'Geist',700);text('}',-298,164,51,ink,'Mono');g.restore();
+ if(gather<1){translations.slice(1).forEach(([locale,label],j)=>{
+  g.save();g.translate(lerp(322+j*478,338,gather),lerp(515+Math.abs(j-1)*20,373+j*101,gather));g.rotate((j-1)*.055*(1-gather));
+  const w=lerp(430,410,gather),h=lerp(293,80,gather);
+  rect(-w/2,-h/2,w,h,j===i||gather<.85?white:'#3c53ef');
+  text(locale+'.json',-w/2+lerp(34,26,gather),-h/2+lerp(58,54,gather),lerp(28,39,gather),j===i||gather<.85?blue:white,'Mono');
+  g.globalAlpha=clamp(1-gather*3);text(label,-w/2+34,25,40,ink,'Geist',700);text('project.create',-w/2+34,h/2-27,24,'#66665c','Mono');g.restore();
+ })}
+ text('Example locale files',105,799,27,'#66665c');mascot(1408,735,250,t);
+}
+function closing(t){
+ rect(0,0,1600,900,paper);identity();
+ text('Try the CLI.',105,356,103,ink,'Geist',700);
+ rect(105,419,879,119,ink);text('npm install -g locinai',138,494,52,white,'Mono');
+ text('locin.dev',107,624,39,blue,'Mono');
+ translations.slice(1).forEach(([locale,label],i)=>{
+  if(t<cues.close+i*CUE.beat/2)return;
+  const arrive=i===0?1:clamp(sp(t-cues.close-i*CUE.beat/2,'base'));
+  const yy=225+154*i+70*(1-arrive);g.save();
+  g.translate(1255,yy);g.rotate((i-1)*.04);rect(-210,-63,428,142,'#00000012');rect(-218,-73,428,142,white);
+  text(locale+'.json',-194,-34,24,blue,'Mono');text(label,-194,31,40,ink,'Geist',700);g.restore();
+ });
+ mascot(1257,731,300,t);
+}
+window.seek=async(t)=>{
+ await ready;t=clamp(t,0,20);g.setTransform(1,0,0,1,0,0);g.globalAlpha=1;g.globalCompositeOperation='source-over';
+ let phase;
+ if(t<cues.extract){phase='opening';opening(t)}else if(t<cues.languages){phase='extract';extract(t)}
+ else if(t<cues.files){phase='languages';languages(t)}else if(t<cues.close){phase='files';files(t)}else{phase='end';closing(t)}
+ window.FRAME={phase,example:true,locales:translations.map(x=>x[0]),key:'project.create',mascot:phase!=='extract'&&(phase!=='languages'||t>T(6)),retainedFiles:phase==='end'};
+};window.seek(0);
+</script></html>

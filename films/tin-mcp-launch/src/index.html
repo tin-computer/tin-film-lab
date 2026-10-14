@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="light"><meta charset="utf-8"><title>Tin · marketing from your agent</title>
+<link rel="stylesheet" href="../../tin-launch/refs/product/dashboard/app.css">
+<link rel="stylesheet" href="../../tin-launch/refs/product/dashboard/x-posts.css">
+<style>
+@font-face{font-family:'Film Sans';src:url('../../locin-cli-launch/refs/fonts/geist-sans-regular.woff2');font-weight:400}
+@font-face{font-family:'Film Sans';src:url('../../locin-cli-launch/refs/fonts/geist-sans-bold.woff2');font-weight:700}
+@font-face{font-family:'Film Mono';src:url('../../locin-cli-launch/refs/fonts/geist-mono-regular.woff2');font-weight:400 700}
+:root{--brand-sans:'Film Sans';--sans:'Film Sans';--mono:'Film Mono';--diagram-sans:'Film Sans';--diagram-mono:'Film Mono'}
+code,pre,.agent-prompt,.agent-status{font-variant-ligatures:none;font-feature-settings:'liga' 0,'calt' 0}
+*{animation:none!important;transition:none!important}html,body{margin:0;overflow:hidden;background:#f7f5ef}
+#stage{position:absolute;width:1600px;height:900px;transform-origin:0 0;overflow:hidden;font-family:'Film Sans';color:#26231c}
+.agent{position:absolute;inset:0;background:#90d7e4;padding:80px 104px}.agent img{width:142px;height:auto}
+.agent-label{margin:44px 0 26px;font:28px 'Film Mono';color:#354c48}
+.connection{font:32px/1.6 'Film Mono';margin:0;padding-bottom:32px;border-bottom:1px solid #36595055;white-space:pre-wrap}
+.agent-prompt{margin:54px 0 0;font:44px/1.3 'Film Mono';max-width:1300px}
+.agent-status{margin-top:44px;font:28px 'Film Mono';color:#354c48}
+.example{position:absolute;left:104px;bottom:58px;font:23px 'Film Mono';color:#5f594c}
+#product{position:absolute;inset:0;background:#f7f5ef;display:flex}.rail{position:relative;width:250px;height:900px;flex-basis:250px;padding:52px 22px;gap:28px}
+.wordmark img{width:109px;height:auto}.wordmark:before{display:none!important}.project-switcher{font-size:21px;padding:18px 10px}.project-switcher strong{font-size:22px}.project-switcher small{font-size:17px}
+.nav-item{font-size:22px;padding:20px 12px;gap:15px}.nav-item svg{width:23px;height:23px}.nav-list{gap:8px}.rail .example{left:34px;bottom:60px;font-size:20px}
+.product-main{flex:1;min-width:0;padding:64px 58px}.workspace-header{padding:0;margin-bottom:32px}.workspace-header h1{font-size:48px;line-height:1.1}
+.workflow-section{font-size:21px;padding:16px 20px}.system-sections{margin-bottom:34px}.system-card-row{padding:30px 25px;gap:22px}.system-card-identity{width:590px;flex-basis:590px;display:block}.system-card-identity strong{font-size:30px;line-height:1.2;display:block}.system-card-identity code{font-size:19px;display:block;margin-top:8px}.system-card-state{font-size:21px;width:auto}.system-running-detail{font-size:24px;padding:10px 25px 28px 62px}.system-card-dot{width:12px;height:12px}
+.x-posts-reader{min-height:0;height:650px;background:transparent;container:none}.x-posts-context{position:relative;display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--paper-border);padding:0 0 26px}.markdown-filename{font:22px 'Film Mono';flex:1}.x-posts-button,.x-posts-link{font-size:21px;line-height:1.2;padding:13px 16px}.x-posts-link{padding-left:0}.x-posts-layout{display:grid!important;grid-template-columns:145px 1fr;width:auto!important;padding:62px 0 0!important;gap:26px!important;transform:none!important}.x-posts-nav{position:relative;top:0;display:block!important}.x-posts-nav button{font-size:23px}.x-posts-nav button span{display:block!important;font-size:18px;margin-top:10px}.x-posts-copy{font:38px/1.5 'Film Sans';white-space:pre-wrap;max-width:790px}.draft-example{font:20px 'Film Mono';color:var(--ink-muted);margin:0 0 22px}
+#cta{position:absolute;inset:0;display:flex;align-items:center;padding:70px 90px;gap:74px;background:#f5f1e6}.result-sheet{width:720px;background:#fdfcf8;border:1px solid #26231c26;padding:40px}.result-sheet .x-posts-copy{font-size:31px;line-height:1.45}.result-sheet .x-posts-context{padding-bottom:22px}.result-sheet .markdown-filename{font-size:18px}.result-sheet .x-posts-button{font-size:17px;padding:10px 12px}.result-sheet .draft-example{margin-top:28px;font-size:17px}.connect-panel{flex:1;min-width:0}.connect-panel img{width:235px;height:auto;margin-bottom:45px}.connect-panel h2{font-size:53px;line-height:1.1;margin:0 0 32px;font-weight:400}.connect-panel code{display:block;font:25px/1.6 'Film Mono';overflow-wrap:anywhere;background:#90d7e4;padding:26px}.connect-panel .site{font:26px 'Film Mono';margin-top:26px}
+.connection,#cta code{word-spacing:.18em}
+#running,#result{position:absolute;inset:64px 58px}.product-main{position:relative}
+#run-progress{transform-origin:left center}
+#film-cursor{position:absolute;width:34px;height:46px;z-index:20;pointer-events:none;transform-origin:top left}
+</style>
+<div id="stage">
+ <section id="agent" class="agent">
+  <img src="../../tin-launch/refs/brand/wordmark-ink-on-transparent.svg" alt="Tin">
+  <p class="agent-label">Coding agent · MCP</p>
+  <pre class="connection">codex mcp add tin --url https://app.tin.computer/mcp</pre>
+  <p class="agent-prompt">› Use Tin to draft a launch post.</p>
+  <p class="agent-status">social.x_draft → Draft for X</p>
+  <span class="example">Example prompt</span>
+ </section>
+ <section id="product">
+  <aside class="rail" aria-label="Primary navigation">
+   <div class="wordmark"><img src="../../tin-launch/refs/brand/wordmark-ink-on-transparent.svg" alt="Tin"></div>
+   <button class="project-switcher" type="button"><span><strong>My product</strong><small>Example project</small></span></button>
+   <nav class="nav-list">
+    <button id="system-nav" class="nav-item" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="3.5" cy="8" r="1.8"/><circle cx="12.5" cy="3.5" r="1.8"/><circle cx="12.5" cy="12.5" r="1.8"/><path d="M5.2 7.2l5.6-3M5.2 8.8l5.6 3"/></svg><span>System</span></button>
+    <button class="nav-item" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z"/></svg><span>Chat</span></button>
+    <button id="decisions-nav" class="nav-item" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5h10v11H3zM5.5 6h5M5.5 9h3"/></svg><span>Decisions</span></button>
+    <button class="nav-item" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5h4l1.4 1.5H14v6.5H2z"/></svg><span>Files</span></button>
+   </nav>
+   <span class="example">Example project</span>
+  </aside>
+  <main class="product-main">
+   <section id="running">
+    <header class="workspace-header"><h1>System</h1></header>
+    <div class="workflow-sections system-sections"><button class="workflow-section is-active">My system</button><button class="workflow-section">Add workflows</button><button class="workflow-section">Activity</button></div>
+    <article class="system-workflow-card is-running">
+     <div class="system-card-row"><span class="system-card-mark"><span class="system-card-dot is-running"></span></span><span class="system-card-identity"><strong>Draft for X</strong><code>social.x_draft</code></span><code class="system-card-state">Running</code></div>
+     <div class="system-running-detail"><span>Preparing the launch post</span><button id="run-open" class="open-button">Open</button></div>
+     <div class="system-progress"><span id="run-progress"></span></div>
+    </article>
+   </section>
+   <section id="result">
+    <header class="workspace-header"><h1>Draft for X</h1></header>
+    <section class="x-posts-reader" aria-label="X post drafts">
+     <div class="x-posts-context"><span class="markdown-filename">launch-post.json</span><button class="x-posts-link">Draft notes</button><button class="x-posts-button">Edit post</button><button class="x-posts-button is-primary">Preview post</button></div>
+     <div class="x-posts-layout"><nav class="x-posts-nav"><button aria-current="true">Post 1<span>Draft</span></button></nav><article class="x-posts-document"><p class="draft-example">Example post</p><div class="x-posts-copy">Tin brings marketing workflows to your coding agent.
+
+Start with a draft. Review it before publishing.</div></article></div>
+    </section>
+   </section>
+  </main>
+ </section>
+ <section id="cta">
+  <div class="result-sheet"><div class="x-posts-context"><span class="markdown-filename">launch-post.json</span><button class="x-posts-button">Edit post</button><button class="x-posts-button is-primary">Preview post</button></div><p class="draft-example">Example post</p><div class="x-posts-copy">Tin brings marketing workflows to your coding agent.
+
+Start with a draft. Review it before publishing.</div></div>
+  <div class="connect-panel"><img src="../../tin-launch/refs/brand/wordmark-ink-on-transparent.svg" alt="Tin"><h2>Connect your agent.</h2><code>codex mcp add tin --url https://app.tin.computer/mcp</code><p class="site">tin.computer</p></div>
+ </section>
+ <svg id="film-cursor" viewBox="0 0 34 46" aria-hidden="true"><path d="M2 2v33l9-8 8 16 7-4-8-16 13-1Z" fill="#26231c" stroke="#fdfcf8" stroke-width="2.5"/></svg>
+</div>
+<script src="../../tin-launch/tools/lib/motion.js"></script>
+<script src="../../../music/tools/music.js"></script><script src="../music-cut/cue.js"></script>
+<script>
+const {clamp,P,lerp,typed}=Motion,M=Music(CUE),T=(b,k=1)=>M.time(b,k),q=new URLSearchParams(location.search);
+const W=+(q.get('w')||1600),H=+(q.get('h')||900),stage=document.querySelector('#stage');
+const layers=['agent','product','cta'].map(id=>document.getElementById(id));
+const [agent,product,cta]=layers,running=document.querySelector('#running'),result=document.querySelector('#result');
+const prompt=document.querySelector('.agent-prompt'),promptText=prompt.textContent;
+const post=document.querySelector('#result .x-posts-copy'),main=document.querySelector('.product-main');
+const open=document.querySelector('#run-open'),cursor=document.querySelector('#film-cursor');
+const resultSheet=document.querySelector('.result-sheet'),connectParts=[...document.querySelector('.connect-panel').children];
+const ready=Promise.all([document.fonts.load('400 38px "Film Sans"'),document.fonts.load('700 48px "Film Sans"'),document.fonts.load('400 32px "Film Mono"'),...[...document.images].map(im=>im.decode())]);
+window.FILM={width:1600,height:900,duration:20,events:[{name:'start',t:T(3)},{name:'result',t:T(5)},{name:'connect',t:T(9)}]};
+window.seek=async t=>{
+ await ready;t=clamp(t,0,20);const scale=Math.min(W/1600,H/900);
+ stage.style.transform=`translate(${(W-1600*scale)/2}px,${(H-900*scale)/2}px) scale(${scale})`;
+ const phase=t<T(3)?'agent':t<T(5)?'running':t<T(9)?'result':'connect';
+ // Both surfaces stay present for the half-second handoff; all state comes from t.
+ layers.forEach(el=>{el.style.transform='none';el.style.clipPath='none'});
+ agent.style.display=t<T(3)+CUE.beat?'block':'none';
+ product.style.display=t>=T(3)&&t<T(9)?'flex':'none';
+ cta.style.display=t>=T(9)?'flex':'none';
+ const handoff=P(t,T(3),CUE.beat,Motion.ease.out);
+ agent.style.transform=`translateX(${-1600*handoff}px)`;
+ product.style.transform=`translateX(${1600*(1-handoff)}px)`;
+ document.querySelector('.connection').style.clipPath=`inset(0 ${100*(1-P(t,T(1,2),CUE.beat*1.5))}% 0 0)`;
+ prompt.textContent=typed(promptText,t,T(1,3),promptText.length/CUE.beat/2);
+ document.querySelector('.agent-status').style.clipPath=`inset(0 ${100*(1-P(t,T(2,3),CUE.beat))}% 0 0)`;
+ running.hidden=t<T(3)||t>=T(5)+CUE.beat;
+ running.style.visibility=t>=T(5)?'hidden':'visible';
+ result.hidden=t<T(5)||t>=T(9);
+ document.getElementById('system-nav').classList.toggle('is-active',phase==='running');document.getElementById('decisions-nav').classList.toggle('is-active',phase==='result');
+ main.style.transform=`scale(${1+.014*P(t,T(5)+CUE.beat,CUE.bar*2)})`;
+ document.querySelector('#run-progress').style.transform=`scaleX(${.85*P(t,T(3),CUE.bar*2)})`;
+ document.querySelector('.system-card-dot').style.transform=`scale(${1+.2*M.pulse(t,{decay:10})})`;
+ open.style.color=t>=T(4,4)?'var(--accent-text)':'';
+ const reveal=P(t,T(5),CUE.beat,Motion.ease.out);
+ result.style.clipPath=t>=T(5)&&t<T(5)+CUE.beat
+  ?`inset(0 0 ${100*(1-reveal)}% 0)`:'none';
+ post.style.clipPath=`inset(0 0 ${100*(1-P(t,T(5,2),CUE.beat))}% 0)`;
+ const opening=t>=T(4)&&t<T(5)+CUE.beat,reading=t>=T(7)&&t<T(9)-CUE.beat;
+ cursor.style.display=opening||reading?'block':'none';
+ cursor.style.opacity=String(1-P(t,opening?T(5):T(9)-CUE.beat*2,CUE.beat));
+ if(cursor.style.display==='block'){
+  const frame=stage.getBoundingClientRect();
+  const point=button=>{const b=button.getBoundingClientRect();return {x:(b.left-frame.left+b.width*.7)/scale,y:(b.top-frame.top+b.height*.6)/scale}};
+  const buttons=[...document.querySelectorAll('#result .x-posts-button')];
+  const target=point(opening?open:buttons[0]);
+  const next=reading?point(buttons[1]):target;
+  const arrive=P(t,opening?T(4):T(7),CUE.beat*(opening?3:2),Motion.ease.out);
+  const across=reading?P(t,T(8),CUE.beat*2,Motion.ease.out):0;
+  cursor.style.left=`${lerp(lerp(target.x-360,target.x,arrive),next.x,across)}px`;
+  cursor.style.top=`${lerp(lerp(target.y+120,target.y,arrive),next.y,across)}px`;
+  const press=opening?P(t,T(4,4),CUE.beat):0;
+  cursor.style.transform=`scale(${1-.12*press})`;
+ }
+ resultSheet.style.transform=`translateX(${100*(1-P(t,T(9),CUE.beat,Motion.ease.out))}px)`;
+ connectParts.forEach((el,i)=>{
+  const arrive=P(t,T(9,1+i),CUE.beat,Motion.ease.out);
+  el.style.clipPath=`inset(0 0 ${100*(1-arrive)}% 0)`;
+  el.style.transform=`translateY(${18*(1-arrive)}px)`;
+ });
+ window.FRAME={phase,example:true,workflow:'social.x_draft'};
+};window.seek(0);
+</script></html>

@@ -1,0 +1,6 @@
+.DS_Store
+music-cut/
+out/
+!refs/fonts/geist-sans-regular.woff2
+!refs/fonts/geist-sans-bold.woff2
+!refs/fonts/geist-mono-regular.woff2

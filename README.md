@@ -1,17 +1,24 @@
 # tin-film-lab
 
-Launch films for Tin, made entirely in code by Claude Code on Opus 5.5: a `seek(t)` HTML page per film, rendered
+Launch and feature films made in code by coding agents: a `seek(t)` HTML page per film, rendered
 with Playwright and ffmpeg, cut to a vetted and bar-mapped music library, reviewed frame by frame before the final.
 
 Start with [HANDOFF.md](HANDOFF.md): what we did, how it works, what's left.
+
+For a new film with your coding agent, start with [FILM_FLOW.md](FILM_FLOW.md): brief questions → saved choices → story and three frames → direction review → music preview → selected render. The repo's `AGENTS.md` and `CLAUDE.md` point agents to this flow.
 
 | Folder | What |
 |---|---|
 | `music/` | The vetted track library with bar-by-bar maps, the cut tool and the film runtime. See `music/README.md`. |
 | `films/tin-launch/` | Product demo film (32 s, 16:9). Final: `out/tin-launch.mp4`. |
 | `films/tin-art/` | Art film in the style of Fable 5 (21.6 s, square). Share copy: `out/tin-art-share.mp4`. |
+| `films/locin-cli-launch/` | 20 s CLI feature film; [brief](films/locin-cli-launch/BRIEF.md), story and clean-checkout render commands. |
+| `films/readntype-reading-launch/` | 19.67 s reading/comprehension film; [brief](films/readntype-reading-launch/BRIEF.md), story and clean-checkout render commands. |
+| `films/tin-mcp-launch/` | 20 s MCP feature film; [brief](films/tin-mcp-launch/BRIEF.md), product example and clean-checkout render commands. |
 
 ## Setup
+
+The LocIn, ReadnType and Tin MCP examples have smaller setup commands in their READMEs and use included open fonts. The full original Tin film setup below also needs the private brand fonts and archive inputs.
 
 ```bash
 uv sync                                    # librosa 0.11 / numba 0.61 pins matter (newer numba segfaults)

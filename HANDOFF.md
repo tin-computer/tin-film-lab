@@ -3,6 +3,8 @@
 How we made Tin's launch films with Claude Code on Opus 5.5, what worked, what didn't, and how to pick it up.
 Written 2026-10-13 for whoever builds the next creative workflows.
 
+14 October addition: [FILM_FLOW.md](FILM_FLOW.md) gives new film requests an interactive start: ask for missing choices, save a brief, show a story and three frames, then continue after direction approval. `AGENTS.md` and `CLAUDE.md` route coding agents to it. LocIn and ReadnType are working examples with saved briefs and render commands; the original unattended prompts below keep their own run mode.
+
 ## Status in one paragraph
 
 We built a lab (repo `tin-computer/tin-film-lab`, originally `~/projects/tin-film-lab` on Ege's machine) that makes launch films entirely in code:
