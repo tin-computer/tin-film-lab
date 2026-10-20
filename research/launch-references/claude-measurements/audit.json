@@ -1,0 +1,40 @@
+{
+  "source": "Claude shortform/research saved results from 15 October 2026",
+  "checked": "20 October 2026: aggregate recalculation from saved files, no new media analysis",
+  "files": [
+    {
+      "name": "corpus.csv",
+      "sha256": "6ab4f54b108a842b0e201e7f6b889a37a39c01f8be35a0ebf0b3dc934d7ed960"
+    },
+    {
+      "name": "grid_lift.json",
+      "sha256": "c82746e59cbe0eaeb16a457dc33bf1202a862dabb584c0dfb3f01bdfcbdc03ce"
+    }
+  ],
+  "groups": [
+    {
+      "format": "Horizontal",
+      "count": 55,
+      "duration": 55.8,
+      "cuts_per_min": 6.2,
+      "first_cut_s": 4.8,
+      "headline_words_mean": 2.28,
+      "headline_free_share": 0.45
+    },
+    {
+      "format": "Vertical",
+      "count": 23,
+      "duration": 27.4,
+      "cuts_per_min": 11.8,
+      "first_cut_s": 2.88,
+      "headline_words_mean": 0.34,
+      "headline_free_share": 0.83
+    }
+  ],
+  "beat_records": 37,
+  "beat_lift_median": 0.86,
+  "beat_lift_at_least_1_5": 4,
+  "eyebrow_candidates": 24,
+  "speech_status": "Unknown. Missing captions were assigned zero in the original exporter. speech_wpm cannot establish voice absence.",
+  "overlap_status": "Not deduplicated against the Astra corpus; do not add the counts."
+}

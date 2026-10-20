@@ -1,0 +1,79 @@
+id,brand,title,views,vertical,duration,cuts_per_min,shot_median_s,first_cut_s,words_mean,headline_words_mean,headline_free_share,text_free_share,dense_share,first_text_s,eyebrow_share,silent,tempo,beat_lift,onset_lift,speech_wpm
+-jPiUEo_MWg,,You are what you use. Stop using prehistoric tools.,20000,True,13.3,27.0,1.43,1.366667,5.6,0.04,0.96,0.37,0.11,0.0,0.0,False,152.0,0.73,0.48,0
+04e7VnPd8aE,Bolt, Bolt,1652057,False,78.7,17.5,2.2,4.0,5.4,3.2,0.32,0.04,0.06,0.0,0.083,False,112.3,2.12,1.16,111
+0PgvHAmnBaU,,The wait is over. Framer F1 starts shipping today,3000,True,25.4,11.8,3.03,3.033333,3.9,0.0,1.0,0.25,0.02,0.5,0.0,False,80.7,3.05,1.57,5
+1SMldLoOhbg,Supabase,Introducing the official Supabase MCP Server,39842,False,107.2,0.0,107.21,,17.4,0.34,0.88,0.48,0.14,0.0,0.005,False,95.7,,,152
+1lmRm6XUisY,Suno,Suno Studio – The first-ever generative audio workstation,191389164,False,73.3,27.0,1.46,1.334667,0.7,0.64,0.75,0.75,0.0,0.0,0.021,False,117.5,0.71,1.11,22
+4zd9hzngFwY,Replit,Replit: Make an app for that,306651063,False,60.1,29.9,1.17,6.840167,9.6,2.98,0.6,0.37,0.4,0.5,0.0,False,117.5,0.86,1.19,122
+5Ai511vNdtY,,Framer F1,3700,True,31.4,0.0,31.39,,2.0,0.3,0.83,0.48,0.0,2.5,0.0,False,161.5,,,0
+6TvtjxG30Xc,Blinkist,Meet the Blinkist app! The world's knowledge in the palm of your hand,1338669,False,34.1,0.0,34.06,,12.4,8.1,0.47,0.21,0.37,3.0,0.074,False,99.4,,,125
+6dIwFoQ0eVg,Linear,Introducing Linear Releases,9595,False,30.1,0.0,30.07,,6.9,3.27,0.2,0.05,0.27,0.0,0.0,False,112.3,,,0
+6t0nbUt8gVA,,How To Design Your Lovable app,1800,True,164.8,1.1,16.96,15.72,97.8,2.01,0.22,0.0,0.89,0.0,0.146,False,136.0,1.45,0.61,214
+6xJWQRVl9nw,Framer,"Framer: All Design, No Code, Real Websites",18256551,False,37.0,3.2,10.75,4.958333,27.1,2.89,0.38,0.14,0.68,0.0,0.041,False,152.0,,0.96,115
+7AnqbpeJoHc,Screen Studio, Screen Studio,4873,False,45.3,23.8,0.5,5.866667,9.5,1.26,0.62,0.29,0.22,0.5,0.011,False,86.1,,0.58,17
+7UsscWi4ubU,,Eleven v4 is free for the next 10 days.,5900,True,39.8,18.1,2.5,2.916667,22.2,0.0,1.0,0.01,0.69,0.0,0.0,False,117.5,0.85,0.79,178
+8AHPXm9Y6mI,Framer,That’s Framer: The pro site builder loved by designers,32976271,False,37.5,4.8,2.19,1.708333,21.4,2.37,0.39,0.23,0.6,0.0,0.08,False,152.0,1.3,0.68,113
+9NeXoomeMqk,Mobbin,Meet Mobbin,4205,False,48.0,35.0,1.15,3.366667,39.5,2.07,0.2,0.05,0.59,0.0,0.094,False,143.6,0.91,1.19,0
+An8IM-kPyms,Cursor,Introducing Cursor 2.0,9463573,False,64.5,0.9,32.24,62.283333,67.5,1.23,0.71,0.05,0.67,2.0,0.008,False,112.3,5.41,1.53,0
+AwKSrJFvdps,Runway, Runway,585933,False,68.8,52.3,0.83,1.5015,0.5,0.33,0.83,0.81,0.0,5.0,0.0,False,152.0,0.9,1.25,149
+By9wCB9IZp0,v0,Introducing v0: Generative UI,63017,False,47.5,0.0,47.51,,19.9,2.47,0.39,0.14,0.51,0.0,0.0,False,99.4,,,0
+DJHWsxs22jg,Canva, Canva Videos,98656864,False,15.1,19.9,2.31,2.736067,11.9,6.23,0.0,0.0,0.33,0.0,0.067,False,136.0,,1.57,100
+DkgS-JZa__o,Windsurf,A New Wave.,15046,False,46.9,5.1,12.0,12.0,7.7,0.72,0.66,0.29,0.27,1.0,0.053,False,143.6,,0.96,0
+DlS41IjSR4g,Jitter,Introducing Jitter 1.0,26150,False,10.1,89.6,0.43,0.5,12.8,1.4,0.4,0.15,0.45,0.0,0.05,True,0,,,0
+E9PvSeIO5NY,Midjourney,Introducing Midjourney V1 Video,89068981,False,144.2,14.1,3.34,2.569233,0.0,0.03,0.97,0.97,0.0,139.0,0.0,False,184.6,0.31,1.23,11
+FDNkDBNR7AM,Claude,Keep thinking with Claude,480833,False,90.0,48.6,0.94,1.12,1.6,0.67,0.81,0.75,0.01,0.5,0.0,False,172.3,1.25,1.26,79
+Fab7sp30pg0,Teenage Engineering,introducing OP–1 field,135025,False,28.1,17.1,2.16,2.84,3.4,0.91,0.45,0.21,0.11,0.5,0.0,False,112.3,,,0
+GMudsuUVb6U,,Build a portfolio website in seconds with wireframer #framer #portfoli,13000,True,39.6,6.1,2.2,2.203746,39.7,0.56,0.82,0.0,0.94,0.0,0.0,False,117.5,2.58,1.26,192
+HSVVMgExV9U,Attio,Introducing Ask Attio,17461364,False,46.8,3.8,9.2,28.395033,3.9,2.48,0.16,0.07,0.06,0.0,0.0,False,129.2,2.15,1.16,0
+Hax3tWGi1us,,How do you lock in?,12000,True,53.1,1.1,26.57,1.8,45.9,0.0,1.0,0.01,0.46,0.0,0.0,False,107.7,,1.74,237
+I6pVSStmALo,ElevenLabs,"Introducing ElevenLabs Image & Video — The Best Audio, Image and Video",49476,False,48.2,3.7,13.79,20.266667,7.8,1.95,0.64,0.39,0.28,0.0,0.0,False,123.0,,1.68,143
+JMsFfX6qTNI,Superhuman,Introducing Superhuman,651002,False,74.3,19.4,1.33,8.433333,23.2,11.66,0.36,0.21,0.46,0.5,0.149,False,143.6,0.69,0.92,99
+KdpxyBKlSfs,,What is Perplexity Pages?,4100000,True,60.0,10.0,2.75,19.019,199.8,0.05,0.97,0.0,0.93,0.0,0.0,True,0,,,0
+LVLsRvGMwMk,Teenage Engineering,introducing EP–1320 medieval,209508,False,65.0,22.2,2.12,4.4,0.6,0.05,0.95,0.92,0.02,47.0,0.0,False,161.5,1.09,2.24,0
+Mi173xGb0ZA,Raycast,New Raycast. Coming 2026,114140,False,38.6,6.2,8.9,8.9,5.1,2.57,0.56,0.25,0.19,1.0,0.0,False,129.2,,,0
+NNrHqRk8rdE,,Loom ,2300,True,33.8,37.3,1.2,0.8,3.9,0.49,0.72,0.15,0.09,0.5,0.03,False,92.3,1.25,1.13,194
+O1Dm5cy7X1E,Canva, Designed for work,15681908,False,30.1,33.9,1.53,2.002,10.6,2.02,0.27,0.27,0.2,0.5,0.233,False,129.2,1.75,1.22,100
+QTcUR5BjN2M,Raycast, Raycast for Windows,12458,False,52.9,31.8,1.29,1.833333,9.5,1.15,0.65,0.52,0.18,1.0,0.057,False,107.7,1.07,1.31,117
+R1cF4T4lgI4,Notion,Introducing Notion 3.0: Agents,15756344,False,90.0,3.3,12.58,4.041667,32.9,3.96,0.44,0.08,0.64,1.0,0.022,False,123.0,,0.93,5
+S92KX8-Hmlc,Notion,Introducing the new Notion AI,8185463,False,56.6,11.7,3.29,2.460792,20.0,3.51,0.4,0.14,0.56,2.5,0.035,False,143.6,0.78,0.91,0
+S9VAIa-Nw34,Stripe,Introducing Stripe Reader,30922,False,51.7,4.6,9.1,3.666667,7.2,7.17,0.09,0.08,0.16,0.5,0.0,False,103.4,,0.59,129
+T_wTfrmsThg,,Fable 5.1 is here,3400000,True,27.4,89.7,0.13,1.166667,1.5,0.62,0.64,0.6,0.04,3.5,0.018,False,107.7,1.13,1.68,0
+UcZfSIegPNw,Airtable,Introducing a new generation of Airtable - built for the AI era,71667,False,58.6,10.2,3.0,10.577233,53.1,5.81,0.25,0.02,0.83,0.0,0.111,False,143.6,1.29,0.67,152
+UkCR8kcL_3g,,Framer is free full-featured design tool,10000,True,19.0,28.4,0.63,4.6,6.7,1.21,0.47,0.26,0.08,0.0,0.079,False,89.1,,0.63,13
+UxbULt_hCdA,Cursor,Introducing Cursor 3,3121872,False,90.4,15.9,3.75,5.714042,69.9,0.5,0.91,0.62,0.33,2.5,0.011,False,99.4,,0.64,222
+VDOhl_sdxZg,,Perplexity Assistant for Android,12000,True,62.9,1.0,31.43,17.92,14.8,5.1,0.49,0.17,0.33,0.0,0.071,False,198.8,,,43
+WbD89DyeuvM,ElevenLabs,Introducing Avatars,39512,False,52.1,1.2,26.03,25.983333,3.0,0.66,0.73,0.52,0.12,3.5,0.0,False,123.0,5.05,,103
+WooOWGM-2cE,Figma,This is Figma Weave (formerly Weavy),91740,False,45.1,33.3,0.2,4.96,7.1,1.43,0.62,0.2,0.2,0.0,0.022,False,89.1,1.76,0.97,126
+XbZvC4KTH68,Cursor,"Cursor now shows you demos, not diffs",144587,False,102.5,31.0,0.86,1.918583,20.5,0.2,0.98,0.59,0.31,4.5,0.0,False,123.0,1.0,0.77,206
+XxSwHXp3gds,,MiniMax H3 Max in ElevenCreative.,3000,True,17.2,31.5,1.45,2.210542,35.9,0.12,0.88,0.0,0.71,0.0,0.0,False,152.0,0.44,0.72,231
+YeldJ4UezDQ,Perplexity,Introducing Comet: Browse at the Speed of Thought,237927,False,72.4,5.0,3.24,3.24,32.7,1.32,0.63,0.29,0.43,3.5,0.11,False,129.2,,,46
+Z1_M2XtsUwY,Perplexity,Introducing: Deep Research on Perplexity,162038,False,54.0,0.0,54.01,,59.5,2.84,0.45,0.06,0.61,0.0,0.028,False,123.0,,,0
+ZoJgrmflhg0,,Bring your idea to life inside ElevenCreative,3400,True,25.1,26.2,1.52,2.88,0.1,0.0,1.0,0.92,0.0,23.0,0.0,False,117.5,0.96,0.88,191
+aCN9iCXNJqQ,OpenAI, You Can Just Build Things,268507,False,60.1,18.0,2.71,3.044708,6.2,1.85,0.75,0.71,0.07,7.0,0.008,False,92.3,0.36,0.3,0
+ayes8sKbgA4,,What Is Notion?,32000,True,86.9,0.7,43.47,3.333333,20.1,0.9,0.68,0.11,0.48,3.5,0.0,False,152.0,3.97,2.19,95
+boJG84Jcf-4,OpenAI,Introducing GPT-5,617460,False,89.5,7.4,1.28,51.666667,28.9,4.87,0.55,0.1,0.39,0.0,0.011,False,143.6,,0.22,0
+c6Bns1T77HM,Zed,Zed is 1.0,311937,False,132.2,1.8,22.54,4.796458,110.1,2.28,0.86,0.16,0.79,5.0,0.019,False,117.5,,1.42,144
+cMTzqBLcUyc,,Perplexity Voice Assistant for iOS #ai #smartphone,30000,False,97.9,0.6,48.94,28.9289,16.1,2.07,0.71,0.33,0.32,0.0,0.128,False,129.2,,1.76,112
+ekSyfD7uoiU,Granola,Say hello to Recipes,1927584,False,43.3,8.3,5.8,4.366667,14.7,1.15,0.69,0.06,0.37,1.0,0.0,False,107.7,0.94,0.94,164
+gOPTo7EVRPw,,"Control comes in pieces. May 26, 2026",3000,True,10.2,0.0,10.15,,0.2,0.2,0.8,0.8,0.0,0.5,0.0,False,152.0,,,0
+i172vdAyB30,Speechify,Speechify Launches Mac App with Voice Typing,1488,False,38.0,4.7,9.19,18.9,12.5,3.26,0.28,0.08,0.41,0.0,0.053,False,103.4,1.99,1.1,150
+jnKVoA7nnNA,Jitter,Jitter - Official Early Access Release Trailer,2741,False,40.4,3.0,11.15,5.116667,4.3,2.1,0.27,0.27,0.02,7.0,0.0,False,143.6,4.76,2.93,0
+lQcXq-66GvI,Typeform,Introducing Typeform for Growth,1115,False,72.5,3.3,19.04,3.32,7.8,2.37,0.23,0.1,0.1,0.5,0.0,False,95.7,,1.06,147
+lToQzQGJjAs,,"Designed for what’s next. May 26, 2026",2200,True,11.8,0.0,11.77,,0.0,0.0,1.0,1.0,0.0,,0.0,False,112.3,,,0
+mRql2VJ99gM,Linear,Introducing Linear Agent,25370,False,54.9,0.0,54.92,,30.7,14.26,0.32,0.12,0.48,0.0,0.136,False,143.6,,,0
+nJUylrt1OdU,Superhuman, Meet your new power tools for work,2462691,False,62.1,5.8,4.74,0.733333,2.7,1.79,0.01,0.01,0.0,0.0,0.0,False,117.5,0.88,0.75,196
+nRWWKzTREm4,,"Control, taking form. May 26, 2026",1900,True,20.2,0.0,20.25,,0.0,0.0,1.0,1.0,0.0,,0.0,False,129.2,,,0
+qOsEYyQuxbU,Perplexity,Perplexity Computer,201821,False,94.4,0.6,47.22,93.033333,20.5,3.99,0.53,0.08,0.53,0.5,0.032,False,107.7,,,8
+r9VOYJM6nZc,Gamma,"Gamma: AI for presenting ideas, beautifully",776548,False,79.0,0.8,39.49,31.498133,46.7,2.95,0.34,0.03,0.79,0.0,0.171,False,107.7,,,0
+rGvQ_rnCmyc,Linear,Product Intelligence (Technology Preview),6440,False,34.9,0.0,34.85,,17.1,8.47,0.31,0.17,0.49,0.0,0.229,False,123.0,,,0
+t_LBECIQQqs,Claude,Introducing Claude Design by Anthropic Labs,922624,False,81.6,8.8,3.42,13.875,35.7,4.46,0.41,0.02,0.61,0.0,0.086,False,103.4,1.02,1.03,4
+u-3cPWPvRUE,,Introducing Claude Sonnet 5.5,812000,True,13.3,45.0,0.76,1.08,0.7,0.48,0.74,0.59,0.0,1.5,0.0,False,107.7,0.73,1.79,0
+v7BXIwkMcPA,,Build Presentations with Claude in Seconds ,1700,True,41.3,16.0,3.09,2.733333,80.6,0.34,0.91,0.01,0.83,0.0,0.0,False,112.3,0.53,,129
+vbhNyRNNYjc,Vercel,Vercel Ship 2025 teaser,6898,False,29.0,0.0,28.96,,0.4,0.41,0.79,0.79,0.0,22.0,0.0,False,92.3,,,0
+x5HCrHp4sdE,,At least Joyce used AI Meeting Notes,15000,True,14.9,12.1,3.75,3.0,29.4,0.53,0.83,0.0,1.0,0.0,0.1,False,129.2,,,0
+xDwR1_vrIg8,Lovable,Lovable 2.0 is here. Multiplayer vibe coding. Smarter & more secure.,10734934,False,80.5,9.7,4.37,6.966667,16.8,2.46,0.22,0.11,0.3,0.5,0.149,False,112.3,1.35,0.35,4
+yj23TX7Amj4,,No one has to know you asked 🙂‍↕️,8300,True,12.2,19.7,3.33,0.1,20.6,3.25,0.83,0.29,0.54,1.5,0.167,False,143.6,,,0
+ykaj0pS4A1A,Raycast,Raycast Focus: Enter Flow State,143915,False,50.8,30.7,0.92,6.25625,1.7,1.35,0.83,0.76,0.06,6.5,0.02,False,60.1,1.94,1.12,0
+yrEic418kjg,Notion,Meet Custom Agents: Your 24/7 AI Team,7943535,False,70.9,0.8,35.45,54.4,25.4,11.32,0.23,0.11,0.49,0.5,0.106,False,76.0,,2.62,2
+zKyxcnEIHU0,Ideogram,Introducing Ideogram 4.0: The Best Open Image Model in the World,49195,False,55.8,20.4,1.17,3.533333,4.0,2.79,0.18,0.18,0.03,0.0,0.009,False,103.4,,1.32,110
+zUHtuGPHbRI,,Turn Your Syllabus Into A Study Guide With Notion Agent #study #backto,4600,True,77.8,4.6,6.87,48.266667,75.4,2.08,0.05,0.01,0.8,0.0,0.0,False,123.0,,0.71,205

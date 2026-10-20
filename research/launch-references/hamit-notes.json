@@ -1,0 +1,237 @@
+{
+  "source": "Earlier references.json, original reviewer_comment field only",
+  "source_sha256": "7ff96f99eb0e8277e97d6862bb4378e85b723adb4816e076ae55c1a4439ea426",
+  "scope": "Saved user comments, preserved verbatim. Not a new listening or review pass. Some comments are Turkish. Agent observations stay in data/.",
+  "records": [
+    {
+      "id": 1,
+      "source_url": "https://x.com/abdullah4204k/status/2111150845358444902",
+      "comment": "- güzel bir anlatım ve ses efektleri. senaryo güzel oluşturulmuş. ürünü iyi anlatıyor. componentler ai slop değil oldukça başarılı istediğimiz gibi"
+    },
+    {
+      "id": 2,
+      "source_url": "https://twitter.com/rhobusiness/status/2111125296447426930",
+      "comment": "- tamamen kamera üzerine yapılmış içerik"
+    },
+    {
+      "id": 3,
+      "source_url": "https://twitter.com/MonidHQ/status/2110815345607156098",
+      "comment": "- müzik var ses efektleri, ufaktan ai slop design bence sıkıcı ama logo geçişi iyi yapılmış"
+    },
+    {
+      "id": 4,
+      "source_url": "https://twitter.com/cognition/status/2110790097369010292",
+      "comment": "- güzel video ama yine kamera işi"
+    },
+    {
+      "id": 5,
+      "source_url": "https://twitter.com/joshm/status/2110785804671045785",
+      "comment": "- güzel bir launch videosu kamera işi var ama belki art designla benzer yöntem izlenebilir"
+    },
+    {
+      "id": 7,
+      "source_url": "https://twitter.com/rincidium/status/2110775777470173408",
+      "comment": "- süper bir launch videosu başta harika bir animasyon ve devamında ürünü gamified şekilde anlatmış. ilginç bir tarz ama müthiş"
+    },
+    {
+      "id": 9,
+      "source_url": "https://twitter.com/ArcherExchange_/status/2110769819901677867",
+      "comment": "- sesle uyum harika babşta animasyon videosu devamında use case"
+    },
+    {
+      "id": 10,
+      "source_url": "https://twitter.com/mehdidjabri/status/2110762633494184248",
+      "comment": "- harika olmuş tek kelimeyle"
+    },
+    {
+      "id": 11,
+      "source_url": "https://twitter.com/krea_ai/status/2110760037128012146",
+      "comment": "- gerçek dünya örnekleriyle müthiş yapılmı. design animasyonları geçişler çok başarılı. ses çok etki etmemiş anlatım güzel"
+    },
+    {
+      "id": 14,
+      "source_url": "https://twitter.com/rabi_guha/status/2110737805823672518",
+      "comment": "- fikri çok iyi açıklamış. kamera analtım var ama genel olarak ui ürün anlatımından geçiyor. müzik etkisi yok ama analtım ve ses efektleri çok dinletilebilir kılıyor"
+    },
+    {
+      "id": 15,
+      "source_url": "https://twitter.com/SaiVamshi1818/status/2110729695902003295",
+      "comment": "- aksiyonlu başladı problemi aktardı burası baya kritik. stok videolarla işi açıklamış. müzik akışı çok iyi heyecanlı. anlatım ai ama başarılı. çok çeşitli bir şekilde açıklayabilmiş"
+    },
+    {
+      "id": 18,
+      "source_url": "https://twitter.com/RoboParty_DEV/status/2110399984680210450",
+      "comment": "- harika bir anlatım güzel robotik sesler ve robotik videolar. bizim işimize yaramaz ama ses efektleri açısından önemli"
+    },
+    {
+      "id": 19,
+      "source_url": "https://twitter.com/nicolasosharp/status/2110387701987889561",
+      "comment": "- eskiye ait stok videolarla derin bir ses anlatımı var. ses aksyonlu gibi heyecanlandırıyor fena değil"
+    },
+    {
+      "id": 20,
+      "source_url": "https://twitter.com/Prateekjogani/status/2110222817178398833",
+      "comment": "- hikaye analtımlı ses stok görseller/videolar var. üründen bahsedilmemiş en sonda onun launchı olduğunu gösteriyor o kadar"
+    },
+    {
+      "id": 26,
+      "source_url": "https://twitter.com/will_marq/status/2110055111116652917",
+      "comment": "- adam launch için uçaktan atlamış fikri anlatmış ilginç ;)"
+    },
+    {
+      "id": 27,
+      "source_url": "https://twitter.com/noah_weiss/status/2110051267007455555",
+      "comment": "- stok görseller ve productla ilgili görsellerle ürünü çok iyi açıklamış. anlatım, ses efektlerinin uyumu çok başarılı. bazen component text falan yerine görsellerin iyi kullanımı çok etkili senaryo ortaya çıkarbiliyor."
+    },
+    {
+      "id": 29,
+      "source_url": "https://twitter.com/shcallaway/status/2110038490859855990",
+      "comment": "- güzel bir aniamsyon, anlatım çok iyi detaylar renk uyumu müthiş. fikir karışık ama launch güzel"
+    },
+    {
+      "id": 34,
+      "source_url": "https://twitter.com/withscuba/status/2110031893689471002",
+      "comment": "- yorumladık bunu scuba var"
+    },
+    {
+      "id": 42,
+      "source_url": "https://twitter.com/Maniadotinc/status/2108255315603189792",
+      "comment": "- ai ses var, çizim animasoynlar ama fikri anlatmamış ilginç bir proje"
+    },
+    {
+      "id": 43,
+      "source_url": "https://twitter.com/anvisha/status/2108252061209088159",
+      "comment": "- kameralı ama arkada rahatlatıcı fon müziği ve başarılı ses efektleri. kamera çok yer vermemiş olsa da başarılı"
+    },
+    {
+      "id": 46,
+      "source_url": "https://twitter.com/trymirage/status/2107504042205139269",
+      "comment": "- aşırı iyi ses efektleri ve müzik akışı çok uyumlu. animasoynlar tasarım çok özgün v igli çekici. ürünü harika açıklamışlar. tek kelimeyle perfect"
+    },
+    {
+      "id": 49,
+      "source_url": "https://twitter.com/memelord/status/2107109600881189273",
+      "comment": "- harika bir tanıtım hem komik hem animasyonlarla içine dahil ediyor. ses efektleri ve anlatım müthiş. harika özene bözene yapılmış"
+    },
+    {
+      "id": 50,
+      "source_url": "https://twitter.com/Nlacombe_/status/2106829867463627039",
+      "comment": "- ai video ile hikayeyi başlatmış. platform tanıtımı ve aksiyonlu bir fon müziği, anlatım yer alıyor"
+    },
+    {
+      "id": 52,
+      "source_url": "https://twitter.com/odysseyml/status/2103146841378586820",
+      "comment": "- fikri oyunlaştırarak anlatmış. çok uçuk şeyler yok. analtım sesi oyun üzerinden gösterim yazılar ses efektleri ve güzel bir fon müziği yetmiş"
+    },
+    {
+      "id": 53,
+      "source_url": "https://twitter.com/claudeai/status/2102435511222890900",
+      "comment": "- opus 5.5 zaten inanılamz"
+    },
+    {
+      "id": 54,
+      "source_url": "https://twitter.com/covacut/status/2100990018391265297",
+      "comment": "- stok videolarla duygusal anlatım ve duygusal fon müziği. yeterli olmuş bile"
+    },
+    {
+      "id": 55,
+      "source_url": "https://twitter.com/AskVenice/status/2100696294029394034",
+      "comment": "- tamamen ai video fikri konuşmadan anlatmış en sonda slogan var. harika bir zeka ürünü"
+    },
+    {
+      "id": 57,
+      "source_url": "https://twitter.com/ExaAILabs/status/2100634095395225898",
+      "comment": "- kameralı ama animasyon geçişleri harika ötesi"
+    },
+    {
+      "id": 59,
+      "source_url": "https://twitter.com/QuiverAI/status/2100295136261349802",
+      "comment": "- ses anlatımı. çok önemli olmuş. arkada ses efektlerine uygun fon müziği. özgün animasyonlar var designer effect belli olmuş. videonun ortasında anlatım gidiyor fon müziği beat switch atıyor harika geçişler var. ekrana kitliyor"
+    },
+    {
+      "id": 63,
+      "source_url": "https://twitter.com/erikschutzler/status/2097736036172681330",
+      "comment": "- hikaye anlatılmış stok videoların üzerine animasyonlar component designlar. tam bir instagram short form analtımı ama çok başarılı. videoda twitterda 270k view almış zaten"
+    },
+    {
+      "id": 64,
+      "source_url": "https://twitter.com/lightreelai/status/2097701733812023728",
+      "comment": "- çokk iyi renk geçişleri ses efektleri, fon müziği başka evrende hissettiriyor. fikri 25 saniyede harika açıklamış. tam bir editor işi müthiş ötesi"
+    },
+    {
+      "id": 66,
+      "source_url": "https://twitter.com/statemachineshq/status/2097355365071368567",
+      "comment": "- stok görseller, videolar. hikaye anlatılmış fikirle ilgili. güzel ses anlatım tonu. fon müziği ses efektleri harika seçilmiş çok uyumlu. story girişi sonrası beat switch ve fikri açıklamış müthiş bir iş olmuş"
+    },
+    {
+      "id": 70,
+      "source_url": "https://twitter.com/supermemory/status/2097035274094272935",
+      "comment": "- hintlilerin sesi hiçuymuyor. video edit harika olmuş stok videolar renk efektleri çok yerinde olmuş başarılı edit. fon müziği güzel"
+    },
+    {
+      "id": 74,
+      "source_url": "https://twitter.com/krea_ai/status/2095530595405475863",
+      "comment": "- ses anlatımı yok. harika animasoylnar. ürün açıklanmış. beatli bir fon müziği var ai bile yapmış olabilir ama edit animasyon geçiş akışo iyi olduğu için izleyiciyi tutmuş. zaten 60k görüntülenme ve çok kısa"
+    },
+    {
+      "id": 75,
+      "source_url": "https://twitter.com/manish_fp/status/2095473681309008005",
+      "comment": "- stok video seçimi çok başarılı. ses analtımı çok iyi ama desibel artmalı.edit gerçekten düşünülmüş güzel bir şey"
+    },
+    {
+      "id": 80,
+      "source_url": "https://twitter.com/khushhhi_/status/2093725672325943527",
+      "comment": "- giriş ses efektleri harika. ses anlatımı heyecanlı ama daha iyi olabilir. stok video seçimi başarılı. editor eli değmiş"
+    },
+    {
+      "id": 81,
+      "source_url": "https://twitter.com/a16z/status/2093330303242965464",
+      "comment": "- harika yazılar anlatım müthiş. arka plan sesini stok videolardan almış. fon müziği heyecan verici. a16z şov yapmış şovvv"
+    },
+    {
+      "id": 85,
+      "source_url": "https://twitter.com/KaitoAI/status/2089721729895841925",
+      "comment": "- işte aradığım tarz bu. başta dipten ses analtımı stok videolar. problemi veya durumu anlatmış. edit girişli bir fon müziği var hep dipten.\n  \n  devamında harika bir esdeekid müziği havalı stok videolar (jose mourinho gibi) aura editi. ama tam izleyiciyi edite kitlemelik bir video"
+    },
+    {
+      "id": 86,
+      "source_url": "https://twitter.com/safishamsii/status/2089748658157670454",
+      "comment": "- ilk başta problemi durumu anlatıyor tek cümle. heyecanlı giriş. stok görseller. sonrasında problemi hikayeyi anlatmaya başlıyor. izleyicide merak uyandırıyor. konuşma var subtitle var. stok videolar çok uyumlu olmuş. tam bir editör işi."
+    },
+    {
+      "id": 90,
+      "source_url": "https://twitter.com/joinCero/status/2087953404190466515",
+      "comment": "- harika bir akış var. çok hızlı ilerliyor ürünü çok iyi anlatmış. kameralı ama videoalr anyı zaten. animasoyn geçişleri kurgu çok launch hissettiriyor. başarılı ve özgün design, ses efektleri var"
+    },
+    {
+      "id": 91,
+      "source_url": "https://twitter.com/grx_xce/status/2084361692792934488",
+      "comment": "- anlatım yok fon müziği ve stok videoalrla gitti. birkaç yazı var hype uyandıracak şekilde yapılmış. çok yeterli müthiş örnek"
+    },
+    {
+      "id": 93,
+      "source_url": "https://twitter.com/Kimi_Moonshot/status/2077821890207547467",
+      "comment": "- harika animasyon uğraşım var bir ekip yapılmış belli ki"
+    },
+    {
+      "id": 94,
+      "source_url": "https://twitter.com/reve/status/2077467417736036502",
+      "comment": "- ürünün fonksiyonu çok iyi anlatıyor ses efektleri ve fon müziği de uymuş. tam bir sosyal medya editi çok başarılı"
+    },
+    {
+      "id": 95,
+      "source_url": "https://twitter.com/tradeonpear/status/2077454093421846566",
+      "comment": "- güzel ses efektleri ve fon müziği. ünlülerin ai videolarını kullanarak ürünle birleştirilmiş güzel eğlenceli bir hava katmış. ürünü de açıklıyor. animasyon geçişleri çok başarılı"
+    },
+    {
+      "id": 99,
+      "source_url": "https://twitter.com/jtx_trade/status/2077045777923223905",
+      "comment": "- çok akıcı bir finans launchı. ses efektleri çok uyumlu ama burda yapay zekanın yapamayacağı bir design video deneyimi var"
+    },
+    {
+      "id": 100,
+      "source_url": "https://twitter.com/Crowdreply_io/status/2077045664471749039",
+      "comment": "- güzel bir animasyon klasik beklenen launch videosu bunları çok raporladım.\n  \n  ses efektleri, animasyon geçiş, bunlar olması gerekenler. ve en kritiği markaya uygun özgün ai slop olmayan componentler var"
+    }
+  ]
+}

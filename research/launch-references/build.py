@@ -116,6 +116,32 @@ def coverage(sources, reviews):
         "closer_windows": sum(len(r['closer_windows']) for r in unique)}
 
 
+def catalog(sources, reviews, summary, comments):
+    """Small, deduplicated index for the read-only browser."""
+    films, groups = [], defaultdict(set)
+    for review in reviews:
+        ident = review["id"]
+        source = sources[ident]
+        labels = set()
+        for element in review["elements"]:
+            if element["kind"] == "ui":
+                labels.update(label for label, names in UI_GROUPS.items()
+                              if element["name"].strip().lower() in names)
+        for label in labels:
+            groups[label].add(ident)
+        films.append({
+            "id": ident, "title": source["title"], "source": source["source_url"],
+            "seconds": source["duration_seconds"], "product": review["product_type"],
+            "scenario": review["scenario"], "lesson": review["comparison"]["lesson"],
+            "elements": review["elements"], "ui": sorted(labels),
+            "hamit_notes": [c for c in comments
+                            if sources[c["id"]].get("canonical_id", c["id"]) == ident],
+        })
+    return {"coverage": summary, "films": films, "questions": AREA_NAMES,
+            "ui": [{"name": name, "count": len(ids)}
+                   for name, ids in sorted(groups.items(), key=lambda row: (-len(row[1]), row[0]))]}
+
+
 def render(review, source):
     streams = source["media_probe"]["streams"]
     video = next(s for s in streams if s["codec_type"] == "video")
@@ -222,6 +248,14 @@ def main():
         + table(["Element", "Films", "Example films"], common_ui)
         + "\n\n## All observed tags\n\n" + table(["Kind", "Element", "Films", "Examples"], element_rows) + "\n")
     (ROOT / "coverage.json").write_text(json.dumps(summary, indent=2) + "\n")
+    comments = json.loads((ROOT / "hamit-notes.json").read_text())["records"]
+    if len({c["id"] for c in comments}) != len(comments):
+        raise ValueError("Duplicate user comment ID")
+    for comment in comments:
+        if source_map[comment["id"]]["source_url"] != comment["source_url"]:
+            raise ValueError("User comment source mismatch")
+    (ROOT / "catalog.json").write_text(json.dumps(
+        catalog(source_map, unique, summary, comments), ensure_ascii=False) + "\n")
     print(json.dumps({**summary, "pending_ids":f"{len(summary['pending_ids'])} (see coverage.json)"}))
 
 

@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from build import QUESTIONS, UI_GROUPS, coverage, table, validate
+from build import QUESTIONS, UI_GROUPS, catalog, coverage, table, validate
 
 
 class ReviewChecks(unittest.TestCase):
@@ -70,6 +70,20 @@ class ReviewChecks(unittest.TestCase):
     def test_ui_aliases_have_one_group(self):
         names = [name for group in UI_GROUPS.values() for name in group]
         self.assertEqual(len(names), len(set(names)))
+
+    def test_catalog_counts_each_film_once_and_keeps_original_comments(self):
+        sources = {1: {"id": 1, "title": "<Example>", "source_url": "https://example.com",
+                       "duration_seconds": 20},
+                   2: {"id": 2, "canonical_id": 1}}
+        review = {**self.review, "product_type": "Tool", "scenario": "Input to result",
+                  "comparison": {"lesson": "Keep the same object"},
+                  "elements": [{"kind": "ui", "name": "chat", "events": ["V01"]},
+                               {"kind": "ui", "name": "chat bubbles", "events": ["V01"]}]}
+        comments = [{"id": 2, "comment": "Original comment"}]
+        result = catalog(sources, [review], {}, comments)
+        self.assertEqual(result["ui"], [{"name": "Chat / messages", "count": 1}])
+        self.assertEqual(result["films"][0]["hamit_notes"], comments)
+        self.assertEqual(result["films"][0]["title"], "<Example>")
 
 
 if __name__ == "__main__":

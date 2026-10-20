@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch reference library · Tin film-lab</title>
+<style>
+  :root {color-scheme:light; --paper:#f3f4f1; --ink:#202923; --muted:#56635b; --line:#cbd2cc; --link:#235a42}
+  *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Hanken Grotesk","Segoe UI",sans-serif}
+  main{max-width:1370px;padding:36px clamp(18px,4vw,56px) 80px;margin:auto}
+  header{border-bottom:2px solid var(--ink);padding-bottom:24px;margin-bottom:28px}
+  h1{font:500 clamp(32px,4vw,48px)/1.15 Georgia,serif;letter-spacing:-.035em;margin:12px 0}
+  h2{font:500 27px/1.25 Georgia,serif;margin:0 0 14px} h3{font-size:17px;margin:26px 0 8px}
+  p{max-width:85ch;margin:8px 0} a{color:var(--link);text-underline-offset:3px}
+  nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px} .muted, small{color:var(--muted)}
+  .layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:36px}
+  label{display:block;font-size:14px;margin-bottom:6px}
+  input,select,button{font:inherit;color:inherit}
+  input,select{width:100%;padding:10px;border:1px solid #8b9b90;background:#fafbf8;border-radius:3px}
+  button{cursor:pointer} button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9a6427;outline-offset:3px}
+  #groups{display:grid;gap:2px;margin-top:14px} #groups button{display:flex;justify-content:space-between;text-align:left;padding:7px 9px;border:0;background:none;font-size:14px}
+  #groups button:hover{background:#e4e9e2} #groups button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+  .filters{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:16px}
+  .count{margin:18px 0 8px;font-size:14px}
+  table{width:100%;border-collapse:collapse;text-align:left;table-layout:fixed}
+  th{font-size:13px;color:var(--muted);font-weight:500;padding:9px 12px;border-bottom:1px solid var(--ink)}
+  td{vertical-align:top;padding:17px 12px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+  th:first-child{width:33%} th:last-child{width:15%}
+  td:first-child{padding-left:0} th:first-child{padding-left:0}
+  .film{display:block;text-align:left;background:none;border:0;color:var(--link);padding:0;line-height:1.35;font-weight:600;font-size:16px;text-decoration:underline;text-underline-offset:3px}
+  small{display:block;font-size:13px;margin-top:5px} .note{font-size:14px}.number{font-variant-numeric:tabular-nums}
+  #reader{margin-bottom:28px;padding:24px 0;border-bottom:2px solid var(--ink)}
+  #reader[hidden]{display:none} #reader .back{background:none;border:1px solid var(--line);padding:7px 12px;margin-bottom:18px}
+  #reader table th:first-child{width:16%} #reader table th:last-child{width:auto}
+  #reader td{font-size:14px;padding:10px 12px}
+  blockquote{margin:16px 0;padding:8px 18px;border-left:2px solid #8a9c90;white-space:pre-wrap}
+  #pager{display:flex;align-items:center;gap:18px;margin-top:22px}
+  #pager button{padding:7px 14px;background:none;border:1px solid #8b9b90} #pager button:disabled{opacity:.4;cursor:default}
+  .error{padding:14px;border:1px solid #9e522e;color:#7b3518}
+  @media(max-width:780px){.layout{grid-template-columns:1fr;gap:24px}#groups{display:flex;overflow:auto;max-height:140px;flex-wrap:wrap}#groups button{gap:12px}.filters{grid-template-columns:1fr}th:first-child{width:38%}th:last-child{width:18%}td,th{padding:12px 7px}.note{font-size:13px}nav{gap:10px 16px}}
+</style>
+<main>
+  <header>
+    <nav><span>Tin film-lab</span><a href="WORKFLOW_RULES.md">Film-making rules</a><a href="METHOD.md">Method & limits</a><a href="claude-measurements/README.md">Claude's 78-film study</a></nav>
+    <h1>Launch reference library</h1>
+    <p id="coverage">Loading saved reviews…</p>
+    <p class="muted">Find a useful scene, then read its evidence. These are sampled picture reviews. Sound listening is unverified.</p>
+  </header>
+  <div class="layout">
+    <aside aria-label="UI element filters">
+      <h2>UI elements</h2>
+      <p class="muted note">Counts are films where the element was recorded. Unlisted does not mean absent.</p>
+      <div id="groups"></div>
+    </aside>
+    <section aria-label="Reference films">
+      <section id="reader" hidden aria-label="Selected film review" tabindex="-1"></section>
+      <div class="filters">
+        <div><label for="query">Find a film, action, motion or texture</label><input id="query" type="search" placeholder="e.g. terminal, paper, product result"></div>
+        <div><label for="notes">Saved comments</label><select id="notes"><option value="all">All films</option><option value="hamit">With Hamit's notes</option></select></div>
+      </div>
+      <p class="count" id="count" role="status" aria-live="polite"></p>
+      <table><thead><tr><th scope="col">Film / product</th><th scope="col">Useful observation</th><th scope="col">Source</th></tr></thead><tbody id="films"></tbody></table>
+      <div id="pager"><button id="prev">Previous</button><span id="page"></span><button id="next">Next</button></div>
+      <noscript>This browser needs JavaScript. The same findings are in <a href="ELEMENTS.md">ELEMENTS.md</a> and <a href="COMPARISON.md">COMPARISON.md</a>.</noscript>
+    </section>
+  </div>
+</main>
+<script src="browser.js"></script>
+</html>
