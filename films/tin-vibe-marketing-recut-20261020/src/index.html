@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Tin — the same project, a new prompt</title>
+<style>
+@font-face{font-family:FK;src:url(fonts/eaba2e2cfb641fcd.woff2);font-weight:400}
+@font-face{font-family:FK;src:url(fonts/cc9346a6dc40c0cb.woff2);font-weight:700}
+@font-face{font-family:GM;src:url(fonts/7d4881bb7e1bf84d.woff2);font-weight:400 700}
+*{margin:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden;background:#f7f5ef}canvas{width:100vw;height:100vh;display:block}
+</style><canvas id="film" width="1920" height="1080" aria-label="Tin marketing work from a coding agent"></canvas>
+<script src="../../tin-launch/tools/lib/motion.js"></script>
+<script src="../../tin-launch/tools/lib/timeline.js"></script>
+<script src="../music-cut/cue.js"></script>
+<script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),FPS=60;
+const C={paper:'#f7f5ef',ink:'#26231c',coal:'#141210',panel:'#1c1916',cream:'#f6f1e7',muted:'#b3aa9b',ember:'#db4415',green:'#99af62'};
+const beat=CUE.beat,b=n=>n*beat,frame=t=>Math.round(t*FPS)/FPS;
+const D=frame(CUE.length),drop=frame(CUE.landing.t);
+const T={app:0,ship:frame(b(2)),task1:frame(b(2)),task2:frame(b(3)),task3:frame(b(4)),
+ ask:frame(b(4)),tin:drop,prompt:frame(b(9)),promptDone:frame(b(10)),
+ plan:frame(b(12)),row2:frame(b(13)),row3:frame(b(14)),open:frame(b(17)),draft:frame(b(19)),
+ hover:frame(b(24)),approve:frame(b(26)),pr:frame(b(28)),end:frame(b(32)),
+ ...Object.fromEntries([1,2,3,4].map(i=>['build-word-'+i,frame(b(i/4))])),
+ ...Object.fromEntries([1,2,3].map(i=>['grow-word-'+i,frame(b(9+i/4))]))};
+const clock=Timeline({fps:FPS,duration:D,beat,events:T,acts:{paper:[0,drop],agent:[drop,T.open],draft:[T.open,T.pr],pullRequest:[T.pr,T.end],end:[T.end,D]},
+ reads:[{text:'Grow my recipe app',start:T.promptDone,end:T.open},{text:'10 weeknight dinners',start:T.draft,end:T.pr},{text:'tin.computer',start:T.end+.4,end:D}]});
+window.FILM={duration:D,width:1920,height:1080,events:clock.events.map(e=>({...e,grid:e.name.includes('-word-')?'quarter':'beat',...(e.name==='pr'?{role:'result'}:{})})),cues:()=>({...clock.cues(),events:clock.cues().events.map(e=>({...e,kind:['tin','open','pr','end'].includes(e.id)?'cut':'cue'}))})};
+window.FILM.soundCues=()=>({fps:FPS,total:clock.total,events:[
+ {id:'build-key-1',f:clock.frame(b(.25)),kind:'key'},{id:'build-key-2',f:clock.frame(b(.75)),kind:'key'},
+ ...['task1','task2','task3'].map(id=>({id,f:clock.cue[id],kind:'land.light'})),
+ {id:'grow-key-1',f:clock.cue.prompt,kind:'key'},{id:'grow-key-2',f:clock.frame(T.prompt+beat/2),kind:'key'},
+ {id:'open',f:clock.cue.open,kind:'click'},{id:'approve',f:clock.cue.approve,kind:'click'}]});
+const clamp=x=>Math.max(0,Math.min(1,x));
+const ease=x=>1-Math.pow(1-clamp(x),3),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+const p=(t,s,d=.6)=>ease((t-s)/d),lerp=(a,b,k)=>a+(b-a)*k;
+const logo=new Image();logo.src='img/logotype-paper-on-transparent.png';
+const ready=Promise.all([document.fonts.load('400 80px FK'),document.fonts.load('700 80px FK'),document.fonts.load('400 50px GM'),logo.decode()]);
+let boxes=[];
+function rect(x,y,w,h,fill,r=18,stroke){g.beginPath();g.roundRect(x,y,w,h,r);g.fillStyle=fill;g.fill();if(stroke){g.strokeStyle=stroke;g.lineWidth=2;g.stroke()}}
+function text(s,x,y,size=56,color=C.cream,font='FK',weight=400){g.fillStyle=color;g.font=`${weight} ${size}px ${font}`;g.textBaseline='top';g.fillText(s,x,y);const m=g.getTransform();if(g.globalAlpha>.02)boxes.push({text:s,x:x*m.a+m.e,y:y*m.d+m.f,w:g.measureText(s).width*m.a,h:size*1.15*m.d})}
+function group(x,y,k,fn,alpha=1){g.save();g.translate(x,y);g.scale(k,k);g.globalAlpha*=clamp(alpha);fn();g.restore()}
+function camera(k){g.translate(960,540);g.scale(k,k);g.translate(-960,-540)}
+function food(x,y,w,h){
+ window.FRAME_COVER={x,y,w,h};
+ g.save();g.beginPath();g.roundRect(x,y,w,h,20);g.clip();g.fillStyle='#b9c09d';g.fillRect(x,y,w,h);
+ // The same authored recipe cover is carried from the app into the article and its PR.
+ const cx=x+w*.51,cy=y+h*.53,r=Math.min(w,h)*.4;
+ g.fillStyle='#87936c';g.beginPath();g.ellipse(cx+10,cy+16,r*1.07,r*.94,0,0,Math.PI*2);g.fill();
+ g.fillStyle='#f2eee3';g.beginPath();g.ellipse(cx,cy,r,r*.86,0,0,Math.PI*2);g.fill();
+ g.strokeStyle='#d7d2c3';g.lineWidth=3;g.beginPath();g.ellipse(cx,cy,r*.8,r*.66,0,0,Math.PI*2);g.stroke();
+ for(let i=0;i<13;i++){const a=i*2.3999,rr=r*(.12+.48*((i*7)%13)/13);g.save();g.translate(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr*.7);g.rotate(a);g.fillStyle=i%3?'#627648':'#b74732';g.beginPath();g.ellipse(0,0,r*.19,r*.08,0,0,Math.PI*2);g.fill();g.restore()}
+ g.strokeStyle='#d9bc78';g.lineWidth=r*.055;for(let i=0;i<8;i++){g.beginPath();g.moveTo(cx-r*.45+i*r*.1,cy-r*.2);g.quadraticCurveTo(cx-r*.1,cy+r*.4,cx+r*.42-i*r*.09,cy+r*.06);g.stroke()}
+ g.restore();
+}
+function app(x,y,k){group(x,y,k,()=>{
+ rect(0,0,1080,590,'#fdfcf8',22,'#d8d2c8');text('Dinner for two',50,42,49,C.ink,'FK',700);
+ food(50,127,540,403);text('Tonight,',643,181,64,C.ink);text('sorted.',643,253,64,C.ink);
+ rect(643,400,345,78,C.ember,39);text('Find a recipe',678,418,37,'#fff');
+})}
+function projectCover(x,y,k,dark=true){group(x,y,k,()=>{food(0,0,360,280);text('Recipe app',0,307,48,dark?C.cream:C.ink);})}
+function cursor(x,y,scale=1){group(x,y,scale,()=>{g.beginPath();g.moveTo(0,0);g.lineTo(1,40);g.lineTo(13,29);g.lineTo(22,49);g.lineTo(30,45);g.lineTo(20,26);g.lineTo(37,26);g.closePath();g.fillStyle=C.cream;g.fill();g.strokeStyle=C.coal;g.lineWidth=2;g.stroke()})}
+function header(){g.drawImage(logo,110,68,144,64);text('MCP',282,79,47,C.muted);text('Claude Code / Codex',1110,85,39,C.muted,'GM')}
+function paper(t,s){
+ g.fillStyle=C.paper;g.fillRect(0,0,1920,1080);text(s<T.ask?'You built it.':'Now grow it.',140,104,112,C.ink);
+ const shrink=s>=T.ask?smooth((t-T.ask)/1.1):0;
+ const entry=p(t,0,.85);
+ app(lerp(lerp(120,420,entry),510,shrink),lerp(lerp(220,292,entry),340,shrink),lerp(lerp(1.3,1,entry),.84,shrink));
+ rect(140,900,1640,104,C.coal,18);
+ const build='build me a recipe app'.split(' '),n=1+[1,2,3,4].filter(i=>s>=T['build-word-'+i]).length;
+ text('› '+build.slice(0,n).join(' '),180,927,42,C.cream,'GM');if(s>=T.ship)text('✓ shipped',1350,927,42,C.green,'GM');
+ const tasks=[['Keyword plan',T.task1,70,390,-.055],['Blog draft',T.task2,1330,440,.045],['Weekly brief',T.task3,1220,720,-.035]];
+ for(const [label,at,x,y,r]of tasks){if(s<at)continue;const k=p(t,at,.4);g.save();g.translate(x,y+(1-k)*75);g.rotate(r);g.shadowColor='#26231c1a';g.shadowBlur=20;g.shadowOffsetY=10;rect(0,0,550,110,'#fdfcf8',10,'#d8d2c8');g.shadowColor='transparent';rect(28,36,32,32,C.paper,5,'#8a8375');text(label,85,29,43,C.ink);g.restore()}
+}
+function workspace(t,s){
+ g.fillStyle=C.coal;g.fillRect(0,0,1920,1080);camera(1+.065*clamp((t-T.tin)/(T.open-T.tin)));header();
+ const enter=p(t,T.tin,.55);projectCover(140,510+(1-enter)*55,.96);
+ rect(140,220+(1-enter)*80,1640,180,'#0d0c0b',18,'#302b25');
+ const prompt='Grow my recipe app'.split(' '),n=s<T.prompt?0:1+[1,2,3].filter(i=>s>=T['grow-word-'+i]).length;
+ text('› '+prompt.slice(0,n).join(' '),190,275+(1-enter)*80,74,C.cream,'GM');
+ const labels=['Keyword plan','Blog draft','Weekly brief'];
+ for(let i=0;i<3;i++){
+  const at=[T.plan,T.row2,T.row3][i];if(s<at)continue;const k=p(t,at,.45),y=500+i*137;
+  rect(620+(1-k)*220,y,1160,111,C.panel,12,i===1?'#6f6658':'#393229');
+  text(labels[i],664+(1-k)*220,y+26,50,C.cream);
+  text(i?'Weekly':'Monthly',1465+(1-k)*220,y+36,34,C.muted,'GM');
+ }
+}
+function draft(t,s){
+ g.fillStyle=C.coal;g.fillRect(0,0,1920,1080);camera(1+.04*clamp((t-T.draft)/(T.pr-T.draft)));header();
+ const k=smooth((t-T.open)/.75),x=lerp(620,180,k),y=lerp(637,205,k),w=lerp(1160,1560,k),h=lerp(111,750,k);
+ rect(x,y,w,h,C.panel,16,'#393229');
+ // Carry the existing cover through the resize instead of leaving an empty panel.
+ food(lerp(86.7,228,k),lerp(508.05,265,k),lerp(368.064,550,k),lerp(286.272,490,k));
+ if(k<.6){group(x+44,y+27,1,()=>text('Blog draft',0,0,50,C.cream),1-k/.6);return}
+ const a=p(t,T.open+.6,.4);g.save();g.beginPath();g.roundRect(x,y,w,h,16);g.clip();group(x,y,1,()=>{
+  text('10 weeknight',655,75,83,C.cream,'FK',700);text('dinners',655,176,83,C.cream,'FK',700);
+  text('Quick meals.',655,312,46,C.muted);text('Less washing up.',655,378,46,C.muted);
+  const approved=s>=T.approve;rect(1000,592,420,102,approved?'#303a26':C.ember,51);
+  text(approved?'✓ Approved':'Approve',1052,616,49,approved?C.green:'#fff','FK',700);
+ },a);g.restore();
+ if(s>=T.hover&&s<T.approve+.45){const move=smooth((t-T.hover)/(T.approve-T.hover));cursor(lerp(1700,1380,move),lerp(1020,850,move),s>=T.approve?.92:1)}
+}
+function pullRequest(t,s){
+ g.fillStyle=C.coal;g.fillRect(0,0,1920,1080);camera(1+.06*clamp((t-T.pr)/(T.end-T.pr)));header();
+ const k=p(t,T.pr,.45);rect(180,210+(1-k)*45,1560,740,C.panel,18,'#393229');
+ text('Pull request opened',245,265+(1-k)*45,74,C.cream,'FK',700);
+ food(245,405,540,415);text('10 weeknight',865,450,76,C.cream);text('dinners',865,542,76,C.cream);
+ rect(865,735,530,83,'#283222',41);text('Ready for review',904,753,42,C.green);
+}
+function ending(t){
+ g.fillStyle=C.coal;g.fillRect(0,0,1920,1080);camera(1+.04*clamp((t-T.end)/(D-T.end)));const k=p(t,T.end,.5);
+ g.drawImage(logo,140,180+(1-k)*35,210,94);text('Vibe marketing.',140,395,166,C.cream,'FK',700);text('tin.computer',150,749,60,C.ember,'GM');
+}
+window.seek=async t=>{await ready;boxes=[];window.FRAME_COVER=null;g.setTransform(1,0,0,1,0,0);g.globalAlpha=1;g.shadowColor='transparent';g.clearRect(0,0,1920,1080);
+ // Whole-frame scene selection keeps hard-cut content stable across blur samples.
+ const s=frame(t);
+ if(s<T.tin)paper(t,s);else if(s<T.open)workspace(t,s);else if(s<T.pr)draft(t,s);else if(s<T.end)pullRequest(t,s);else ending(t);
+ window.FRAME_TEXT=boxes.map(x=>x.text);window.FRAME_BOXES=boxes;
+};
+</script></html>

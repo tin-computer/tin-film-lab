@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Put the cut music (and an optional SFX track) under the silent picture at -14 LUFS integrated, <= -1 dBTP.
-# Usage: tools/mix.sh <silent.mp4> <music.wav> <out.mp4> [sfx.wav]
+# Usage: tools/mix.sh <silent.mp4> <music.wav> <out.mp4> [sfx.wav] [reference.wav]
 #
 # Two passes: measure the mix, then apply ONE linear gain (so the music's build-to-drop dynamics survive) and a
 # gentle peak limiter (-2.2 dBFS at 4x the sample rate, leaving headroom for the AAC encoder) and verify.
@@ -8,7 +8,7 @@
 # -0.2 dBTP) and squeezed the loudness range from 7.6 to 3.2 LU, flattening the drop.
 set -euo pipefail
 FF="${FFMPEG:-$(cd "$(dirname "$0")/../../.." && pwd)/bin/ffmpeg}"
-v="$1"; m="$2"; o="$3"; sfx="${4:-}"
+v="$1"; m="$2"; o="$3"; sfx="${4:-}"; reference="${5:-}"
 TARGET=-14.0
 if [[ -n "$sfx" ]]; then
   inputs=(-i "$v" -i "$m" -i "$sfx"); pre="[1:a][2:a]amix=inputs=2:normalize=0:duration=first[a]"
@@ -21,9 +21,15 @@ measure() {  # integrated loudness and true peak of the audio of a file or filte
 read -r I _ < <(measure "${inputs[@]}" -filter_complex "$pre;[a]ebur128=peak=true[x]" -map "[x]" -f null -)
 gain=$(python3 -c "print(round($TARGET - ($I), 2))")
 for pass in 1 2; do
+  split=""; outputs=(-movflags +faststart "$o"); audio_label=aout
+  if [[ -n "$reference" ]]; then
+    split=";[aout]asplit=2[encoded][reference]"
+    audio_label=encoded
+    outputs+=(-map '[reference]' -c:a pcm_s24le "$reference")
+  fi
   "$FF" -y -loglevel error "${inputs[@]}" -filter_complex \
-    "$pre;[a]volume=${gain}dB,aresample=192000,alimiter=limit=0.78:attack=1:release=60:level=disabled,aresample=48000[aout]" \
-    -map 0:v -map "[aout]" -c:v copy -c:a aac -b:a 256k -ar 48000 -shortest -movflags +faststart "$o"
+    "$pre;[a]volume=${gain}dB,aresample=192000,alimiter=limit=0.78:attack=1:release=60:level=disabled,aresample=48000[aout]$split" \
+    -map 0:v -map "[$audio_label]" -c:v copy -c:a aac -b:a 256k -ar 48000 -shortest "${outputs[@]}"
   read -r Io TPo < <(measure -i "$o" -af ebur128=peak=true -f null -)
   off=$(python3 -c "print(round($TARGET - ($Io), 2))")
   if python3 -c "import sys; sys.exit(0 if abs($off) <= 0.15 else 1)"; then break; fi

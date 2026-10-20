@@ -1,0 +1,280 @@
+{
+  "checked_date": "2026-10-20",
+  "file": "out/preview.mp4",
+  "sha256": "bb003fe8dd3747882c3be8eb031aa66968967d855ebb552fe75db9bff87c3da5",
+  "bytes": 4625710,
+  "file_checks": [
+    {
+      "name": "size",
+      "ok": true,
+      "expected": "1920x1080",
+      "actual": "1920x1080"
+    },
+    {
+      "name": "fps",
+      "ok": true,
+      "expected": 60.0,
+      "actual": 60.0
+    },
+    {
+      "name": "frames",
+      "ok": true,
+      "expected": 1295,
+      "actual": 1295
+    },
+    {
+      "name": "duration",
+      "ok": true,
+      "expected": "21.583s +-0.018",
+      "actual": "21.583s"
+    },
+    {
+      "name": "vcodec",
+      "ok": true,
+      "expected": "h264",
+      "actual": "h264"
+    },
+    {
+      "name": "pix_fmt",
+      "ok": true,
+      "expected": "yuv420p",
+      "actual": "yuv420p"
+    },
+    {
+      "name": "bt709",
+      "ok": true,
+      "expected": "bt709/bt709/bt709/tv",
+      "actual": "bt709/bt709/bt709/tv"
+    },
+    {
+      "name": "audio",
+      "ok": true,
+      "expected": "present",
+      "actual": "present"
+    },
+    {
+      "name": "acodec",
+      "ok": true,
+      "expected": "aac",
+      "actual": "aac"
+    },
+    {
+      "name": "sample_rate",
+      "ok": true,
+      "expected": 48000,
+      "actual": 48000
+    },
+    {
+      "name": "channels",
+      "ok": true,
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "name": "audio_len",
+      "ok": true,
+      "expected": "21.583s +-0.073",
+      "actual": "21.568s"
+    },
+    {
+      "name": "lufs",
+      "ok": true,
+      "expected": "-14.0+-1.0",
+      "actual": -14.1
+    },
+    {
+      "name": "true_peak",
+      "ok": true,
+      "expected": "<= -1.0 dBTP",
+      "actual": -1.9
+    }
+  ],
+  "source_states": {
+    "sampledStates": 35,
+    "repeatSeeks": 10,
+    "hardCutSubframes": 4,
+    "errors": [],
+    "productStates": "pass",
+    "humanListening": false,
+    "newViewerTest": false
+  },
+  "picture_scan": {
+    "frames": 1295,
+    "pass": true,
+    "fails": 0,
+    "warnings": 15,
+    "flags": [
+      {
+        "check": "spike",
+        "severity": "warn",
+        "frame": 72,
+        "t": 1.2,
+        "note": "a 1-frame change on the cue at f72 (1.184 vs 0.22 around it): fine if it is a designed hit; a fade or reveal that finishes in 1-2 frames reads as a pop",
+        "act": "paper",
+        "mad": 1.184,
+        "cls": "hit",
+        "region": null
+      },
+      {
+        "check": "quiet",
+        "severity": "warn",
+        "frame": "188-287",
+        "t": 3.133,
+        "note": "100 f of near-stillness (mean change 0.058); fine for a read, otherwise add drift or a push",
+        "act": "paper"
+      },
+      {
+        "check": "quiet",
+        "severity": "warn",
+        "frame": "354-424",
+        "t": 5.9,
+        "note": "71 f of near-stillness (mean change 0.099); fine for a read, otherwise add drift or a push",
+        "act": "agent"
+      },
+      {
+        "check": "judder",
+        "severity": "warn",
+        "frame": "396-419",
+        "t": 6.6,
+        "note": "a slow move (0.156 px/f) in p2 [1472, 52, 256, 256] advances in whole-pixel stairs (2 jumps): put all translation inside one transform and animate no left/top",
+        "act": "agent",
+        "track": "p2"
+      },
+      {
+        "check": "spike",
+        "severity": "warn",
+        "frame": 468,
+        "t": 7.8,
+        "note": "a 1-frame change on the cue at f468 (1.158 vs 0.31 around it): fine if it is a designed hit; a fade or reveal that finishes in 1-2 frames reads as a pop",
+        "act": "agent",
+        "mad": 1.158,
+        "cls": "hit",
+        "region": null
+      },
+      {
+        "check": "banding",
+        "severity": "warn",
+        "frame": 480,
+        "t": 8.0,
+        "note": "3.3% of the frame (16 tiles) is smooth gradient in flat 8-bit plateaus: visible bands; use dithered PNG backdrops (red boxes in the sheet)",
+        "act": "agent"
+      },
+      {
+        "check": "judder",
+        "severity": "warn",
+        "frame": "540-563",
+        "t": 9.0,
+        "note": "a slow move (0.102 px/f) in p6 [192, 772, 256, 256] advances in whole-pixel stairs (2 jumps): put all translation inside one transform and animate no left/top",
+        "act": "agent",
+        "track": "p6"
+      },
+      {
+        "check": "judder",
+        "severity": "warn",
+        "frame": "588-611",
+        "t": 9.8,
+        "note": "a slow move (0.113 px/f) in p6 [192, 772, 256, 256] advances in whole-pixel stairs (2 jumps): put all translation inside one transform and animate no left/top",
+        "act": "agent",
+        "track": "p6"
+      },
+      {
+        "check": "quiet",
+        "severity": "warn",
+        "frame": "657-900",
+        "t": 10.95,
+        "note": "244 f of near-stillness (mean change 0.082); fine for a read, otherwise add drift or a push",
+        "act": "draft"
+      },
+      {
+        "check": "banding",
+        "severity": "warn",
+        "frame": 720,
+        "t": 12.0,
+        "note": "5.0% of the frame (24 tiles) is smooth gradient in flat 8-bit plateaus: visible bands; use dithered PNG backdrops (red boxes in the sheet)",
+        "act": "draft"
+      },
+      {
+        "check": "judder",
+        "severity": "warn",
+        "frame": "792-815",
+        "t": 13.2,
+        "note": "a slow move (0.152 px/f) in p0 [192, 52, 256, 256] advances in whole-pixel stairs (2 jumps): put all translation inside one transform and animate no left/top",
+        "act": "draft",
+        "track": "p0"
+      },
+      {
+        "check": "banding",
+        "severity": "warn",
+        "frame": 840,
+        "t": 14.0,
+        "note": "8.1% of the frame (39 tiles) is smooth gradient in flat 8-bit plateaus: visible bands; use dithered PNG backdrops (red boxes in the sheet)",
+        "act": "draft"
+      },
+      {
+        "check": "banding",
+        "severity": "warn",
+        "frame": 900,
+        "t": 15.0,
+        "note": "4.8% of the frame (23 tiles) is smooth gradient in flat 8-bit plateaus: visible bands; use dithered PNG backdrops (red boxes in the sheet)",
+        "act": "draft"
+      },
+      {
+        "check": "spike",
+        "severity": "warn",
+        "frame": 936,
+        "t": 15.6,
+        "note": "a 1-frame change on the cue at f936 (1.577 vs 0.06 around it): fine if it is a designed hit; a fade or reveal that finishes in 1-2 frames reads as a pop",
+        "act": "draft",
+        "mad": 1.577,
+        "cls": "hit",
+        "region": null
+      },
+      {
+        "check": "quiet",
+        "severity": "warn",
+        "frame": "1160-1294",
+        "t": 19.333,
+        "note": "135 f of near-stillness (mean change 0.095); fine for a read, otherwise add drift or a push",
+        "act": "end"
+      }
+    ]
+  },
+  "encoded_audio_sync": {
+    "pass": true,
+    "points": [
+      {
+        "t": 2.424,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "corr": 0.9996
+      },
+      {
+        "t": 8.816,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "corr": 0.9997
+      },
+      {
+        "t": 16.563,
+        "lag_samples": 0,
+        "lag_ms": 0.0,
+        "corr": 0.9988
+      }
+    ],
+    "worst_lag_samples": 0,
+    "tol_samples": 48,
+    "true_peak_dbtp": -1.87
+  },
+  "earshot": {
+    "status": "complete",
+    "sha256": "bb003fe8dd3747882c3be8eb031aa66968967d855ebb552fe75db9bff87c3da5",
+    "earshot": "0.3.0",
+    "human_listening": false
+  },
+  "limits": [
+    "15 picture warnings need human review",
+    "Sampled visual checks, not continuous audiovisual playback",
+    "Existing dependencies and locally supplied licensed inputs were used",
+    "No human listening or new-viewer test"
+  ]
+}

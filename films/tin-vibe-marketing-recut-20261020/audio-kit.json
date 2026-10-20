@@ -1,0 +1,34 @@
+{
+  "kit": 1,
+  "name": "tin-vibe-recut",
+  "sr": 48000,
+  "note": "Three quiet roles under Noir Now. No extra riser, drop, whoosh or logo sting. These are code-made effects, not recordings.",
+  "roles": {
+    "key": {
+      "sound": "pro_typing_key/soft",
+      "takes": 4,
+      "align": "onset",
+      "level_db": -26,
+      "note": "A few short taps follow typed prompt words, not every glyph."
+    },
+    "land.light": {
+      "sound": "fit/land.light/fingertip_book",
+      "takes": 3,
+      "align": "onset",
+      "level_db": -23,
+      "note": "Quiet material contacts for the three task notes."
+    },
+    "click": {
+      "sound": "pro_click/mouse",
+      "takes": 2,
+      "align": "onset",
+      "level_db": -22,
+      "note": "Selection and approval, without a cinematic impact."
+    }
+  },
+  "off": {
+    "suck": "off by default: a reverse whoosh into a cut stacks a build onto the reveal",
+    "riser": "off by default; pro_riser/air_gate is the short opt-in, never a shepard riser",
+    "swell": "off by default: the sub swell of whoosh.long already carries the move"
+  }
+}

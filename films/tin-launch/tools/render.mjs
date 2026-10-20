@@ -2,6 +2,7 @@
 //
 //   node tools/render.mjs video  --page src/index.html --out out/draft.mp4 [--fps 60 --sub 4 --shutter 270 --w 1920 --h 1080 --from 0 --to <dur> --workers 4]
 //   node tools/render.mjs stills --page src/index.html --at 0.5,2.1,7.87 --outdir out/stills [--w 1920 --h 1080]
+//   node tools/render.mjs events --page src/index.html > out/events.json
 //
 // The page must set window.FILM = { duration, width, height } and window.seek = (t) => void|Promise.
 // seek(t) must paint the exact frame for film time t from nothing but t: no timers, no CSS transitions,
@@ -36,7 +37,36 @@ const shoot = async (page, t, type = 'jpeg') => {
   return page.screenshot({ type, ...(type === 'jpeg' ? { quality: 95 } : {}), clip: { x: 0, y: 0, width: W, height: H } });
 };
 
-if (mode === 'stills') {
+if (mode === 'cues') {
+  const browser = await chromium.launch();
+  try {
+    const page = await open(browser);
+    const cues = await page.evaluate(async () => {
+      await window.seek(0);
+      if (typeof window.FILM.cues !== 'function') throw new Error('FILM.cues() is required');
+      return window.FILM.cues();
+    });
+    console.log(JSON.stringify(cues, null, 2));
+  } finally {
+    await browser.close();
+  }
+} else if (mode === 'events') {
+  const browser = await chromium.launch();
+  try {
+    const page = await open(browser);
+    const events = await page.evaluate(async () => {
+      await window.seek(0);
+      const events = window.FILM.events;
+      if (!Array.isArray(events) || !events.length || events.some(e => !e || typeof e.name !== 'string' || !Number.isFinite(e.t))) {
+        throw new Error('FILM.events needs named events with finite times');
+      }
+      return events;
+    });
+    console.log(JSON.stringify(events, null, 2));
+  } finally {
+    await browser.close();
+  }
+} else if (mode === 'stills') {
   const outdir = resolve(arg('outdir', 'out/stills')); mkdirSync(outdir, { recursive: true });
   const ats = arg('at', '0').split(',').map(Number);
   const browser = await chromium.launch();
@@ -96,5 +126,5 @@ if (mode === 'stills') {
   await browser.close();
   console.log(`wrote ${out} (${total} frames, ${((Date.now() - t0) / 1000).toFixed(0)}s)`);
 } else {
-  console.error('usage: node tools/render.mjs video|stills ...'); process.exit(2);
+  console.error('usage: node tools/render.mjs video|stills|events|cues ...'); process.exit(2);
 }

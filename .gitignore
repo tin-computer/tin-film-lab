@@ -42,3 +42,12 @@ films/tin-art/out/board/*
 *.otf
 *.woff
 *.woff2
+
+# Shared local runtimes may be directory symlinks.
+/.venv
+/.venv-earshot
+/bin
+node_modules
+
+# One reviewed final delivery; intermediate frames and audio remain ignored.
+!films/tin-vibe-marketing-recut-20261020/out/preview.mp4

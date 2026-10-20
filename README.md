@@ -9,9 +9,15 @@ For the 460-source sampled review and feature-film brief rules, see [launch refe
 
 | Folder | What |
 |---|---|
+| `tools/cinetic/` | Named picture cues, a 273-technique selector, encoded-file and audio-offset checks. [Guide](tools/cinetic/README.md) |
+| `tools/earshot/` | Optional local sound measurements and model reports, with incomplete-result handling. [Guide](tools/earshot/README.md) |
+| `shortform/` | Claude's selected waveform, preview, text-review and delivery tools, with quiet-window and encoding corrections. [Guide](shortform/README.md) |
+| `films/tin-vibe-marketing-recut-20261020/` | Rebuilt 21.6s Tin feature example. [MP4](films/tin-vibe-marketing-recut-20261020/out/preview.mp4) · [source and setup](films/tin-vibe-marketing-recut-20261020/README.md) |
 | `music/` | The vetted track library with bar-by-bar maps, the cut tool and the film runtime. See `music/README.md`. |
 | `films/tin-launch/` | Product demo film (32 s, 16:9). Final: `out/tin-launch.mp4`. |
 | `films/tin-art/` | Art film in the style of Fable 5 (21.6 s, square). Share copy: `out/tin-art-share.mp4`. |
+
+[Reviewed additions and limits](REVIEWED_ADDITIONS.md) records what was selected from the Codex and Claude work, the failures caught, and what remains local.
 
 ## Setup
 

@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/Leonxlnx/cinetic",
+  "commit": "ecfa6605de1adb9345ce937724810dc32267d068",
+  "modification": "Binary environment variables and adjacent macOS libraries for explicit FFprobe; no threshold changes",
+  "files": {
+    "probe.py": {
+      "upstream_sha256": "a42cb29053ee402b58eff0491779161b77862c4dbd05e36dafcab2a923966dc9",
+      "local_sha256": "62c9b11e0504d4fad43b00e0b38a08d94fd29b1f3546d2c1db51e1ca9abc44e2"
+    },
+    "check-sync.py": {
+      "upstream_sha256": "b8929038f87d20e672e684ab9fc67d01ff5f1bb7b7c9140deec79ccc021b254c",
+      "local_sha256": "4da548608f8f713f745ab51c12ece6ed9cd2a0ade38e2fe923f3d5ee670a8bcb"
+    },
+    "forensics.py": {
+      "upstream_sha256": "d5c199eb1072b75e2c34c5363a7b1c6e1823e15e98867c6b1b7aebe7b3776b76",
+      "local_sha256": "8d44c799bbb16a1a967a43110498922720eda1d3cdf4c25ba288c9ea88e4875f"
+    },
+    "pick.py": {
+      "upstream_sha256": "f54b9ed3469b48ab896987e2730a7554a5e75423c02b4d3e944cadbb212e430e",
+      "local_sha256": "f54b9ed3469b48ab896987e2730a7554a5e75423c02b4d3e944cadbb212e430e"
+    },
+    "library/techniques.json": {
+      "upstream_sha256": "d8d936571cfcbf884002130004f02845f514d6d2d36cfa5676114afc6fc0992b",
+      "local_sha256": "d8d936571cfcbf884002130004f02845f514d6d2d36cfa5676114afc6fc0992b"
+    }
+  }
+}

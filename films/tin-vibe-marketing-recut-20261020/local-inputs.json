@@ -1,0 +1,25 @@
+{
+  "note": "Locally supplied licensed inputs, not redistributed. Provide these before the commands in README.md.",
+  "files": [
+    {
+      "file": "music-cut/music.wav",
+      "sha256": "8ff4c04177fe7758f0453705231ffcaf17fe217ab33e8e87aeba43bf2463307c",
+      "bundled": false
+    },
+    {
+      "file": "src/fonts/eaba2e2cfb641fcd.woff2",
+      "sha256": "507163fcba2bb057c7c6c6f3e1be199432b26f62557a6356fbed800dbacf4f4e",
+      "bundled": false
+    },
+    {
+      "file": "src/fonts/7d4881bb7e1bf84d.woff2",
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "bundled": false
+    },
+    {
+      "file": "src/fonts/cc9346a6dc40c0cb.woff2",
+      "sha256": "58493cacadf88a360915fbc838782c7746cd391a8fe6e7c08aed28d3bf71486e",
+      "bundled": false
+    }
+  ]
+}
