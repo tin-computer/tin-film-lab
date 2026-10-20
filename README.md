@@ -5,6 +5,8 @@ with Playwright and ffmpeg, cut to a vetted and bar-mapped music library, review
 
 Start with [HANDOFF.md](HANDOFF.md): what we did, how it works, what's left.
 
+For the tools, motion elements, music, sound effects, skills and checked source paths, open the [development inventory](inventory/README.md). It separates existing code, reviewed branch additions and local-only work. [Next-work plan](inventory/PLAN.md).
+
 For the 460-source sampled review and feature-film brief rules, see [launch references](research/launch-references/README.md). The tables count known duplicate edits once, and the reports keep sound uncertainty explicit.
 
 | Folder | What |

@@ -1,0 +1,2301 @@
+{
+  "date": "2026-10-20T23:36+03:00",
+  "source_commit": "313c22454b43ea94d821b399c1335ef55eb29155",
+  "counts": {
+    "music": 45,
+    "music_base": 19,
+    "music_local": 26,
+    "selected_sfx": 20,
+    "generated_sfx_roles": 3,
+    "old_mixkit_sfx": 6,
+    "techniques": 273,
+    "ui_groups": 26,
+    "skill_files": 6,
+    "skill_names": 4
+  },
+  "rows": [
+    {
+      "group": "Eklediklerimiz",
+      "title": "Cinetic + ortak zaman çizelgesi",
+      "state": "branch",
+      "origin": "Codex + Claude çalışmalarından seçildi / kontrol edildi",
+      "use": "Hareket fikirlerini seçer; sahne, görüntü ve ses kontrollerini aynı olay zamanına bağlar.",
+      "check": "273 tarif doğrulandı. Yanlış fps ve 80 ms ses kayması kontrol örneklerinde yakalandı.",
+      "path": "tools/cinetic/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "Earshot ses incelemesi",
+      "state": "branch",
+      "origin": "Codex + Claude çalışmalarından seçildi / kontrol edildi",
+      "use": "Son MP4 üzerinden ses seviyesi, olaylar ve görüntüyle zaman farkı raporu çıkarır.",
+      "check": "Eksik/değişmiş dosya açık hata verir. Tin filminde dört rapor üretildi; modelin ses etiketleri kesin kabul edilmez.",
+      "path": "tools/earshot/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "Claude short-form araçları",
+      "state": "branch",
+      "origin": "Codex + Claude çalışmalarından seçildi / kontrol edildi",
+      "use": "Ritme bağlı yazma, önizleme, dalga formu ve son kodlama araçları.",
+      "check": "Kısa sessiz bölümde eksik yazı, yanlış renk aralığı ve ikinci AAC kodlama düzeltildi.",
+      "path": "shortform/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "Referans analizi ve özgün notlar",
+      "state": "branch",
+      "origin": "Codex + Claude çalışmalarından seçildi / kontrol edildi",
+      "use": "460 kaynak kaydı, 458 farklı kurgu, 25 inceleme alanı; kaynaklı hareket ve UI notları.",
+      "check": "Örnek kareler üzerinden inceleme; 46 kullanıcı yorumu ayrı saklandı. Baştan sona dinleme iddiası yok.",
+      "path": "research/launch-references/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "Tin feature örneği",
+      "state": "branch",
+      "origin": "Codex + Claude çalışmalarından seçildi / kontrol edildi",
+      "use": "Tek ürün için istek → yazı taslağı → onay → PR hikâyesi.",
+      "check": "21,58 sn; 1.295 kare. Tarama: 0 hata / 15 uyarı. Üç ses örneğinde ölçülen kayma 0.",
+      "path": "films/tin-vibe-marketing-recut-20261020/CHECKS.json",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "Soru ve hikâye akışı",
+      "state": "local",
+      "origin": "Yerel film-lab geliştirmesi",
+      "use": "Eksik yaratıcı tercihleri sorar; bir ürün eylemi ve sonucuna göre brief hazırlar.",
+      "check": "FILM_FLOW ve talimatlar yerelde. Yeni ve bilinmeyen bir üründe bağımsız baştan sona deneme açık.",
+      "path": "FILM_FLOW.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Eklediklerimiz",
+      "title": "creative.launch_video",
+      "state": "local",
+      "origin": "Ayrı Tin service çalışması",
+      "use": "Tin proje/marka bilgileri ve cevaplardan kısa film üretmek için workflow paketi.",
+      "check": "41 yerel test geçti, 8 atlandı. Bu envanter staging başarısı iddia etmez.",
+      "path": "tin / workflow_packages/creative.launch_video/",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "render.mjs + seek(t)",
+      "state": "base",
+      "origin": "Mevcut altyapı",
+      "use": "HTML sahnesini istenen zamana götürüp Playwright ile kare üretir.",
+      "check": "Var olan renderer; events/cues dışa aktarımı bu dalda eklendi.",
+      "path": "films/tin-launch/tools/render.mjs",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "map_track.py / cut.py / music.js",
+      "state": "base",
+      "origin": "Mevcut altyapı",
+      "use": "Müziği ölçer, bölüm seçer ve sahneye ritim/enerji verisi sağlar.",
+      "check": "19 eski parçada harita var. Harita tek başına kulak onayı değildir.",
+      "path": "music/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "mix.sh",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Müzik ve efektleri birleştirir; karşılaştırma için AAC öncesi WAV saklayabilir.",
+      "check": "Eski çağrı ve isteğe bağlı referans WAV kontrol edildi.",
+      "path": "films/tin-launch/tools/mix.sh",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "timeline.js",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Sahne ve olay zamanlarını tek yerde tutar; eksik/çakışan bölüm sınırını reddeder.",
+      "check": "Aynı olaylar renderer ve kontrol araçlarına aktarılıyor.",
+      "path": "films/tin-launch/tools/lib/timeline.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "pick.py",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "273 hareket tarifinden ürün hikâyesine uygun kısa liste seçer.",
+      "check": "Aynı seed aynı sonucu verdi; önceki seçimleri dışlama kontrolü geçti.",
+      "path": "tools/cinetic/pick.py",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "probe.py / check-sync.py / forensics.py",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Çıktının formatını, ses kaymasını ve sorunlu kare adaylarını tarar.",
+      "check": "Yanlış fps ve 80 ms kayma yakalandı. Uyarıları insan incelemeli.",
+      "path": "tools/cinetic/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "Earshot review.py",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Gerçek dosya için ölçüm, zaman çizelgesi ve ses raporlarını saklar.",
+      "check": "Dosya hash kontrolü var; eksik rapor başarı sayılmıyor.",
+      "path": "tools/earshot/review.py",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "sync.js",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Yazı gruplarını ve kesimleri ölçülen müzik zamanlarına yerleştirir.",
+      "check": "Kısa sessiz aralıkta tüm karakterler korunuyor; yedek zamanlar gerçek vurgu diye etiketlenmiyor.",
+      "path": "shortform/tools/sync.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "stage.js / guides.js",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Film önizlemesi, kare adımı ve yaklaşık platform kaplama alanları.",
+      "check": "Kare adımı ve kılavuz gizleme kontrol edildi.",
+      "path": "shortform/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "events.mjs / syncplot.py",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "Film olaylarını dışa aktarır ve dalga formu üzerinde gösterir.",
+      "check": "Claude okuma filminde olay dışa aktarımı ve çizim çalıştırıldı.",
+      "path": "shortform/README.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "deliver.sh",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "H.264 / BT.709 çıktı üretir; önceden karıştırılmış AAC sesini korur.",
+      "check": "İki giriş renk aralığı, kare sayısı ve AAC paketlerinin değişmemesi kontrol edildi.",
+      "path": "shortform/tools/deliver.sh",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "slopcheck.mjs",
+      "state": "branch",
+      "origin": "Bu dalda eklenen / güncellenen",
+      "use": "DOM filmindeki ek başlık, çok küçük yazı ve metin yoğunluğu için aday uyarıları listeler.",
+      "check": "Mevcut araç. Yeni kapsam genişletmesi bu planda yok.",
+      "path": "shortform/tools/slopcheck.mjs",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Araçlar",
+      "title": "sfx.py / sfx-events.mjs / sheets.sh",
+      "state": "base",
+      "origin": "Mevcut altyapı",
+      "use": "Efekt üretimi/zamanlama ve inceleme kareleri için eski film araçları.",
+      "check": "Mevcut altyapı; yeni eklenmiş araç gibi sayılmıyor.",
+      "path": "films/tin-launch/tools/",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "critique · tin-art",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "Kare ve taslağı inceleyip en zayıf yerleri tekrar ele alma.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-art/.claude/skills/critique/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "materials · tin-art",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "Görsel/doku bulma, kaynak ve kullanım hakkı kaydı.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-art/.claude/skills/materials/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "motion-film · tin-art",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "seek(t) sahnesi, hareket ve render süreci.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-art/.claude/skills/motion-film/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "critique · tin-launch",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "Kare ve taslağı inceleyip en zayıf yerleri tekrar ele alma.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-launch/.claude/skills/critique/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "motion-film · tin-launch",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "seek(t) sahnesi, hareket ve render süreci.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-launch/.claude/skills/motion-film/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "music-sync · tin-launch",
+      "state": "base",
+      "origin": "Ege’nin mevcut repo altyapısı",
+      "use": "Müzik seçimi, kesiti ve sahnelerin ölçülen ritme bağlanması.",
+      "check": "Önceden vardı. Bu altı dosya dört farklı skill adı içerir.",
+      "path": "films/tin-launch/.claude/skills/music-sync/SKILL.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "FILM_FLOW / AGENTS / CLAUDE",
+      "state": "local",
+      "origin": "Yerel talimat güncellemesi",
+      "use": "Ürün bilgisi → eksik sorular → brief → hikâye → kaynak → render → inceleme.",
+      "check": "Önceki ürünün tercihlerini yeni ürüne taşımama; az yazı ve ürün eylemi kuralları eklendi.",
+      "path": "FILM_FLOW.md / AGENTS.md / CLAUDE.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Skill ve talimatlar",
+      "title": "launch-video / RENDER",
+      "state": "local",
+      "origin": "Tin workflow skill’i",
+      "use": "Studio içinde film üretme ve kontrol adımlarını anlatır.",
+      "check": "Yerel Tin paketi. Bu kayıt, skill’in herkese sunulduğu anlamına gelmez.",
+      "path": "tin / workflow_packages/creative.launch_video/skills/launch-video/",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Açılış · 10 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Four live cells from frame 2 — There is no title. The film opens on a flush 2x2 grid where every cell is already mid-action (a line assembling, a counter ticking, an object orbiting, a pin dropping), so from its first frames the frame reads as one living system.",
+        "Macro number scramble, one-frame snap-out — Huge digits fill and overflow the frame, re-rolling every frame. On one frame the view cuts back to the whole figure, which rolls into the final metric and holds: the number is the hook before any brand appears.",
+        "Mark builds, then is thrown into a macro of itself — On frame 1 a dot swells into the brand mark. The mark grows briefly, holds for a breath, then shrinks away faster and faster and hard-cuts at peak speed to a frame-filling macro of the same mark, which keeps pulling back.",
+        "Sparse intro, drop on the first hard cut — (Sound and picture.) The first ~2 s carry only light plucks or a filtered, wide pad under the opening type; the low end and the kick land exactly on the frame where the punchline card or first product shot cuts in.",
+        "Cursor into a field, two-stage push, typed provocation — A small search pill sits still on a dark stage; a text cursor drifts in, the camera pushes in twice to a macro framing, and a provocative query types into the field before any brand appears.",
+        "Oversize line flies through, restarts small — A huge fragment of the headline, about a quarter of frame height, brakes in from the right with its letters fading on as it slows, then dissolves; three frames later the same line restarts small and centred so it can be read.",
+        "Problem pile-up, freeze, turn — The film opens inside the problem: cards, alerts or rows pile in faster and faster while a counter climbs, the picture freezes for a breath of true silence, and the turn hits on the downbeat.",
+        "Finished result first, then rewind — The film opens on the finished end state at its most impressive, holds for a beat, then visibly rewinds every element back to the empty start, where the story begins playing forward.",
+        "A click starts the film — From frame 0 a cursor is already travelling toward the one button on an otherwise bare stage; it presses, and the button floods open into the first scene.",
+        "Cut in mid-sentence, pull back to the line — The film opens inside one giant word, its first letter cropped by the frame edge as if cutting into a thought mid-sentence; after a beat the camera pulls back to reveal the whole sentence at reading size."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Geçiş · 22 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Velocity handoff cut — The outgoing shot speeds up in one direction and is cut on its fastest frame. The next shot opens already moving the same way and brakes to rest, so momentum runs straight through the edit.",
+        "Scale-through cut — An object shrinks faster and faster toward a fixed point, the film cuts, and a matching object appears much larger on the same point and keeps shrinking as it brakes, so one pull-back runs through two different worlds. The mirror version swells into the cut and opens on an undersized object that grows.",
+        "Anchored overlay, background swap — A foreground element (a pin, a status pill, a modal, a big word) keeps its exact screen position while the world behind it hard-cuts, so a total change of scene reads as a change of zoom or context.",
+        "Polarity flip cut — A hard cut flips the stage between near-black and near-white on a downbeat, often with the same icon or pill held on the same spot in inverted colours, so the luminance jump itself is the accent.",
+        "Shape match cut — The hero shape leaves one shot at a known point and size, and the next shot opens on a matching shape (the mark, the flat UI, the real object) on the same point, so the object's identity carries across a change of world.",
+        "Giant word punch-out — A hard cut lands on an extreme close-up of an oversized word sliding fast and braking, its letters resolving one by one. A second cut jumps out to the whole word at reading size, arriving with wide tracking that slams together.",
+        "Collapse to a dot relay — The hero collapses into one small dot, or the whole world shrinks into it. The dot, the only thing that survives, opens into the next object: a check ring, an avatar, the mark.",
+        "Defocus cut — The outgoing shot throws itself out of focus in a few frames, the film cuts to a shot that is still fully defocused with its content already moving, and the lens snaps sharp as that content settles.",
+        "Path relay — A line and its lead dot carry the eye from one place to the next. The connector bends around a rounded corner with the camera following, or continues across a cut and enters the next shot from the same edge at the same angle.",
+        "Iris from a glyph — A small dot appears on a word or icon in the current shot and balloons exponentially to swallow the frame, showing the next scene inside it, so the reveal starts from content rather than from nowhere.",
+        "Portal zoom with aspect morph — A window opens in the middle of a solid tile. Tile and window grow faster and faster while the square stretches to 16:9, until the window's interior is the next scene and the tile's border has flown off the edges.",
+        "Band wipe — A band crosses a region (snapping up, lingering, then whipping off, or sweeping across a chart) and the content changes along its edge: the old state is erased under it and the new state draws in its wake.",
+        "Horizon rise — A huge disc rises from the bottom edge like a planet horizon, its rim washing over the frame, until its dark core swallows the screen and becomes the stage for the next line.",
+        "Product surface cover wipe — A product surface (a UI panel, a window, a device) moves in front of the old shot and either passes straight through it with the scene changed behind it, or lands and becomes the new shot.",
+        "Reveal by subtraction — The clutter in front of the hero flies off toward the frame edges or shrinks away, uncovering a hero that was already sitting at its final size behind it.",
+        "Conveyor line swap — The current line floats up and fades, the stage is empty for an instant, and the next line rises from below into the same spot, so a run of statements reads as one upward feed.",
+        "Motion-masked swap — Content changes on exactly the frame something else moves fastest (background rings whipping past, a card kicking into a tilt), so the change hides inside the motion and two states chain in one space with no visible cut.",
+        "Tip-back exit — The outgoing scene tips away from camera like a sheet laid onto a table, or flips up into a line, speeding up and fading into the next stage colour, and the next element lands on the clean field.",
+        "Envelope-matched type cut — A big line hard-cuts to a much smaller, longer line whose words start spread apart so it spans exactly the old line's width, then the gaps close while the sideways drift carries on, so the outer edges of the type survive the cut.",
+        "Angle change on a shared drift — A hard cut jumps to a new angle or the next state of the same object (front to top-down, open to closed) while the slow zoom or pan carries on at exactly the same rate, so a calm shot changes viewpoint with no jolt and no speed ramp.",
+        "Select and retype swap — A finished headline is selected like text in an editor, the highlight holds for a beat, and on one frame the selection is replaced by a caret that types the next line in the same place.",
+        "Stepped column fill — Columns rise from the bottom edge in a stepped pyramid centred under the hero, spreading outward until they close into one solid field that becomes the next stage behind it."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Kamera · 22 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Living hold creep — Under every hold the frame keeps a barely visible push, pull or sideways drift, so no shot sits dead while the viewer reads.",
+        "Breathing zoom between interactions — After a reveal the camera slowly pulls back, coasts through a stop and turns smoothly into a slow push that lands on the next interaction, so the frame breathes across a whole act.",
+        "Punch-in insert on the same render — A hard cut jumps from the wide view to a 2-2.5x on-axis close-up, or to a 3-4.5x macro of the exact control being used, while every animation keeps running, then cuts back out.",
+        "Detail first, then pull back — A shot opens tight on the one thing that matters (giant prompt words, a chart counting up, a status pill) with no chrome, then the camera pulls back to show it sitting in the full window.",
+        "Hero push with a 3D turn — From a wide view of the whole app, one continuous move pushes 2.5x into a single panel while yawing, so the panel turns toward the viewer and an empty side of the frame opens for the caption.",
+        "Dolly surge with a foreground pass — The camera surges from a wide shot into a 3x medium close-up, with most of the travel in half a second, and at the fastest moment a near object rushes past the lens before a long, slow creep.",
+        "Push-in with a roll swing — The camera dives into one corner of the UI, rolls a few degrees off level mid-dive like a hand-steered move, and rolls back to level as it lands.",
+        "Isolating push into one item — The camera pushes into one row, card or column while everything around it fades, dims or slides off the edges, picking a single thread out of a busy layout.",
+        "Reactive reframe — When something new appears (a popover, a result, the hero icon), the camera glides a few hundred pixels and pushes in slightly until it sits where the eye wants it.",
+        "Pull-back that lands an event — A long, gentle pull-back runs from a close-up to the full view, and as it decelerates the next UI event (a modal, labels, a caption) starts, so it lands together with the camera's settle.",
+        "Cursor-led whip orbit — Following a cursor that leads the way to the next panel, the camera swings fast across the product, yawing to show the slab's thick edge and rolling slightly.",
+        "Off-frame whip relay — The cursor accelerates up and out of frame, the camera whips down the product while it's hidden, and the cursor re-enters from the top as a fast streak that brakes onto its target.",
+        "Follow the lead dot — A small lead (a progress dot, a travelling packet, a drawing line's head) moves through the layout and the camera follows it with a soft lag, never quite stopping, so the viewer always knows where to look.",
+        "Crane down with a delayed push — The camera tilts down the page past the chart to the detail cards while a slow push-in builds behind it, as if the operator were leaning in to read.",
+        "Extrude then crash in — An object grows toward camera (a disc extruding into a tall cylinder) and the camera slams into it, hard-cutting to its interior while still rushing forward.",
+        "Directional impact kick — On a true impact (a card landing, a lock-in, a slam) the whole frame jolts a few pixels in the direction of the hit and pushes a hair closer, then settles within a fifth of a second.",
+        "Layered parallax truck — The camera trucks sideways across a scene split into two or three depth planes: the background barely moves, the subject moves with the camera and a near element slides past faster, so a flat layout reads as space.",
+        "Seamless loop drift — In a looping clip the camera drifts along a slow, closed figure-eight (a little sideways, a little up, breathing in and out) and returns exactly to its first frame, so the loop has no seam.",
+        "Pull out from inside the object — The shot opens on what reads as a full-bleed colour field or a statement card, and one long pull reveals it was the face of a small object (an app icon, a card, a screen, the mark) sitting among its neighbours.",
+        "Fly-through of a depth field — Dozens of flat screens or tokens float at different depths and the camera travels forward through them: near ones swell and slide off the frame edges, far ones barely drift, until the move lands square on one hero screen.",
+        "Fit-to-content follow — As a route, graph or plan builds, the camera widens just enough to keep every piece that matters in frame, so the shot opens close on the first node and ends on the whole structure.",
+        "Zoom-out hop between areas — To travel between two distant parts of one product, the camera eases back as it sets off, crosses at a wider framing that shows where it is going, and pushes back in as it arrives."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Yazı hareketi · 25 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Phrase clamp at a junction — Two halves of a phrase arrive from opposite directions and lock on one baseline at a fixed junction, like a clamp closing.",
+        "Slot roller beside a fixed phrase — A fixed phrase holds still while the word in its slot rolls through alternatives one line at a time, speeding up until the last one lands.",
+        "Masked baseline rise — Each word rises out of an invisible line at its own baseline, tops of the glyphs first, as if cut out of the layout.",
+        "Blur-to-focus word rise — Words materialise one per beat out of a soft blur, rising a few pixels and darkening to full ink as they sharpen.",
+        "In-place word light-up on beats — The finished line is laid out from the start and its words light up in place, chunk by chunk on the beat, with the last word held back.",
+        "Time-boxed eased type-on — Text types in with most of the line appearing in the first few frames, and every line, short or long, finishes in the same musical length.",
+        "Re-centring line build — Words or typed glyphs join a centred line one at a time while the whole line glides sideways so it is centred on every frame.",
+        "Staggered word roll — The words of a phrase roll up and away one after another while their replacements rise in from below, so one sentence mutates instead of cutting.",
+        "Reading-order word exit — Words leave one by one in reading order, each lifting a few pixels and vanishing, until only the hero element is left on screen.",
+        "One-word slam sequence — A line is read one huge word at a time: each word hits oversized and blurred, settles, then is sucked away as the next word cuts in.",
+        "Multi-direction slam assembly — Each word of a short sentence flies in from a different side, oversized and streaked, and the sentence assembles on one baseline almost at once.",
+        "Oversize word slide-in — A huge word arrives streaked from beside the frame and brakes on a long tail, and a trailing word follows from further out and closes the gap so the phrase locks together.",
+        "Blur-swap rescale — A big word blurs out and instantly re-forms smaller as the start of the full line, so the type changes scale without a rubbery size tween.",
+        "Hard-step edits that act out the copy — The headline does what it says with one-frame edits: broken words click straight one at a time, or words delete from the end faster and faster.",
+        "Shared-letter morph — One word turns into another: the letters both words share stay and slide into place while the new letters tumble in and click upright.",
+        "Scramble decode — A string of random glyphs locks into the real text from left to right, or real letters roll through the alphabet into gibberish and back.",
+        "Travelling front restyles a word — A front sweeps left to right across a settled word and restyles each glyph as it passes, in colour or weight, sometimes with a cursor riding under it.",
+        "Words spill out from behind a mark — A glyph or icon slides aside and the words shoot out from behind it, clipped at its edge, as if the mark were delivering the message.",
+        "Vertical word stack — In a tall frame each new word lands on its own line under the last while the stack rises one line, so the newest word always sits on the optical centre.",
+        "Slice-band glyph assembly — Each letter builds up from thin horizontal slices that slide in from slightly different offsets at slightly different moments, faint and pale at first, until the word locks solid.",
+        "Slice glitch into a speed streak — A word jolts into sideways-displaced horizontal slices for two frames, then stretches into a solid capsule that races off as a streak, and the next word lands in its wake.",
+        "Scaled-echo extrusion — A hero title carries two or three faint copies scaled out behind it, a short depth extrusion that compresses as the title lands and then holds.",
+        "Quiet type swells on the drop — A word appears small and low-contrast and waits through the build, then swells to hero size, with 90% of the growth landing exactly on the beat drop.",
+        "Centre-out line unmask — A short line opens from its own centre outward behind a soft-edged mask while the letters stay perfectly still, so a result or status reads as unveiled rather than flown in.",
+        "Animated line re-break — A centred one-line statement re-breaks into a two-line stack, or back, with every word gliding from its old slot to its new one, so the layout changes without a cut or a jump."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "UI hareketi · 19 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Orbit gather and merge — Tokens swing into orbit around a node, slow to a lazy spin, then accelerate one by one into a single exit point from which a line shoots out.",
+        "Path fractures into a fan, then re-converges — A solid line draws out, breaks into dashes, splits into a fan of curves that end on obstacle pills, and later the curves funnel back into one point that becomes the next diagram.",
+        "Stalled state by dimming — A token stops on its rail, the destination greys out, short status words appear one after another, and the frame goes briefly still so the blockage is felt.",
+        "Clutter pile-up, then strip to one — Clicks spawn copies of a control until the frame is a messy pile, then elements vanish one per beat and the survivors snap to re-centre until a single tile remains.",
+        "Cards dealt or dropped into a grid — Cards land in a row or grid one after another, either dealt fast with a small tilt that squares up, or falling from just in front of the camera and shrinking into their slots.",
+        "Container resizes, content reflows — A card or window changes size because its content or the user changes it, growing as typed text wraps or narrowing as an edge is dragged, while everything inside reflows to the new width.",
+        "Row cascade — List rows or cards appear one after another from top to bottom, each rising a few pixels as it fades in, so the list reads as data streaming in.",
+        "Fanned stack resolves into slots — A tilted, overlapping stack of cards spreads into an even row, or each card flips to show its face and flies small into a slot of a list grid where its label resolves.",
+        "Lens list scroll — A list scrolls with momentum past an invisible lens line, and each item's size, tint or tilt depends on its distance from that line, like a phone picker, a rolodex cylinder or a smile-shaped arc.",
+        "Toss into a bin with one rebound — Icons or chips are thrown into a container that rises in to catch them, drop through its mouth and peek back out once before settling.",
+        "Push-aside with bound layout — An incoming panel or card enters from the edge and the neighbouring content moves aside because it is bound to the panel's edge, so one motion moves two elements and nothing overlaps.",
+        "Outline-led insert and spawn — A thin accent line or a heavy outline appears first and opens into a new row or a modal, then the stroke decays to a hairline so the content takes over.",
+        "Spawn from the anchor point — Menus, popovers, drop targets and detail cards scale out of the exact point that caused them, such as the cursor tip or a map pin, and collapse back into it.",
+        "Shell first, then contents, then the action — The empty container is on screen first, its contents arrive left to right, the card unfolds downward in stages, and the primary button fills last as the clear call to act.",
+        "Top insert pushes the list down — New items arrive at the top of a list one at a time and every earlier item slides down one slot, on a steady metronome that reads as abundance or on a slower cadence where each row resolves as it is generated.",
+        "Container morph into its next role — One element changes shape into what it becomes, a button unfolding into a panel, a card stretching into a detail view, a pill collapsing into an app tile, so there is no navigation cut to explain.",
+        "Drag to reorder, siblings make way — An item lifts under the cursor, travels on a slight arc to a new position while its neighbours slide aside one slot at a time, and settles into place with a firm landing and no bounce.",
+        "Progress spine leads the steps — A thin line grows down the side of a step list with a dot at its head. Each step appears as the head reaches it, works with a spinner and a typed detail line, then flips to done, and the list scrolls to keep the head in view until the line turns a rounded corner toward the result.",
+        "Genie launch from an icon — A dock or home-screen icon flares open at its top into a curved funnel that keeps widening until it fills the frame, and the app's first screen is already sitting inside it."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Veri ve sayı · 17 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Ease-out count-up from a near-final value — A proof figure counts up in place from a credible value just below its target and decelerates, so the last units tick in one at a time and it reads in about half a second.",
+        "Companion glyph swaps mid-count — A small icon riding a counting number (a flag, an avatar, a status glyph) swaps to its destination state when the count crosses a threshold, then drops from superscript to the baseline.",
+        "Process-status pill with ring progress — A compact capsule shows where a process stands in one glance: a live dot, a mono step label, a ring filled to the current percentage, the step count and a grey date.",
+        "Metric as the first statement — The film opens on its proof number already moving, with no title and no logo, and the brand waits for the end lockup.",
+        "Tucked unit under the last digits — A small lowercase unit word fades in right-aligned under a big number's last digits, its top overlapping the numeral's baseline, so number and unit read as one mark.",
+        "Hero bar in close-up, then pull back — The winning bar (or the hero chart) grows across a tight frame, then the camera eases back to show the whole chart, with the grey comparison bars and their values.",
+        "Mini bar-chart answer card — Inside a chat or a panel, an answer arrives as a small card of labelled horizontal bars that grow in sequence, followed by a one-line insight that states the key figures.",
+        "Line chart draws with a tracking head — A line or stepped series draws left to right behind a solid dot at its head that the eye can follow, accelerating through the middle and creeping into its last point.",
+        "Constant-speed bar sweep with lit caps — A row of bars grows in a wave that travels at constant speed; each bar eases up on its own and flashes a bright cap that relaxes to the resting tone.",
+        "One control drives several live numbers — Dragging a slider visibly drives every dependent figure in lockstep, and the fill changes tint once it passes a marked threshold.",
+        "Flag cascade, then one chosen — Status marks appear on a set of cards one after another, then a single card switches to the accent state: many flagged, one picked.",
+        "Top-to-bottom row refresh — When a filter changes, a thin scan line crosses each table row in turn from top to bottom, and the row's icon, label and values change behind it.",
+        "Mechanical digit reel — Each digit sits in its own masked column and rolls vertically like an odometer: the low columns spin while the high ones step once, landing column by column.",
+        "Ring gauge filling with its centre number — A circular gauge sweeps to its value while the number at its centre counts on the same progress, and the ring's end cap leads the eye around.",
+        "Before-to-after with a delta chip — The old figure steps back to a small grey 'before', the new figure counts in at hero size, and a delta chip ('-38%') pops in the accent on the landing frame.",
+        "Unit grid that fills to the count — A grid of small squares, each standing for a fixed number of units, fills in a diagonal wave while a counter beside it reaches the total, and one cell lands in the accent.",
+        "Area-true ratio comparison — A multiplier claim ('10x smaller') plays as a block that shrinks in log space to the area the ratio implies, leaving an outline of its old size behind."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Ürün gösterimi · 22 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Device rises already moving — A phone or app window enters from below already travelling on the cut frame and decelerates into place near centre while the whole shot slowly scales down.",
+        "Tilted product plane flattens — A real product page lies tipped back in perspective, rises toward the camera and rotates flat to face the viewer, landing the product as a frontal screen.",
+        "Hard swap on the cause frame — On a click or selection the product image, view or value changes in one frame with no crossfade, any price or count rolls up from just below its new value, and a physical card can hide the swap in a small 3D kick.",
+        "Generated view resolves from soft — A freshly generated window or row appears as a soft, out-of-focus shape over a flat placeholder plate and snaps into crisp UI in about a third of a second.",
+        "Agent status beat, then streamed answer — The product's tiny working status is shown at hero size, as a black capsule with a spinner and a typed label or as bare headline type, holds for a beat with a looping ellipsis or shimmer, then dissolves as the answer streams in.",
+        "Headline becomes the product input — Without a cut the headline turns into the product: a caret appears in the gap between two words, swells into a capsule and widens into the input bar that shoves the words aside, or the sentence inside a card dissolves while the card reshapes into the input.",
+        "Fast prompt at true scale — The real prompt bar fills with a long, honest instruction in about a second at full legible size, the card growing as lines wrap, then the text is sent up into a chat bubble.",
+        "Mark docks into the app — An integration mark or icon travels to an app tile or page and settles overlapping its face, rising in front of it at the moment of contact, so it reads as plugging in.",
+        "Edit with the product's own UI — Instead of cuts, the film moves between product areas the way the app does: a window recedes to a corner, a sheet slides up, a popover pops from its anchor, a button or card unfolds into a full panel.",
+        "Shared element survives the page change — The cursor clicks a row; the page drains away except the row's icon (or the clicked card), which stays exactly in place while the next page assembles around it with a short zoom-out.",
+        "Flick scroll lands the target — A list or page scrolls like a trackpad flick, entering already fast or ramping up briefly, then glides on an exponential tail until the target row rests at its reading position.",
+        "One native control as the demo — Instead of a screenshot, the feature is shown as the single control that embodies it (a picker wheel, a toggle, a segmented switch) at large scale, centred, with no chrome, doing only its native interaction.",
+        "Drag assets in, skeletons fill — The cursor drags a fanned stack of images into the input; after the drop they appear as grey skeleton thumbnails that fill with the real images one by one.",
+        "Pin field pull-back — A map pulls back from a close view to reveal a field of location pins that drop in as accent marks and relax to ink, then a card grows out of the pin the cursor picks.",
+        "Before/after drag divider — The cursor grabs a vertical divider on the product and drags it across, wiping away the old state to reveal the new one in the same layout.",
+        "Long page flown like a runway — A whole long page lies on a steeply tilted plane that recedes to a horizon, and the view travels along it faster and faster, so the page reads as one landscape and is cut at full speed.",
+        "Ghost suggestion accepted with a key — As someone types, the product proposes the rest of the line as pale ghost text after the caret; a small key chip appears, the key is pressed, and the ghost text inks in left to right as the caret jumps to its end.",
+        "List narrows with each keystroke — A shortcut opens a command palette or search field, and as the query types the list answers every key: non-matching rows fold away, survivors slide up, matched letters ink in, and the highlight rides the top result until Enter.",
+        "Scrub a chart with a live readout — The cursor glides across a chart; a hairline and a dot ride the series beneath it and a small readout shows the date and value at that point, stepping from data point to data point until it lands on the one that makes the claim.",
+        "Command runs, output prints in bursts — A command is typed at human speed and entered; the terminal answers machine-fast, printing whole lines in uneven bursts with a stepping spinner and a progress bar, and ends on a single success line.",
+        "Change applied as a visible diff — A proposed edit lands in a code or document view as a diff: outgoing lines strike through and fold away, incoming lines open in place with a marker in the gutter, and the view steps hunk by hunk before the change is accepted.",
+        "Several people at work at once — Two or three named cursors move and act on the same canvas at the same time, each in its own rhythm, while presence avatars stack in the corner, so collaboration reads without a word."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Logo ve kapanış · 18 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Mark slides aside, name follows — The centred mark glides sideways, shrinking if it was hero-sized, to open its slot, and the name resolves beside it just before the mark stops, so the lockup forms in one gesture.",
+        "Name types backwards, group stays centred — The name appears from its last letter to its first while the mark is pushed outward, so the lockup grows out of the mark's edge and stays centred on every frame.",
+        "Pull out of the mark, undershoot, breathe — The mark arrives so large that only fragments of it fill the frame, collapses to slightly smaller than its final size, then gently breathes up to rest, as if the camera had found it.",
+        "Dark slam, spin and brighten — After a near-still beat, giant low-contrast arms of the mark sweep over the frame, and the mark rushes back to logo size while spinning into place and brightening to full contrast.",
+        "Seed build with stroke draw-on — The mark grows from a small seed while its strokes, stripes or arcs draw on in a quick stagger, so it assembles itself in about half a second and the label rises in beside it.",
+        "Liquid blob resolves into the mark — A dot, or two soft lobes sliding in from the sides, swells into a liquid blob that stretches, splits and snaps into the crisp geometric mark.",
+        "Staircase echo shape morph — A large brand shape collapses into a slim pill around the URL, and mid-morph its moving edges show stepped echoes from staggered copies, like a mechanical transformation.",
+        "Story object becomes the mark — The film's last object (a dot, circle, coin or pill) ends at exactly the mark's screen position and size, and the mark replaces it by a hard cut or an in-place morph, so the logo arrives as the answer to the story.",
+        "Words part, URL types into the gap — The closing line splits at its middle, both halves slide outward and dim, the URL types letter by letter into the gap, and the flanks fade so the URL holds alone.",
+        "Card shrinks to a pill, words close in — The last content card empties and shrinks into a small pill while the tagline words slide in from beyond the frame edges, blurred to sharp, to sit on either side of it; then the logo appears inside the pill.",
+        "CTA line closes its gaps — The end line starts with exaggerated spaces between its words, which close as the line settles centred; the last word, often the URL, travels farthest, so the eye ends there.",
+        "The product clears the stage — The last product element leaves (dropping out of frame, accelerating away, or bursting outward toward camera), and the brand, already waiting behind it, starts its reveal on the exact frame it is uncovered.",
+        "End card replays the opening — The ending reuses the opening's stage and its mechanic, now carrying the brand, so the film closes on a rhyme the viewer has already learned.",
+        "Lockup keeps building through the hold — Once resolved, the lockup never freezes: the card slowly pushes in (or exhales back), the tracking tightens a touch and the stage dims, so the last 1.5-2 s read as intentional rather than stalled.",
+        "Stop-motion brand strobe — A burst of hard-cut brand states (the poster, the lockup tiled in ever denser grids, one flood, the boxed wordmark, the glyph) flickers past in under a second as a punchy sign-off.",
+        "Accent icon cools to its neutral mark — The app icon pops up from tiny in the film's hot accent, cools through darker tones to its neutral final colours, lifts a little to make room, and the name fades in beneath it.",
+        "Mark turns through a key light — The mark (an extruded glyph, a coin or a tile) turns a few degrees in 3D, and its face passes through a light, so a single specular sweep crosses it as it settles face-on.",
+        "Device keeps time inside the lockup — During the hold, the story device that became part of the mark (a dot, a bar, a stripe) gives one or two small ticks on the beat, so the bookend plays inside the finished lockup instead of after it."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Renk ve ışık · 25 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Monochrome world, one accent — Everything is black, white and grey, and one saturated accent marks the single element in each shot that carries the meaning.",
+        "One-hue light ramp — Every lit thing (rims, rings, stage lifts, the end-card field) comes from adjacent lightness steps of one hue on a single near-black stage.",
+        "Accent ground for claims only — Narrative shots sit on the neutral stage, other claims flip to the opposite neutral, and the single full-bleed accent ground is saved for the hero claim or the closing card, so colour works as punctuation.",
+        "Single inversion card — In an otherwise dark film, one card cuts to a near-white field with dark type for one second, marking the key promise.",
+        "Theme flip mid-move — In the middle of a camera fly-over, the dark page and stage flash to their light versions, top first, and the motion never pauses.",
+        "Palette shift as context cue — The world's colour changes behind a steady foreground, for a whole act or for one beat, to say 'new context' or 'this is the moment' without words.",
+        "Ink resolve on arrival — Text never simply fades in: it arrives pale (or dim on a dark stage) and darkens or brightens to full ink as it settles.",
+        "Accent on the newest arrival — Whatever just arrived (a typed character, a snapped word, a generated pill) wears the accent for a moment and then settles to neutral, so a short coloured wake leads the eye.",
+        "Accent hit envelope — On a press or an impact, the element floods with the accent and peaks for one frame with its label inverted, then either bleeds back like decaying light or stays as the new state.",
+        "Specular sweep — A soft bright band glides once across a settled number, word or logo face, so the element looks locked and made of a real material without moving.",
+        "Rim streak on card edges — A bright streak travels along a dark card's border while its edges carry a faint lit rim, separating it from a black stage without a drop shadow.",
+        "Travelling tone band fill — A word, URL or logo mark fills through a band of colour (dark, then accent, then light) that sweeps across it and settles on the final ink.",
+        "Living gradient stage — Behind static cards the background never freezes: soft pools of colour at the corners breathe in brightness or drift slowly, like light through water.",
+        "Light swell bridge into the hero — Light swells around a small panel until the frame is bright, the film cuts on the brightest frame to the hero card sitting in the same light, and that light slowly exhales back to dark.",
+        "Rising colour wash carrier — A soft single-hue field rises from the bottom edge behind the type, swells and sweeps up across the frame on the change, then recedes off the top, so the foreground swap reads as one move.",
+        "Drain the stage, keep the hero — Everything around the hero fades and the world drops to dark or bleaches to white, while the hero stays crisp in place, isolating it or closing a section.",
+        "Tilt-linked sheen — As a card or device tilts in 3D, a faint highlight band slides across its face in step with the angle, so the surface reads as a real material catching a key light.",
+        "Duotone until featured — Screenshots and photos sit in a two-tone grade until their beat. Then full colour opens out from the point of interaction, and the previous item returns to duotone.",
+        "Key-light edge hairline — Every card, device bezel and bevelled shape on a dark stage carries a hairline edge that is bright on the side facing one fixed key light and fades to nothing on the far side, so surfaces separate from black without shadows or halos.",
+        "Brightness rides the move — A mark or icon takes its brightness from the same progress that drives its scale or depth, so an oversized pass stays a dark shape and the object reaches full brightness exactly as it lands.",
+        "Now, was, next tone ladder — Items in a sequence sit on three neutral tones: the one being read is at full ink, the ones already read step down to a mid grey and stay as context, and the ones still to come wait in a dim grey.",
+        "Graphic softens into the stage — A crisp graphic that has just finished its move, such as a wall of bars or a stripe field, loses its edges, widens and keeps drifting until it has become the soft backdrop for the next title, with no cut.",
+        "Rolling band flood — A light frame fills with the brand colour as soft horizontal bands of it roll upward and grow opaque. The text tints and dissolves into it, and the film arrives on its end-card field without a cut.",
+        "Shadows tinted by the stage — On a tinted light stage, lifted cards and solid pills cast soft shadows in a dark step of the stage's own hue instead of grey, so depth reads as part of the world's colour rather than dirt on it.",
+        "Type solidity arc — The type gains body across the film. Early statements are translucent white that lets the coloured stage show through, and the closing line and lockup are solid, so the payoff reads as more certain than the promise."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Doku ve son görünüm · 20 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Speed-gated motion blur — Fast whips, flings and flicked scrolls streak like a real shutter while holds and slow drifts stay pin-sharp, so the eye rests on the readable frames.",
+        "Stepped cadence on twos — One designated layer or section updates only on every second frame, so its motion reads crisp, precise and slightly mechanical against an otherwise smooth 60 fps film.",
+        "One grade across mixed media — Desaturated photography, matte grey 3D, flat vector maps and line diagrams cut freely against each other without clashing, because every medium shares one dark value range and only the hero prop carries the accent.",
+        "Low-luma photo plate — A real photograph sits behind the UI or type, graded almost to black or thrown out of focus, adding context and tonal texture without stealing contrast from the copy.",
+        "Global frame-keyed grain — A fine, even grain sits over the whole film at one strength, breaking banding in soft ramps and blurred plates and giving flat colour fields a tactile surface.",
+        "Stipple only in lit ramps — A visible dithered stipple lives only inside lit edges and light falloffs, while the flat stage around them stays perfectly clean.",
+        "Faint dot-matrix silhouette — Behind a claim, a barely visible field of dots forms a meaningful silhouette (a world map, a region, the product's own shape), adding literal context without competing with the type.",
+        "Scanline transmutation — A bright bar sweeps down a hero object: above the bar the object has already become its digital form, a dot-matrix disc with a crisp rim, while below it the original solid object remains.",
+        "Locked-state mosaic — Withheld content shows as pixelated, desaturated, darkened art with a lock glyph and thin light lines sliding across it, until an unlock snaps it to clean full-tone art.",
+        "Intersecting ring field — Above and below a centred band of type, families of huge overlapping ellipse outlines rotate slowly in opposite directions and whip on every copy swap, giving the words an ownable abstract environment.",
+        "Brushed micro-streaks — Fine directional streaks and a satin grain across a hero object's face make it read as machined material instead of flat vector.",
+        "Glyph-grid shock pulse — On the film's biggest hit, the dark background flashes a grid of tiny monoline marks that bend outward from the impact like a shockwave, then settles back to a quiet grained field.",
+        "Gobo-lit studio backdrop — The UI floats over an off-white studio backdrop crossed by huge, very soft diagonal shadows, like window light through leaves, so flat screens feel photographed.",
+        "Fog floor — The bottom fifth of the frame lightens toward the stage's brightest tone, as if the UI hovers above a softly lit floor that receding planes can sink into.",
+        "Micro-tick UI sound — (Sound) Typing and UI changes get tiny, dry ticks at or under the music, and once the drums run the UI goes silent, so the picture feels tactile without a loud keyboard sample.",
+        "Hairline edge and key shadow — Every floating surface gets a 1 px edge plus one soft key shadow on paper, or a top inner highlight on ink, so flat UI reads as a physical object in a lit space.",
+        "Feathered edge mask — Lists, reels and overflowing lines dissolve into the stage at a soft edge instead of being cut by a hard crop, so content feels endless and the eye stays in the clear middle.",
+        "Stepped mosaic resolve — An image or screen arrives as coarse grey blocks that halve in size every two frames until the real picture snaps in, sharp and in full colour.",
+        "Wireframe-to-product scan — A thin accent line sweeps across a UI card: ahead of it the card is still a wireframe of outlines and skeleton bars, behind it the finished product is already there.",
+        "Halftone shading — A flat hero shape gains volume from a single-colour halftone dot field whose dots swell in the shadow side and shrink toward a slowly moving light."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Yerleşim · 16 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Swarm, cluster and burst reveal — About twenty cards or screenshots fly in from every edge, swirl, pack into a dense overlapping cluster that slowly swells, then blow outward past the camera to uncover a hero object that was waiting behind them.",
+        "Arc carousel — A row of cards rides a wide smile-shaped arc across the lower part of the frame, each tilted tangent to the curve, rushing in, coasting slowly through the middle and speeding out.",
+        "Hero icon becomes the inline glyph — The centred hero icon shrinks and travels into a slot at the start of, or inside, a sentence, and the words of the claim spill out of it, so the icon becomes a word.",
+        "Headline over a ghost of the UI — A headline inks in from light grey to near-black while a faint copy of the product interface sits behind it, then the UI resolves to full strength as the headline leaves.",
+        "Icon-led ragged word stack — A short lead word is followed by three or four keywords on separate lines, each with a small line icon, set at staggered x positions so the list has a rag instead of bullets.",
+        "Hub-and-spoke concept diagram — A central product tile sits inside two thin concentric rings with a short streak orbiting it, inputs on the left and outputs on the right, under a centred one-line headline.",
+        "Mark set as a word — A logo, partner mark or icon sits inside a sentence on the baseline at cap height, as if it were a word, appearing with its own delayed fade or swapping with a word in the same slot.",
+        "Caption in the subject's negative space — Each camera move ends on a pose where the product covers about two-thirds of the frame and leaves a clean band of empty stage, and the caption builds inside that band.",
+        "Opposite-corner caption relay — One caption fades out of one upper corner while the next starts building in the mirrored corner, so the eye travels across a locked frame and that travel is the motion.",
+        "One huge centred subject — Every frame has exactly one subject, centred and large: a single line of type, or one UI card scaled to most of the frame width and often bleeding past the edges, with everything else dimmed.",
+        "Centre object with mirrored flanks — A narrow centre object (a phone-width window, a pill, a big number) holds the middle while matching elements sit on both sides: the two halves of a caption, or two mirrored columns of items.",
+        "Subtract to the one — A busy board loses its elements one by one until a single survivor remains, which either re-centres or stays exactly where it was while the world around it dims.",
+        "Words part for an inserted object — Inside a finished line, the words slide apart to open a gap and an object pops into it (an icon, a photo, a token, or a caret that grows into a container), so the sentence becomes a frame for the object.",
+        "Live cause-and-effect split — Two panels share the frame side by side, the cause on one side (a chat, a list, an input) and the effect on the other (a generated page, a photo, a result), both live, while the camera creeps in.",
+        "Bento cell takes over the frame — In a flush four-cell grid, one cell grows to fill the whole frame while its siblings are pushed off the edges, still playing as they go, turning a breadth overview into one focused shot without a cut.",
+        "Vertical clear-band stack — In a 9:16 frame, the caption and the subject stack vertically inside the band the feed leaves clear, with their combined mass centred on that band rather than on the frame, and nothing important under the bottom caption zone or the right action rail."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Tempo ve hikâye · 23 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Breath envelope per card — Every card arrives fast and decelerates, keeps moving gently through its hold, then accelerates away and is cut on its fastest frame.",
+        "Camera locks, the interface performs — After each move the camera stops dead, and for a 1-4 s read only the caption, the cursor and one micro-interaction move.",
+        "The one long hold — In a film that otherwise never stops, a single key claim sits nearly still for over a second, which tells the viewer it is the line to remember.",
+        "Hard stop into a silent sign-off — Tension rises under the back half, the music stops dead on the cut to the last line or URL, the picture all but freezes, and the lockup arrives at full speed under a single low stinger.",
+        "Spectacle, diagram, walkthrough, sign-off — A launch film in four sequences: a short spectacle open, one concept diagram, a long real-product walkthrough and a brief brand close.",
+        "Image act, then type act — A short spot splits in half: the first half is pure imagery with no words at all, the second is pure type with no imagery.",
+        "Light and dark as chapters — Acts are planned by stage polarity, dark for the abstract or problem beats and light for the product, so chapter changes read without any title cards.",
+        "Oner through a morph chain — The whole film plays as one continuous shot, every new scene growing out of an object already on screen, with no hard cuts at all.",
+        "One camera journey across one surface — Every product state lives on one large surface and the film is a single camera path between poses; scene changes are pushes, pulls, orbits, whips and the interface's own window actions.",
+        "Travelling thread object — One small accent object (a dot, a packet or a streak) recurs across shots and acts, carrying the idea from problem to feature to feature as a single causal chain.",
+        "Each repeat runs faster — The first instance of a repeated action plays at full length, the second runs about 40% quicker, and later ones are implied or ratchet faster still.",
+        "Fixed-length ask, variable answer — A demo repeats a fixed-length ask beat followed by a result whose length varies with its importance, so the rhythm teaches itself and the variations prevent fatigue.",
+        "Phrase chunks on the beat — A line arrives in two or three chunks split by meaning, each landing exactly on the next beat, so the reading rhythm is performed by the track.",
+        "Empty ground after a cut — Right after some hard cuts the new stage shows for two empty frames before its type appears, a tiny palate cleanser that makes the cut read crisply without any flash.",
+        "Music hole, then slam on the cut — The low end, or the whole bed, vanishes for a fraction of a second under a key statement, then slams back on the exact frame of a picture event.",
+        "Score arranged to the acts — The music's arrangement tells the story's structure: a sparse filtered intro, the drop on the first product frame, a breakdown for the calm act, a return for the proof, a final hit on the climax and the logo in silence.",
+        "Silent UI over a steady bed — In dense, fast-changing sequences the interface makes no sound of its own, with no per-key or per-event effects, and a steady groove carries all the energy.",
+        "Accelerando into the climax — Shot lengths shrink step by step toward the climax, then one designed freeze on silence resets the clock just before the payoff lands.",
+        "Loop seam hidden at a motion peak — A loop wraps around on the fastest frame of a whip or push, so the last frame flows into the first with no visible restart.",
+        "Silence as the default bed — There is no running music: most of the film is true silence, sound appears only on decisive events, one low swell carries the single reveal act, and the audio cuts dead on the frame a key value lands.",
+        "Long-tailed beat lengths — Beat lengths follow a long tail instead of an even grid: most beats sit near one median length, a few connective beats snap past at a third of it, and one or two hero beats run about three times as long, so the film never settles into a slideshow rhythm.",
+        "One screen direction per act — Each act owns one direction of travel, so every entrance, exit, drift and camera ramp in it runs the same way, and the direction turns only at an act seam, where the turn itself marks the new chapter.",
+        "Machine on the grid, hands off it — Work the product does (rows inserting, items stacking, text streaming) ticks on a strict metronome, while what a person does (moving the cursor, flipping toggles, clicking) arrives on uneven, deliberating gaps, so the viewer can feel who is acting."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Küçük etkileşim · 20 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Focus ring: pop on click, trim to point — A thin outline around a control either pops outward and fades the moment it is clicked, or draws itself clockwise around a target and erases from the tail, pointing at the action without a cursor.",
+        "In-place character rewrite — A small monospace status field is overwritten left to right by its new state, or a sensitive value turns to dots and deletes from the right, all inside the same fixed slot with no layout change.",
+        "Anticipation dip before an unlock — Light builds on a locked card, the card briefly darkens as the lock's shackle swings open, then it pops to clean full-tone content, so the release feels bigger than it is.",
+        "One-element tell before the event — Just before a state change or a cut, exactly one small thing moves, such as a plus glyph turning 45 degrees into an x or an object slowly turning toward its target, while everything else holds.",
+        "Chip bloom around content — A container grows out of its content: a dropped icon tile widens into a labelled chip that floods with the accent and wipes back to an outline, or a solid pill swells behind a name so the group becomes a button.",
+        "Shape handoff: pill becomes the icon — A labelled capsule empties its text, then collapses at a fixed height into a square tile or circle that becomes the next thing (the app icon, a loader or a dock slot), so the object never disappears, it changes role.",
+        "Guide cursor: arrive, hover, press — A cursor travels a bowed path to the element about to act, the target shows its hover state a few frames after the cursor arrives, and a short press triggers the response on the same frame.",
+        "Velocity-stretch dot — A small round dot (a cursor or a list marker) stretches into a capsule along its motion in proportion to its speed, anchored at its trailing end, and shrinks back to a dot when it stops.",
+        "Shared highlight walks the menu — One rounded highlight slides from row to row of a sidebar or menu, trailing the cursor, and the chosen row settles into a pale accent tint.",
+        "Stretchy tab indicator — The selected pill of a segmented control shoots to the new option with its leading edge arriving first, stretches to about 1.9x its width mid-travel, then hugs the new label as the label takes the active colour.",
+        "Radial dash burst around a word — Short dashes burst outward around a hero word on the beat, drift almost imperceptibly while it is read, then fly outward faster as the frame pushes into the cut.",
+        "Launch hop that never lands — A centred app icon hops up as if launching, hangs at the top for a beat and starts to fall, and the camera leaves before it lands, so the hop motivates the scene change.",
+        "Two-beat confirm cascade — A row of buttons or toggles confirms one by one: the label or knob changes first, the fill follows a beat later, and the rows go at uneven, human gaps.",
+        "Spinner resolves to a check — A working indicator (a rotating dashed ring in a step list, or a small spinning disc pushed into the middle of a sentence) turns into a check with a short tag the moment the step is done.",
+        "Send as a ghosted handoff — On send, the composer's text drifts up and fades away while the same content appears above as a posted message, briefly overlapping the old text, instead of flying between containers.",
+        "Drag, lift and seat — A chip or file picked up by the cursor lifts off the surface, follows the hand with a slight lag and tilt, then drops into its slot with a small contact squash as the slot accepts it.",
+        "Badge count bump — A notification badge or counter chip ticks up: the digit rolls to the next value while the badge gives a small pulse, once per increment.",
+        "Click to focus: I-beam, ring, caret — An arrow cursor turns into an I-beam as it enters an empty field and clicks. The field's border sharpens, a caret appears and blinks twice at an uneven, human pace, and on the first key the placeholder vanishes and the pointer fades away.",
+        "Cursor glyph follows context — The pointer changes shape with what it is over, as a real system pointer does: an I-beam over text, an open hand over something draggable, a closed fist while dragging, and the arrow everywhere else. Each change is a one-frame swap.",
+        "Drag-select snaps glyph by glyph — An I-beam presses at the start of a phrase and drags across it, a tinted highlight grows behind the text one whole character at a time, and on release a small action bar grows out of the selection, ready for the product to act on it."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "Derinlik ve 3D · 14 tarif",
+      "state": "branch",
+      "origin": "Cinetic / MIT",
+      "use": "Seçilebilir hareket tarifleri. Hazır çalışan component paketi olarak sayılmıyor.",
+      "check": "Katalog ve seçim aracı kontrol edildi; her tarif ayrı render edilmedi.",
+      "path": "tools/cinetic/library/techniques.json",
+      "details": [
+        "Card fan that buries, then scatters — A dozen identical cards swoop in from two corners along a curved arc and stack in depth until they bury the frame. They drift for a beat, then scatter outward and leave one small card in the centre that carries the number.",
+        "Pinned label over a swapping world — A pin pops on a 3D-rendered place and a short data tag on a leader line tracks that point as the camera orbits. On a cut, the world underneath switches between 3D and flat while the tag holds its screen position.",
+        "Tilted object on a spotlit ground — A real card or device lies in perspective on a dark surface under one soft pool of light. Most of the frame falls to black, and a slow drift slides the light across the object's face.",
+        "Depth orbit ring that collapses into the mark — Small icons orbit the central mark on a tilted ellipse: they grow and pass in front as they come near and shrink behind it as they go far. Then the ring speeds up and contracts into the mark.",
+        "Folded channel that unfolds flat — A wide card starts bent into a U-shaped channel with its side walls folded toward camera. It flattens open while the cards stacked inside fan out into a neat row, then the whole thing tips away.",
+        "3D flip that swaps state — An icon or card turns over in 3D and comes back around changed (outline to solid, grey to full colour), then shrinks and travels to its next place.",
+        "Peek, hover, launch and recede — A device or product panel barely rises from the bottom edge, pauses, then shoots up to centre. It is tipped back as it rises, faces camera as it arrives, and slowly settles away from camera.",
+        "Edge-on sliver snaps face-on — A thin edge-on sliver snaps open into a full face-on coin or badge. Most of the turn happens in the first frame, then it eases into place as its face catches the light.",
+        "Product on a thick extruded slab — The live interface sits on the front of a thick matte slab with rounded corners. When the camera orbits or yaws, the slab's solid edge appears, which turns a screen into an object and makes every angle readable.",
+        "Impact morph with stretch and floor ripple — Something accelerates into a 3D tile. On contact the tile swaps shape and colour in one frame, stretches tall and settles without rebound while the floor beneath it ripples.",
+        "Icon lifts out of its row into a 3D hero — A small icon tile peels out of a settings row and inverts from dark to light. It flies to frame centre growing almost 2x, tilted in 3D and slowly turning as it floats into the next chapter.",
+        "Cube turn to a blank face — Words converge and slide under an icon, then the icon turns 90 degrees like a cube to show a plain accent face that becomes the field for what comes next.",
+        "Press tilt that hides a swap — A card tips in 3D toward the point that was clicked or tapped and relaxes back flat. The content changes on the tilt's peak frame, so the change has a physical cause.",
+        "Exploded layer stack — A live UI component turns to a three-quarter view and separates into its layers along depth to show how it is built, then snaps back together and turns flat."
+      ],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "spring / sp / track",
+      "state": "base",
+      "origin": "Mevcut Motion kütüphanesi",
+      "use": "Zamana bağlı yay hareketi ve birden fazla hedef arasında geçiş.",
+      "check": "Gerçek kod helper’ları. Referanslarda gözlenen UI listesiyle aynı şey değil.",
+      "path": "films/tin-launch/tools/lib/motion.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "clamp / lerp / ease / P",
+      "state": "base",
+      "origin": "Mevcut Motion kütüphanesi",
+      "use": "Aralık sınırlama, ara değer ve hız eğrileri.",
+      "check": "Gerçek kod helper’ları. Referanslarda gözlenen UI listesiyle aynı şey değil.",
+      "path": "films/tin-launch/tools/lib/motion.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "typed / swapAlpha",
+      "state": "base",
+      "origin": "Mevcut Motion kütüphanesi",
+      "use": "Yazı açılması ve içerik değişirken görünürlük.",
+      "check": "Gerçek kod helper’ları. Referanslarda gözlenen UI listesiyle aynı şey değil.",
+      "path": "films/tin-launch/tools/lib/motion.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Hareket ve elementler",
+      "title": "rng",
+      "state": "base",
+      "origin": "Mevcut Motion kütüphanesi",
+      "use": "Aynı seed ile tekrar üretilebilir rastgele değerler.",
+      "check": "Gerçek kod helper’ları. Referanslarda gözlenen UI listesiyle aynı şey değil.",
+      "path": "films/tin-launch/tools/lib/motion.js",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Chart",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "72 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Chat / messages",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "69 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Prompt input",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "55 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Form",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "32 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Table / matrix",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "30 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Notification",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "29 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Phone frame",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "22 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Code editor",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "19 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Document / report",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "18 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Terminal",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "15 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Map",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "14 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Timeline",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "14 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Image / thumbnail grid",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "13 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Search",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "11 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Browser frame",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "10 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Node graph",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "10 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Video player / preview",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "10 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Dialog",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "9 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Email",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "9 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Calendar",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "8 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Spreadsheet",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "8 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Settings",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "5 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Leaderboard",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "4 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Progress bar",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "4 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Slider",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "3 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Referansta görülen UI",
+      "title": "Audio waveform",
+      "state": "reference",
+      "origin": "458 farklı kurgudaki örnek kare notları",
+      "use": "2 filmde kaydedildi. Uygun ürün sahnesi için araştırma etiketi.",
+      "check": "Hazır component geliştirdik demek değildir. Etiket yoksa element yoktur sonucu çıkarılmaz.",
+      "path": "research/launch-references/ELEMENTS.md",
+      "details": [],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Don't Look Back",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → drop 9–24 → outro 25–28",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/488-don-t-look-back/",
+      "details": [
+        "Sanatçı: Diego Nava",
+        "Kayıt ID: 488",
+        "Ritim: 65.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Uplifting Bass",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–24 → outro 25–27",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/726-uplifting-bass/",
+      "details": [
+        "Sanatçı: Lily J",
+        "Kayıt ID: 726",
+        "Ritim: 66.99 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Nav Trap",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → drop 9–28 → outro 29–31",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/275-nav-trap/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 275",
+        "Ritim: 70.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Young Trizzy 02",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–12 → breakdown 13–16 → drop 17–29",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/431-young-trizzy-02/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 431",
+        "Ritim: 70.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Trap Hamza",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–4 → main 5–32 → outro 33–36",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/267-trap-hamza/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 267",
+        "Ritim: 82.5 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Drum and Bass Vibes",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–32 → outro 33–36",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/719-drum-and-bass-vibes/",
+      "details": [
+        "Sanatçı: Lily J",
+        "Kayıt ID: 719",
+        "Ritim: 87.99 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "City Of Sins",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–32 → breakdown 33–36 → drop 37–44 → outro 45–48",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/986-city-of-sins/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 986",
+        "Ritim: 89.99 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "R&B vibes 1",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–36 → breakdown 37–44 → drop 45–60 → breakdown 61–64 → outro 65–68",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/685-r-b-vibes-1/",
+      "details": [
+        "Sanatçı: Grigoriy Nuzhny",
+        "Kayıt ID: 685",
+        "Ritim: 90.0 BPM · beat",
+        "Harita: check by ear"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Drawing the Sky",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–8 → drop 9–92 → main 93–100 → main 101–104 → breakdown 105–108 → outro 109–115",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/606-drawing-the-sky/",
+      "details": [
+        "Sanatçı: Eugenio Mininni",
+        "Kayıt ID: 606",
+        "Ritim: 99.99 BPM · beat",
+        "Harita: check by ear"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "PlaceIt World 02",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → groove 5–8 → groove 9–16 → drop 17–36 → outro 37–41",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/725-placeit-world-02/",
+      "details": [
+        "Sanatçı: Lily J",
+        "Kayıt ID: 725",
+        "Ritim: 102.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Hollidays",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → drop 9–24 → breakdown 25–32 → drop 33–48 → breakdown 49–52 → outro 53–57",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/690-hollidays/",
+      "details": [
+        "Sanatçı: Grigoriy Nuzhny",
+        "Kayıt ID: 690",
+        "Ritim: 108.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Blindfolded",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → drop 9–20 → breakdown 21–24 → drop 25–40 → main 41–48 → drop 49–52 → breakdown 53–56 → drop 57–72 → outro 73–85",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/194-blindfolded/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 194",
+        "Ritim: 110.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Roses",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–5 → groove 6–13 → build 14–17 → groove 18–21 → build 22–25 → drop 26–29 → drop 30–57 → breakdown 58–61 → breakdown 62–65 → groove 66–69 → build 70–73 → build 74–77 → drop 78–121 → breakdown 122–125 → outro 126–128",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/183-roses/",
+      "details": [
+        "Sanatçı: Andrew Ev",
+        "Kayıt ID: 183",
+        "Ritim: 114.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Funkee Monkeee",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–20 → main 21–36 → breakdown 37–50",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/1140-funkee-monkeee/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1140",
+        "Ritim: 120.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Swish Swed",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–12 → breakdown 13–16 → build 17–20 → drop 21–48 → breakdown 49–52 → drop 53–60 → main 61–68 → outro 69–72",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/201-swish-swed/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 201",
+        "Ritim: 120.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "House Vibez",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → main 5–24 → breakdown 25–28 → breakdown 29–32 → drop 33–48 → outro 49–57",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/745-house-vibez/",
+      "details": [
+        "Sanatçı: Lily J",
+        "Kayıt ID: 745",
+        "Ritim: 122.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Razor Edge",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–5 → drop 6–37 → breakdown 38–45 → drop 46–54",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/1280-razor-edge/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1280",
+        "Ritim: 122.01 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Dub Techno Groove",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–8 → main 9–16 → main 17–48 → outro 49–52",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/133-dub-techno-groove/",
+      "details": [
+        "Sanatçı: Alejandro Magaña (A. M.)",
+        "Kayıt ID: 133",
+        "Ritim: 122.91 BPM · beat",
+        "Harita: check by ear"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Grandpa's Twist",
+      "state": "base",
+      "origin": "Ege’nin 19 parçalık kütüphanesi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → drop 9–52 → main 53–56 → outro 57–60",
+      "check": "Eski kütüphanenin mevcut kaydı; bu turda yeniden dinlenmedi.",
+      "path": "music/library/800-grandpa-s-twist/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 800",
+        "Ritim: 124.02 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Paranoia",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–24 → outro 25–29",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/367-paranoia/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 367",
+        "Ritim: 70.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Caught In The Beat",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → drop 9–24 → breakdown 25–28 → drop 29–44 → breakdown 45–48 → drop 49–80 → breakdown 81–84 → outro 85–88",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101811-caught-in-the-beat/",
+      "details": [
+        "Sanatçı: Broke For Free",
+        "Kayıt ID: 2026101811",
+        "Ritim: 80.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Nightfall",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → groove 5–28 → breakdown 29–36 → build 37–40 → build 41–44 → drop 45–84 → outro 85–88",
+      "check": "Parça tercih edilmiş; ritim haritasının kulak kontrolü açık.",
+      "path": "music/library/627733662-nightfall/",
+      "details": [
+        "Sanatçı: Scott Buckley",
+        "Kayıt ID: 627733662",
+        "Ritim: 80.0 BPM · beat",
+        "Harita: solid",
+        "Kaynak lisansı: CC BY 4.0"
+      ],
+      "url": "https://www.scottbuckley.com.au/library/nightfall/"
+    },
+    {
+      "group": "Müzikler",
+      "title": "Rebecca",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–12 → groove 13–28 → drop 29–36 → outro 37–41",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1039-rebecca/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1039",
+        "Ritim: 100.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "The preparation",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → main 9–12 → drop 13–60 → main 61–104 → main 105–108 → outro 109–114",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101813-the-preparation/",
+      "details": [
+        "Sanatçı: zero-project",
+        "Kayıt ID: 2026101813",
+        "Ritim: 110.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Sounds Good",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. main 1–8 → breakdown 9–12 → drop 13–16 → main 17–44 → outro 45–48",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1077-sounds-good/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1077",
+        "Ritim: 120.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Neon",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–13 → build 14–17 → groove 18–21 → groove 22–25 → drop 26–57 → breakdown 58–65 → groove 66–69 → groove 70–73 → main 74–77 → groove 78–85 → drop 86–89 → main 90–121 → main 122–125 → outro 126–131",
+      "check": "Parça tercih edilmiş; ritim haritasının kulak kontrolü açık.",
+      "path": "music/library/698217811-neon/",
+      "details": [
+        "Sanatçı: Scott Buckley",
+        "Kayıt ID: 698217811",
+        "Ritim: 120.0 BPM · beat",
+        "Harita: check by ear",
+        "Kaynak lisansı: CC BY 4.0"
+      ],
+      "url": "https://www.scottbuckley.com.au/library/neon/"
+    },
+    {
+      "group": "Müzikler",
+      "title": "Take this Higher",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–24 → main 25–28 → main 29–48 → outro 49–51",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1012-take-this-higher/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1012",
+        "Ritim: 124.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Lifelike",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → build 9–16 → drop 17–32 → breakdown 33–40 → drop 41–64 → breakdown 65–68 → groove 69–72 → outro 73–75",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101801-lifelike/",
+      "details": [
+        "Sanatçı: Alexi Action",
+        "Kayıt ID: 2026101801",
+        "Ritim: 125.01 BPM · beat",
+        "Harita: check by ear",
+        "Kaynak lisansı: by"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "I'm Under The Radar",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. main 1–52 → outro 53–58",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/933-im-under-the-radar/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 933",
+        "Ritim: 127.97 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Day Bird",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–24 → groove 25–36 → build 37–40 → drop 41–56 → breakdown 57–60 → main 61–72 → drop 73–96 → breakdown 97–100 → build 101–104 → build 105–112 → build 113–116 → outro 117–120",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101812-day-bird/",
+      "details": [
+        "Sanatçı: Broke For Free",
+        "Kayıt ID: 2026101812",
+        "Ritim: 129.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "High Technologic Beat Explosion",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → build 9–12 → groove 13–16 → groove 17–24 → groove 25–28 → build 29–32 → drop 33–48 → main 49–56 → main 57–72 → main 73–80 → main 81–84 → main 85–112 → breakdown 113–120 → outro 121–130",
+      "check": "Parça tercih edilmiş; ritim haritasının kulak kontrolü açık.",
+      "path": "music/library/2000000002-high-technologic-beat-explosion/",
+      "details": [
+        "Sanatçı: Loyalty Freak Music",
+        "Kayıt ID: 2000000002",
+        "Ritim: 140.0 BPM · beat",
+        "Harita: check by ear",
+        "Kaynak lisansı: CC BY 4.0"
+      ],
+      "url": "https://loyaltyfreakmusic.com/music/robot-dance/"
+    },
+    {
+      "group": "Müzikler",
+      "title": "Status Quo",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → groove 5–8 → groove 9–12 → build 13–16 → drop 17–48 → main 49–64 → main 65–97",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101804-status-quo/",
+      "details": [
+        "Sanatçı: recyclesound",
+        "Kayıt ID: 2026101804",
+        "Ritim: 140.8 BPM · beat",
+        "Harita: solid",
+        "Kaynak lisansı: by"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Atoms in Peace",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. main 1–16 → breakdown 17–24 → drop 25–32 → main 33–48 → breakdown 49–56 → drop 57–112 → breakdown 113–120 → drop 121–148 → main 149–156 → main 157–160 → breakdown 161–172 → drop 173–176 → outro 177–182",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/107-atoms-in-peace/",
+      "details": [
+        "Sanatçı: Alejandro Magaña (A. M.)",
+        "Kayıt ID: 107",
+        "Ritim: 191.99 BPM · beat",
+        "Harita: check by ear"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Resonance",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → build 9–44 → build 45–56 → build 57–136 → drop 137–168 → main 169–204 → main 205–208 → main 209–212 → main 213–216 → outro 217–222",
+      "check": "Parça tercih edilmiş; ritim haritasının kulak kontrolü açık.",
+      "path": "music/library/435758553-resonance/",
+      "details": [
+        "Sanatçı: Scott Buckley",
+        "Kayıt ID: 435758553",
+        "Ritim: 200.01 BPM · beat",
+        "Harita: solid",
+        "Kaynak lisansı: CC BY 4.0"
+      ],
+      "url": "https://www.scottbuckley.com.au/library/resonance/"
+    },
+    {
+      "group": "Müzikler",
+      "title": "The light of truth",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. ",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101814-the-light-of-truth/",
+      "details": [
+        "Sanatçı: zero-project",
+        "Kayıt ID: 2026101814",
+        "Ritim: sabit BPM yok BPM · free",
+        "Harita: no reliable grid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Machina",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. ",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101815-machina/",
+      "details": [
+        "Sanatçı: Scott Buckley",
+        "Kayıt ID: 2026101815",
+        "Ritim: sabit BPM yok BPM · free",
+        "Harita: no reliable grid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Signal to Noise",
+      "state": "local",
+      "origin": "Codex yerel ekleri",
+      "use": "Müzik seçimi ve zaman haritası. ",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/2026101816-signal-to-noise/",
+      "details": [
+        "Sanatçı: Scott Buckley",
+        "Kayıt ID: 2026101816",
+        "Ritim: sabit BPM yok BPM · free",
+        "Harita: no reliable grid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Party Robot",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–12 → main 13–28 → main 29–48 → outro 49–52",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1254-party-robot/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1254",
+        "Ritim: 75.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Funky Triplets",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–24 → main 25–32 → breakdown 33–36 → drop 37–46",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1141-funky-triplets/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1141",
+        "Ritim: 100.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Macario",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–20 → breakdown 21–24 → build 25–28 → drop 29–44 → main 45–48 → outro 49–52",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/772-macario/",
+      "details": [
+        "Sanatçı: Mauro Urbina",
+        "Kayıt ID: 772",
+        "Ritim: 100.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "No Warning",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → main 9–28 → breakdown 29–32 → drop 33–48 → outro 49–52",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1150-no-warning/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1150",
+        "Ritim: 110.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Funky Martian",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. main 1–8 → breakdown 9–12 → drop 13–20 → build 21–32 → drop 33–44 → outro 45–49",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1029-funky-martian/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1029",
+        "Ritim: 116.01 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Lil Haiti Beat",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → build 5–8 → drop 9–24 → breakdown 25–28 → build 29–32 → main 33–50",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/298-lil-haiti-beat/",
+      "details": [
+        "Sanatçı: Arulo",
+        "Kayıt ID: 298",
+        "Ritim: 120.0 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "House Two",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–4 → drop 5–20 → main 21–40 → main 41–48 → breakdown 49–52 → build 53–56 → drop 57–64 → main 65–80 → outro 81–86",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/694-house-two/",
+      "details": [
+        "Sanatçı: Grigoriy Nuzhny",
+        "Kayıt ID: 694",
+        "Ritim: 120.02 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Müzikler",
+      "title": "Can't Get You Off My Mind",
+      "state": "local",
+      "origin": "Claude yerel seçimi",
+      "use": "Müzik seçimi ve zaman haritası. intro 1–8 → build 9–16 → drop 17–24 → main 25–32 → main 33–57",
+      "check": "Yeni kulak/tat kontrolü açık.",
+      "path": "music/library/1210-can-t-get-you-off-my-mind/",
+      "details": [
+        "Sanatçı: Michael Ramir C.",
+        "Kayıt ID: 1210",
+        "Ritim: 149.98 BPM · beat",
+        "Harita: solid"
+      ],
+      "url": null
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-click-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "short-click · One practical press; keep below the music",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.097 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-click-003",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "click-alternative · A second surface/weight; choose after listening",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.007 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-confirmation-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "confirmation · One completed result, not every card",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.290 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-confirmation-002",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "confirmation-alternative · Compare a different result accent",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.539 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-open-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "open · An actual opening object or panel",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.148 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-close-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "close · The closing action of an object",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.148 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-switch-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "state-change · A changed choice or product state",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.615 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-scroll-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "scroll · A controlled movement or continuous browse",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "1.000 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-scratch-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "surface · Try under a material change, not as constant noise",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.139 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-pluck-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "small-accent · One restrained playful motion",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.100 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-drop-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "landing · An object arriving or the main result",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.132 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-glitch-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "interruption · A brief broken state before its resolution",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.017 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-error-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "problem · A visible failure only, never invented urgency",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.162 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-tick-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "sequence · A few important mechanical steps",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.045 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "kenney-select-001",
+      "state": "local",
+      "origin": "Kenney",
+      "use": "selection · The cause of a visible edit",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.040 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kenney"
+      ],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "soft-keyboard",
+      "state": "local",
+      "origin": "Wikimedia Commons",
+      "use": "Keyboard contact · One short typing action; use groups rather than sound every letter",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "4.000 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Mrakash1"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Soft_laptop_keyboard-wxA-2.wav"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "camera-focus",
+      "state": "local",
+      "origin": "Wikimedia Commons",
+      "use": "Focus movement · A physical camera refocus or framed arrival",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "0.356 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Lycopene579"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Camera_focus.oga"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "pen-drop",
+      "state": "local",
+      "origin": "Wikimedia Commons",
+      "use": "Object contact · One small physical landing",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "1.052 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: Kapoios2026"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Pen_dropped.ogg"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "typewriter-ding",
+      "state": "local",
+      "origin": "Wikimedia Commons",
+      "use": "End of line · A deliberate completion accent; do not default all UI to a typewriter",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "1.056 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: CC0",
+        "Sanatçı: _stubb"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:406243_stubb_typewriter-ding-near-mono.wav"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "old-book",
+      "state": "local",
+      "origin": "Wikimedia Commons",
+      "use": "Book foley · Source identifies page turns and book closure; choose an individual action after listening",
+      "check": "Kaynak/hash, decode ve zaman haritası kaydı var. Dinleme onayı açık.",
+      "path": "assets/sfx/index.json",
+      "details": [
+        "73.587 sn · 48000 Hz · 2 kanal",
+        "Kaynak kaydındaki lisans: Public domain",
+        "Sanatçı: cori"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:Old_book.ogg"
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "key · Earshot",
+      "state": "branch",
+      "origin": "Tin recut için kodla üretilen efekt",
+      "use": "A few short taps follow typed prompt words, not every glyph.",
+      "check": "4 varyasyon, -26 dB. Son filmde zaman/seviye kontrolü var; insan dinlemesi açık.",
+      "path": "films/tin-vibe-marketing-recut-20261020/audio-kit.json",
+      "details": [
+        "Ses modeli: pro_typing_key/soft"
+      ],
+      "url": null
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "land.light · Earshot",
+      "state": "branch",
+      "origin": "Tin recut için kodla üretilen efekt",
+      "use": "Quiet material contacts for the three task notes.",
+      "check": "3 varyasyon, -23 dB. Son filmde zaman/seviye kontrolü var; insan dinlemesi açık.",
+      "path": "films/tin-vibe-marketing-recut-20261020/audio-kit.json",
+      "details": [
+        "Ses modeli: fit/land.light/fingertip_book"
+      ],
+      "url": null
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "click · Earshot",
+      "state": "branch",
+      "origin": "Tin recut için kodla üretilen efekt",
+      "use": "Selection and approval, without a cinematic impact.",
+      "check": "2 varyasyon, -22 dB. Son filmde zaman/seviye kontrolü var; insan dinlemesi açık.",
+      "path": "films/tin-vibe-marketing-recut-20261020/audio-kit.json",
+      "details": [
+        "Ses modeli: pro_click/mouse"
+      ],
+      "url": null
+    },
+    {
+      "group": "Ses efektleri",
+      "title": "6 eski Mixkit efekti",
+      "state": "base",
+      "origin": "Ege’nin mevcut ses paketi",
+      "use": "Mevcut film seslerini geri yüklemek için kayıtlı efekt dosyaları.",
+      "check": "Yeni 20 efektle toplanıp “26 yeni efekt” diye sayılmıyor.",
+      "path": "music/audio-manifest.json",
+      "details": [
+        "sfx/1111",
+        "sfx/1113",
+        "sfx/1117",
+        "sfx/2533",
+        "sfx/2541",
+        "sfx/2542"
+      ],
+      "url": null
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Mixkit",
+      "state": "base",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Mevcut 19 parça + 6 efekt için indirme/yeniden kurma yolu.",
+      "check": "Hash kontrollü fetch_audio.py var; ses dosyaları repoya eklenmiyor.",
+      "path": "music/fetch_audio.py",
+      "details": [],
+      "url": "https://mixkit.co/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Openverse",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Müzik ve görsel adaylarını keşfetme.",
+      "check": "İlk kaynağa gidip dosya ve hak bilgisi kontrol edilmeli; tüm sonuçlar onaylı değil.",
+      "path": "assets/README.md",
+      "details": [],
+      "url": "https://api.openverse.org/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Internet Archive",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Müzik ve arşiv video arama/indirme.",
+      "check": "18 Ekim örnek MP3 indirildi ve çözüldü; her seçilen kaynağın kredisi tutulmalı.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://archive.org/developers/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Wikimedia Commons",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Ses, görsel ve arşiv dosyalarını kaynak bilgisiyle bulma.",
+      "check": "Anahtarsız metadata ve bir CC0 WAV indirmesi kontrol edildi.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Kenney",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "15 seçilmiş kısa arayüz efekti.",
+      "check": "CC0 paket kaynağı/hash kaydı var; yaratıcı seçim için dinleme açık.",
+      "path": "assets/sfx/sources.json",
+      "details": [],
+      "url": "https://kenney.nl/assets/interface-sounds"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Poly Haven",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Nesne yüzeyleri ve dokular.",
+      "check": "Bir 1k JPG indirme, decode ve verilen MD5 kontrolü geçti.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://polyhaven.com/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "The Met",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Public-domain nesne ve sanat görselleri.",
+      "check": "Metadata + bir görsel indirmesi geçti; her sonuçta kullanılabilir görsel yok.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://metmuseum.github.io/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "NASA Images",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Hikâyeye uygunsa bilim/arşiv görüntüsü.",
+      "check": "Bir MP4 decode kontrolü geçti; bu, tanıtım kullanım hakkı onayı değildir.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://images.nasa.gov/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Art Institute of Chicago",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Yedek sanat görseli kaynağı.",
+      "check": "Metadata çalıştı; denenen görsel indirmesi 403 verdi.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://api.artic.edu/docs/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "Pexels / Pixabay",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Stok görsel ve video için seçenek.",
+      "check": "API anahtarıyla doğrulanmış çağrı yok. Hazır entegrasyon diye gösterilmiyor.",
+      "path": "assets/FREE_APIS.md",
+      "details": [],
+      "url": "https://www.pexels.com/api/"
+    },
+    {
+      "group": "Kaynaklar",
+      "title": "assets.mjs",
+      "state": "local",
+      "origin": "Kaynak kontrol notları; otomatik bütünleşme iddiası değil",
+      "use": "Tin Studio için arşiv arama, küçük dosya indirme ve kredi kaydı helper’ı.",
+      "check": "Yerel RENDER.md yolu var; staging’de bu akışın tamamı henüz doğrulanmadı.",
+      "path": "tin / workflow_packages/creative.launch_video/skills/launch-video/RENDER.md",
+      "details": [],
+      "url": null
+    }
+  ]
+}

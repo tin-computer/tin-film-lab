@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-20",
+  "metadata_records": 152,
+  "music_rows": 45,
+  "local_recorded_sfx_rows": 20,
+  "generated_sfx_roles": 3,
+  "motion_recipe_names": 273,
+  "observed_ui_groups": 26,
+  "checks": [
+    "Unique group/title pairs and required fields checked when building the snapshot",
+    "Every branch/base/reference source path resolves in the reviewed Git tree",
+    "Browser: overview, category switching, Neon search, local-only filter and plan view checked",
+    "Browser: 1440px desktop and 390px mobile; checked music, sound, expanded motion and observed-UI views have no horizontal overflow",
+    "Browser: no third-party resource requests",
+    "git diff --check passed"
+  ],
+  "limits": [
+    "Metadata snapshot; local-only entries do not ship their source or raw media",
+    "Existing saved checks are described; music and effects were not listened to in this inventory pass",
+    "The next-work plan is not an implemented or staging-tested workflow change"
+  ]
+}

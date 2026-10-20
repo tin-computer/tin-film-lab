@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="tr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Film-lab · Eklenenler ve kaynaklar</title>
+<style>
+:root{color-scheme:light;--paper:#f3f4f1;--ink:#202923;--muted:#526158;--line:#cbd2cc;--green:#235a42;--amber:#865119}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.55 "Hanken Grotesk","Segoe UI",sans-serif}a{color:var(--green);text-underline-offset:3px}button,input,select{font:inherit;color:inherit}button,a,input,select,summary{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #94622d}
+main{max-width:1460px;margin:auto;padding:28px clamp(18px,4vw,62px) 70px}nav{display:flex;gap:10px 24px;flex-wrap:wrap;font-size:14px}header{border-bottom:2px solid var(--ink);padding-bottom:26px;margin-bottom:28px}h1{font:500 clamp(34px,4vw,52px)/1.08 Georgia,serif;letter-spacing:-.035em;margin:25px 0 17px}h2{font:500 29px/1.2 Georgia,serif;margin:0 0 12px}p{margin:8px 0;max-width:88ch}.muted{color:var(--muted)}.summary{font-size:15px;margin-top:20px;padding-top:14px;border-top:1px solid var(--line);max-width:none}.summary strong{font-weight:600}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:42px}aside{align-self:start;position:sticky;top:20px}#groups{display:grid;gap:3px}#groups button{display:flex;justify-content:space-between;gap:10px;text-align:left;font-size:14px;padding:9px 10px;border:0;background:none;cursor:pointer}#groups button:hover{background:#e2e8e1}#groups button[aria-pressed=true]{background:var(--ink);color:var(--paper)}aside p{font-size:13px;margin:20px 10px}label{display:block;font-size:13px;margin-bottom:5px}.filters{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:16px;margin:24px 0 15px}input,select{width:100%;border:1px solid #89968c;background:#fafbf8;border-radius:2px;padding:10px}#count{font-size:13px;color:var(--muted);margin-bottom:18px}.item{padding:20px 0;border-top:1px solid var(--line);display:grid;grid-template-columns: minmax(190px,.8fr) minmax(0,1.8fr);gap:24px}.item h3{font-size:17px;line-height:1.35;margin:0 0 9px;overflow-wrap:anywhere}.item p{font-size:14px;margin:0 0 8px}.item .origin{font-size:12px;color:var(--muted)}.state{font-size:12px;display:inline-block;border:1px solid #9aab9f;border-radius:2px;padding:2px 6px}.state.local{color:var(--amber);border-color:#beaa8d}.state.reference{border-style:dashed}.check{color:var(--muted)}code{font-family:ui-monospace,monospace;font-size:11px;overflow-wrap:anywhere}details{font-size:13px;margin-top:12px}summary{color:var(--green);cursor:pointer}ul{padding-left:19px}li{margin-bottom:9px}.evidence{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:12px}.blank{padding:30px 0}.error{border:1px solid #955125;padding:18px}.legend{display:flex;gap:8px 18px;flex-wrap:wrap;font-size:12px;margin-top:12px}footer{border-top:2px solid var(--ink);margin-top:42px;padding-top:18px;font-size:13px}.plan{padding:14px 0;border-bottom:1px solid var(--line)}.plan b{font-size:15px}.plan p{font-size:14px;margin-top:6px}
+@media(max-width:850px){.layout{grid-template-columns:1fr;gap:26px}aside{position:static}#groups{display:flex;flex-wrap:wrap;gap:4px}#groups button{gap:10px;padding:7px 9px}aside p{margin:12px 0}.item{grid-template-columns:1fr;gap:9px}.filters{grid-template-columns:1fr}.summary{font-size:14px}h1{margin-top:20px}.item{padding:20px 0}.legend{gap:7px 10px}}
+</style>
+<main>
+<header>
+ <nav><span>Tin film-lab</span><a href="../README.md">Repo</a><a href="PLAN.md">Plan notu</a><a href="../research/launch-references/">Referans araştırması</a></nav>
+ <h1>Film-lab’e ne ekledik?</h1>
+ <p>Film üretirken kullanılan araçlar, elementler, sesler, müzikler ve skill’ler. Her kayıtta ne işe yaradığı, nerede olduğu ve ne kadar kontrol edildiği var.</p>
+ <p class="muted" id="date">Envanter yükleniyor…</p>
+ <p class="summary" id="summary"></p>
+ <div class="legend"><span><b>Dalda:</b> paylaşılan kod / metadata</span><span><b>Önceden vardı:</b> mevcut altyapı</span><span><b>Yerelde:</b> ayrı checkout’ta</span><span><b>Gözlem:</b> referansta görüldü</span></div>
+</header>
+<div class="layout">
+ <aside aria-label="Envanter bölümleri"><div id="groups"></div><p class="muted">Müzik haritası dinleme onayı değildir. Hareket tarifi ve araştırma etiketi, hazır component demek değildir.</p></aside>
+ <section aria-label="Envanter kayıtları">
+  <h2 id="heading">Eklediklerimiz</h2><p class="muted" id="intro"></p>
+  <div class="filters"><div><label for="query">Ad, işlev veya dosya ara</label><input id="query" type="search" placeholder="örn. Neon, typing, soru, render"></div><div><label for="state">Nerede?</label><select id="state"><option value="all">Tümü</option><option value="branch">Dalda</option><option value="base">Önceden vardı</option><option value="local">Yerelde</option><option value="reference">Gözlem</option></select></div></div>
+  <p id="count" role="status" aria-live="polite"></p><div id="items"></div>
+ </section>
+</div>
+<footer><p>20 Ekim envanteri; canlı tarama değildir. <a href="README.md">Sayım ve kaynaklar</a> · <a href="PLAN.md">1 / 2 / 4 için plan</a></p><p>Ses dinlemesi ve ürünü bilmeyen bir izleyiciyle anlaşılırlık kontrolü ayrı açık işlerdir.</p></footer>
+<noscript>Envanter için JavaScript gerekir. <a href="inventory.json">Metadata</a> ve <a href="PLAN.md">plan notunu</a> okuyabilirsin.</noscript>
+</main>
+<script>
+'use strict';
+const labels={branch:'Dalda',base:'Önceden vardı',local:'Yerelde',reference:'Gözlem'};
+const descriptions={
+ 'Eklediklerimiz':'Bu turda eklenen veya kontrol edilip seçilen işler. Eski repo araçları ayrıca listeleniyor.',
+ 'Araçlar':'Gerçek kod ve komutlar; neyi yaptıkları ve eldeki kontrol sonucu.',
+ 'Skill ve talimatlar':'Altı mevcut skill dosyası dört farklı adı içeriyor. Yeni soru akışı ve Tin skill’i yerel durumuyla ayrı.',
+ 'Hareket ve elementler':'273 Cinetic tarifi 14 grupta. İsimlerini açıp inceleyebilirsin. Mevcut Motion helper’ları en altta.',
+ 'Referansta görülen UI':'26 UI türü, 458 farklı kurgudaki örnek kare notlarından. Bu liste bir component kütüphanesi değildir.',
+ 'Müzikler':'19 mevcut + 18 yerel Codex + 8 yerel Claude seçimi: 45 farklı indeksli parça. Ham ses dosyaları bu envantere kopyalanmadı.',
+ 'Ses efektleri':'20 seçilmiş kayıt, Tin recut’ta kullanılan 3 üretilmiş ses rolü ve 6 eski Mixkit efekti ayrı tutuluyor.',
+ 'Kaynaklar':'Mevcut indirme yolları ve yerel API denemeleri. Örnek indirme başarısı, uçtan uca workflow entegrasyonu demek değil.',
+ 'Sıradaki işler':'Konuştuğumuz 1, 2 ve 4 için kısa plan. Tamamlanmış iş gibi sayılmıyor.'
+};
+const $=id=>document.getElementById(id);
+const el=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
+let data,group='Eklediklerimiz';
+function show(){
+ $('heading').textContent=group;$('intro').textContent=descriptions[group];
+ document.querySelectorAll('#groups button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group===group)));
+ $('items').replaceChildren();
+ if(group==='Sıradaki işler'){
+  for(const [title,text] of [
+   ['1 · Ürün anlaşılsın','Sorulardan tek eylem ve sonuç çıkar. Önce kısa ana sahne; sonra eski brief’i olmayan yeni ürün ve yeni izleyici kontrolü.'],
+   ['2 · Kaynak toplama','Workflow içinden seçili sağlayıcıya git, küçük adayları getir ve kaynak/kredi kaydını tut. Mevcut arşiv helper’ını kullanabiliriz.'],
+   ['4 · Revizyon dosyaları','MP4 ile brief, sahne kodu, zamanlar ve kaynak manifestini sürümleyerek sakla. Temiz klasörden geri yükleyip bir sahneyi değiştir.']]){
+   const a=el('article',undefined,'plan');a.append(el('b',title),el('p',text));$('items').append(a);
+  }
+  const p=el('p');const a=el('a','Tam planı aç');a.href='PLAN.md';p.append(a);$('items').append(p);$('count').textContent='3 plan maddesi · 3. konu kapsam dışında';return;
+ }
+ const q=$('query').value.toLocaleLowerCase('tr').trim(),state=$('state').value;
+ const list=data.rows.filter(r=>r.group===group&&(state==='all'||r.state===state)&&[r.title,r.use,r.check,r.origin,r.path,...r.details].join(' ').toLocaleLowerCase('tr').includes(q));
+ $('count').textContent=list.length+' kayıt';
+ for(const r of list){
+  const row=el('article',undefined,'item'),left=el('div'),right=el('div');
+  left.append(el('h3',r.title),el('span',labels[r.state],'state '+r.state),el('p',r.origin,'origin'));
+  right.append(el('p',r.use),el('p',r.check,'check'));
+  if(r.details.length){const d=el('details'),s=el('summary','İçerik / ayrıntı ('+r.details.length+')'),ul=el('ul');for(const x of r.details)ul.append(el('li',x));d.append(s,ul);right.append(d);}
+  const proof=el('div',undefined,'evidence');
+  if(r.path){const path=el('code',r.path);proof.append(path);if(r.state==='branch'||r.state==='base'||r.state==='reference'){
+   const a=el('a','Dosyayı aç');a.href='https://github.com/tin-computer/tin-film-lab/blob/codex/launch-reference-analysis/'+r.path.split('/').map(encodeURIComponent).join('/');
+   if(r.path.endsWith('/'))a.href=a.href.replace('/blob/','/tree/');proof.append(a);
+  }}
+  if(r.url){const url=new URL(r.url);if(url.protocol==='https:'){const a=el('a','İlk kaynak');a.href=url.href;proof.append(a);}}
+  right.append(proof);row.append(left,right);$('items').append(row);
+ }
+ if(!list.length)$('items').append(el('p','Bu bölümde eşleşen kayıt yok. Aramayı veya durum filtresini temizle.','blank'));
+}
+fetch('inventory.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{
+ if(!Array.isArray(d.rows)||!d.counts)throw Error('Eksik envanter verisi');data=d;
+ $('date').textContent='Kaynak kontrolü: '+new Date(d.date).toLocaleString('tr-TR',{timeZone:'Europe/Istanbul'})+' · Europe/Istanbul';
+ const c=d.counts;$('summary').textContent=`${c.music} indeksli müzik (${c.music_base} mevcut + ${c.music_local} yerel ek) · ${c.selected_sfx} seçilmiş kayıt efekti · ${c.generated_sfx_roles} üretilmiş ses rolü · ${c.techniques} hareket tarifi · ${c.ui_groups} gözlenen UI türü`;
+ for(const name of Object.keys(descriptions)){const b=el('button');b.type='button';b.dataset.group=name;b.setAttribute('aria-pressed',String(group===name));const n=data.rows.filter(r=>r.group===name).length;b.append(el('span',name),el('span',name==='Sıradaki işler'?'3':String(n)));b.onclick=()=>{group=name;$('query').value='';$('state').value='all';show();};$('groups').append(b);}
+ $('query').addEventListener('input',show);$('state').addEventListener('change',show);show();
+}).catch(error=>{$('date').textContent='Envanter yüklenemedi.';$('items').append(el('p',error.message+' · Repo kökünden yerel HTTP sunucusuyla aç.','error'));});
+</script>
+</html>
