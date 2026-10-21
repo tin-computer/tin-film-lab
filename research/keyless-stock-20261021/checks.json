@@ -1,0 +1,16 @@
+{
+  "downloaded": 17,
+  "full_decode": true,
+  "frames_inspected": 68,
+  "selected": 7,
+  "rejected": 10,
+  "providers": {
+    "Mixkit": 8,
+    "RawFilm": 9
+  },
+  "original_hashes_unchanged": true,
+  "shared_raw_pack_allowed": false,
+  "new_human_approvals": 0,
+  "source_sound_review": false,
+  "bulk_download_disabled": true
+}
