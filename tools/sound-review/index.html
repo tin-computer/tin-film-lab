@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Choose sound by the action</title>
+<style>
+body{font:17px system-ui;max-width:880px;margin:40px auto;padding:20px;background:#f4f2ec;color:#272622}h1{font-size:30px}section{border-top:1px solid #aaa;padding:24px 0}button,input,textarea{font:inherit;margin:8px 8px 8px 0;padding:9px}textarea{display:block;width:90%;height:58px}.stage{height:130px;border:1px solid #aaa;display:grid;place-items:center;background:white;overflow:hidden}.object{padding:12px 20px;border:2px solid #444;border-radius:8px;transition:none}.hit{transform:scale(.94)}.done{border-color:#217740;color:#217740}.message{transform:translateY(50px);opacity:0}.message.done{transform:translateY(0);opacity:1}.moving{transform:translateX(-170px)}.moving.done{transform:translateX(0)}small{display:block}select{font:inherit;padding:8px}audio{display:block;width:100%;margin:12px 0}label{display:block}
+</style>
+<h1>Choose sound by the action</h1><p>Listen to the same action with different sounds. Nothing is selected yet. Save a choice only after listening. Silence is valid.</p>
+<p>Levels use a shared active-RMS target and a peak limit. This is an approximate level match, not a claim that they feel equally loud.</p>
+<label>Your name <input id="listener" placeholder="Listener"></label><label>Import earlier choices <input id="import" type="file" accept="application/json"></label>
+<div id="groups"></div><button id="save">Download effect choices</button><p id="status" role="status"></p><h1>Describe the music</h1><p>Listen to the whole track or scrub to another section. Write what you hear and which brand/story it fits. No points or quality rating.</p><label>Import earlier music notes <input id="music-import" type="file" accept="application/json"></label><div id="music"></div><button id="music-save">Download music descriptions</button>
+<script>
+/* DATA */
+const copy={press:['Press a button','Approve'],complete:['A task finishes successfully','Working…'],message:['A message arrives','Message received'],transition:['One scene moves into the next','Product view']};
+let choices={}, playing=null, frame;
+for(const [kind,ids] of Object.entries(DATA.groups)){
+ const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=copy[kind][0];section.append(heading);
+ const stage=document.createElement('div');stage.className='stage';const object=document.createElement('div');stage.append(object);section.append(stage);
+ const reset=()=>{object.className='object'+(kind==='message'?' message':kind==='transition'?' moving':'');object.textContent=copy[kind][1]};reset();
+ const select=document.createElement('select');select.setAttribute('aria-label',kind+' selected sound');select.dataset.context=kind;
+ for(const [value,label] of [['','Not chosen'],['silence','Silence'],...ids.map((id,i)=>[id,'Sound '+String.fromCharCode(65+i)])]){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option)}
+ ids.forEach((id,i)=>{const button=document.createElement('button');button.textContent='Listen '+String.fromCharCode(65+i);button.onclick=()=>{
+  if(playing)playing.pause();cancelAnimationFrame(frame);reset();const audio=new Audio(DATA.assets[id].file);playing=audio;
+  const draw=()=>{const dt=audio.currentTime-DATA.assets[id].anchor;object.classList.toggle('hit',kind==='press'&&dt>=0&&dt<.14);object.classList.toggle('done',kind!=='press'&&dt>=0);if(kind==='complete')object.textContent=dt>=0?'Done':'Working…';if(!audio.ended)frame=requestAnimationFrame(draw)};
+  audio.play().then(draw).catch(e=>document.querySelector('#status').textContent=e.message);
+ };section.append(button)});
+ select.addEventListener('change',()=>select.dataset.listener='');
+ section.append(select);const note=document.createElement('textarea');note.placeholder='Why does this fit this action? Describe the feeling and where it should not be used.';note.dataset.context=kind;note.addEventListener('input',()=>select.dataset.listener='');section.append(note);
+ document.querySelector('#groups').append(section);
+}
+for (const track of DATA.music || []) {
+ const section=document.createElement('section');section.dataset.music=track.id;
+ const title=document.createElement('h2');title.textContent=track.title;section.append(title);
+ const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src=track.file;section.append(audio);
+ for(const [key,label] of [['feeling','What does it feel like?'],['progression','How does it start and develop?'],['use_with','Fits these brands or stories (one per line)'],['avoid_with','Avoid in these contexts (one per line)']]){const l=document.createElement('label');l.textContent=label;const input=document.createElement('textarea');input.dataset.field=key;input.addEventListener('input',()=>section.dataset.listener='');l.append(input);section.append(l)}
+ document.querySelector('#music').append(section);
+}
+document.querySelector('#music-import').onchange=async e=>{try{const rows=JSON.parse(await e.target.files[0].text());for(const row of rows){const section=[...document.querySelectorAll('[data-music]')].find(s=>s.dataset.music===String(row.id));if(!section)continue;section.dataset.listener=row.listener||'';for(const key of ['feeling','progression','use_with','avoid_with'])section.querySelector(`[data-field="${key}"]`).value=Array.isArray(row[key])?row[key].join('\n'):row[key]||''}}catch(e){document.querySelector('#status').textContent=e.message}};
+document.querySelector('#music-save').onclick=()=>{
+ const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Add the listener name';return}
+ const rows=[];for(const section of document.querySelectorAll('[data-music]')){const row={id:section.dataset.music,listener:section.dataset.listener||listener};for(const field of section.querySelectorAll('[data-field]'))row[field.dataset.field]=field.value.trim();if(!row.feeling&&!row.progression&&!row.use_with&&!row.avoid_with)continue;if(!row.feeling||!row.progression){document.querySelector('#status').textContent='Add feeling and progression for '+row.id;return}for(const key of ['use_with','avoid_with'])row[key]=row[key].split('\n').map(s=>s.trim()).filter(Boolean);rows.push(row)}
+ const url=URL.createObjectURL(new Blob([JSON.stringify(rows,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='listening-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent='Downloaded '+rows.length+' descriptions';
+};
+document.querySelector('#import').onchange=async e=>{try{choices=JSON.parse(await e.target.files[0].text());for(const [key,value]of Object.entries(choices)){const s=document.querySelector(`select[data-context="${key}"]`),n=document.querySelector(`textarea[data-context="${key}"]`);if(s){s.dataset.listener=value.listener||'';s.value=value.effect===null?'silence':value.effect;n.value=value.reason||''}}}catch(e){document.querySelector('#status').textContent=e.message}};
+document.querySelector('#save').onclick=()=>{
+ const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Add the listener name';return}
+ const result={};for(const select of document.querySelectorAll('select')){if(!select.value)continue;const kind=select.dataset.context,reason=document.querySelector(`textarea[data-context="${kind}"]`).value.trim();if(!reason){document.querySelector('#status').textContent='Add a short reason for '+kind;return}result[kind]={effect:select.value==='silence'?null:select.value,listener:select.dataset.listener||listener,reason,source:select.value==='silence'?null:DATA.assets[select.value].source}}
+ const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='effect-choices.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent='Downloaded '+Object.keys(result).length+' choices. Unchosen actions stay unchosen.';
+};
+</script></html>

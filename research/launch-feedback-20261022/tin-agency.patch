@@ -1,0 +1,68 @@
+--- a/films/tin-agency/src/index.html
++++ b/films/tin-agency/src/index.html
+@@ -23 +23 @@
+-  #term { position: absolute; left: 240px; top: 330px; width: 1440px; background: #0d0c0b; border-radius: 22px; border: 1px solid #2a2622; padding: 40px 50px; font-size: 40px; line-height: 1.6; }
++  #term { position: absolute; left: 240px; top: 330px; width: 1440px; background: #0d0c0b; border-radius: 22px; border: 1px solid #2a2622; padding: 40px 50px; font-size: 40px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+@@ -36 +35,0 @@
+-  #logo { position: absolute; left: 50%; top: 50%; height: 200px; margin: -100px 0 0 -224px; }
+@@ -44,5 +43,3 @@
+-  #endLogo { position: absolute; left: 146px; top: 150px; height: 80px; }
+-  #endH { position: absolute; left: 140px; top: 260px; font-size: 220px; line-height: 1.15; letter-spacing: -0.05em; padding-bottom: .1em; white-space: nowrap; }
+-  #endS { position: absolute; left: 146px; top: 550px; font-size: 54px; color: var(--cream2); letter-spacing: -0.02em; }
+-  #endCmd { position: absolute; left: 140px; top: 700px; background: #0d0c0b; border: 1px solid #2a2622; border-radius: 999px; padding: 28px 44px; font-size: 32px; }
+-  #endUrl { position: absolute; left: 140px; top: 840px; font-size: 38px; color: var(--ember); font-weight: 700; }
++
++  #endLogo { position:absolute; height:160px; left:50%; top:370px; transform:translateX(-50%); }
++  #endUrl { position:absolute; top:600px; left:0; right:0; text-align:center; font-size:46px; color:var(--cream2); }
+@@ -57 +54 @@
+-<div class="layer" id="now"><div id="term" class="mono"></div><div id="team"></div></div>
++<div class="layer" id="now"><div id="term" class="mono" data-film-review-overflow></div><div id="team"></div></div>
+@@ -59 +55,0 @@
+-  <img id="logo" src="img/logotype-paper-on-transparent.png" alt="">
+@@ -61 +57 @@
+-    <div class="k mono">content.generate · draft · waiting for you</div>
++    <div class="k mono">Draft ready for review</div>
+@@ -67,3 +62,0 @@
+-    <div id="endH" data-film-review-overflow>Vibe marketing.</div>
+-    <div id="endS">The Tin MCP for Claude Code and Codex. Open source.</div>
+-    <div id="endCmd" class="mono"><span class="d">$ </span>claude mcp add --transport http tin https://app.tin.computer/mcp</div>
+@@ -81 +74 @@
+-const BEAT = CUE.beat, BAR = CUE.bar, DUR = CUE.length, DROP = CUE.landing.t, FPS = 30;
++const BEAT = CUE.beat, BAR = CUE.bar, DUR = 17 * BAR, DROP = CUE.landing.t, FPS = 30;
+@@ -102 +95 @@
+-const F = { dec: BAR * 13, click: beatAfter(L[3].t1 + 0.2), end: BAR * 15, vibe: Wd(4, 1) - 0.05, sub: L[4].t1 + 0.2 };
++const F = { dec: DROP, click: beatAfter(L[3].t1 + 0.2), end: BAR * 15, vibe: Wd(4, 1) - 0.05, sub: L[4].t1 + 0.2 };
+@@ -107,0 +101,7 @@
++  scenes: [
++    {name:'Archive',from:0,to:NOW},
++    {name:'Connect Tin',from:NOW,to:A.team},
++    {name:'Four workflows',from:A.team,to:DROP},
++    {name:'Review the draft',from:DROP,to:F.end,kind:'product'},
++    {name:'Tin closing',from:F.end,to:DUR,kind:'closing'}
++  ],
+@@ -110 +110 @@
+-    { name: 'drop-logo', t: DROP, grid: 'bar' },
++    { name: 'draft-reveal', t: DROP, grid: 'bar' },
+@@ -138 +138 @@
+-const ready = Promise.all([document.fonts.load('400 40px fk'), document.fonts.load('700 40px fk'), document.fonts.load('40px gm'), imgReady($('logo')), imgReady($('endLogo'))]);
++const ready = Promise.all([document.fonts.load('400 40px fk'), document.fonts.load('700 40px fk'), document.fonts.load('40px gm'), imgReady($('endLogo'))]);
+@@ -194,3 +194,2 @@
+-  const logoOn = t < F.dec, endOn = t >= F.end, decOn = !logoOn && !endOn;
+-  show($('logo'), logoOn); show($('dec'), decOn); show($('end'), endOn);
+-  if (logoOn) { const k = sp(t - DROP, 'heavy'); $('logo').style.transform = settle(k, k => `scale(${q(0.86 + 0.14 * k)})`); }
++  const endOn = t >= F.end, decOn = !endOn;
++  show($('dec'), decOn); show($('end'), endOn);
+@@ -201 +200 @@
+-    $('approved').textContent = t >= F.click + 0.08 ? '✓ approved · opens a pull request' : '';
++    $('approved').textContent = t >= F.click + 0.08 ? '✓ Approved' : '';
+@@ -208,7 +207,3 @@
+-    const a = sp(t - F.end, 'base'), v = sp(t - F.vibe, 'snappy'), c = sp(t - F.sub, 'base'), drift = clamp((t - F.end) / (DUR - F.end));
+-    $('endLogo').style.opacity = a > 0.999 ? '' : q(a);
+-    $('endH').style.opacity = t >= F.vibe ? (v > 0.999 ? '' : q(v)) : '0';
+-    $('endH').style.transformOrigin = '0 50%';
+-    $('endH').style.transform = `translateY(${Math.round((1 - v) * 50)}px) scale(${q(1 + 0.03 * drift)})`;
+-    $('endS').style.opacity = q(c); $('endCmd').style.opacity = q(c); $('endUrl').style.opacity = q(c);
+-    $('endCmd').style.transform = settle(c, k => `translateY(${Math.round((1 - k) * 24)}px)`);
++    const a = clamp(sp(t - F.end, 'base'));
++    $('endLogo').style.opacity = q(a);
++    $('endUrl').style.opacity = q(a);

@@ -42,3 +42,12 @@ films/tin-art/out/board/*
 *.otf
 *.woff
 *.woff2
+
+# Local feedback renders and source copies; focused changes are kept as patches
+/out/
+films/tin-agency/
+films/cheatcode-pov/
+
+# Local dependency links in a separate checkout
+/bin
+**/node_modules

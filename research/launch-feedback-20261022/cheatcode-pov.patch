@@ -1,0 +1,21 @@
+--- a/films/cheatcode-pov/src/index.html
++++ b/films/cheatcode-pov/src/index.html
+@@ -16,0 +17 @@
++  #chat { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+@@ -22 +23 @@
+-  .msg.me { right: 0; background: #000; color: #fff; }
++  .msg.me { right: 0; background: #007aff; color: #fff; }
+@@ -63 +64 @@
+-  #slogan { margin-top: 30px; font-size: 52px; } #url { margin-top: 50px; font-size: 38px; color: var(--sub); } #url b { color: var(--ink); }
++  #slogan { margin-top: 30px; font-size: 52px; }
+@@ -85 +86 @@
+-  <div id="endCard"><div id="logo">cheat-code.<span class="cc">cc</span></div><div id="slogan">Peer pressure makes diamonds</div><div id="url"><b>cheat-code.cc</b> · free in open beta</div></div>
++  <div id="endCard"><div id="logo">cheat-code.<span class="cc">cc</span></div><div id="slogan" data-film-copy>Peer pressure makes diamonds</div></div>
+@@ -160,0 +162,7 @@
++  scenes: [
++    {name:'Group chat',from:0,to:DROP,kind:'product'},
++    {name:'Shared week',from:DROP,to:A.chat2,kind:'product'},
++    {name:'Friends reply',from:A.chat2,to:A.punch,kind:'product'},
++    {name:'The promise',from:A.punch,to:A.end},
++    {name:'Cheatcode closing',from:A.end,to:DUR,kind:'closing'}
++  ],

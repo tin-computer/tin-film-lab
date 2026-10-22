@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-22",
+  "tests": {
+    "frame_review_cases_passed": 11,
+    "music_selection_tests_passed": 4,
+    "effect_selection_tests_passed": 1,
+    "browser_export_and_import_check": "passed with synthetic fixture and local generated page"
+  },
+  "local_audition": {
+    "music_tracks": 37,
+    "unique_effects": 10,
+    "contexts": 4,
+    "human_selections_recorded": 0
+  },
+  "films": {
+    "tin": {
+      "status": "needs_visual_review",
+      "frames_checked": 1113,
+      "source_sha256": "d91d11477daa81185d43e3e1286b9f4d4443a7f5c1b11cae78d547f98b7b59d6",
+      "errors": {},
+      "warnings": {
+        "missing_interface_reference": 1
+      },
+      "snapshots": 39,
+      "visual_review": "sampled encoded frames inspected by agent",
+      "interface_review": "pending real matching product state"
+    },
+    "cheatcode": {
+      "status": "failed",
+      "frames_checked": 788,
+      "source_sha256": "858580e79ca192292658d94c79f68f2c11ae1c28adc18b2e512c02778c4da97e",
+      "errors": {
+        "history_dependent_pixels": 92
+      },
+      "warnings": {
+        "missing_interface_reference": 3,
+        "text_outside_viewport": 19,
+        "text_clipped_by_container": 18,
+        "unverified_text_geometry": 1,
+        "manual_visual_surfaces": 1
+      },
+      "snapshots": 117,
+      "visual_review": "sampled encoded frames inspected by agent",
+      "interface_review": "pending real matching product state"
+    }
+  },
+  "tin_audio": {
+    "reuse": "existing music and narration; no effects added",
+    "integrated_lufs": -14.1,
+    "true_peak_dbtp": -1.9,
+    "human_listening": "pending"
+  },
+  "api_calls": 0,
+  "api_spend_usd": 0,
+  "notes": [
+    "Cheatcode repeated-seek pixel differences remain failures; the tolerance was not raised.",
+    "Claw was compared with an official Messages image; no full fidelity pass is claimed.",
+    "Metrics do not prove emotional fit or product accuracy."
+  ]
+}

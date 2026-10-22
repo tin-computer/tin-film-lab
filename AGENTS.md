@@ -12,3 +12,5 @@ For a new launch, feature or short marketing film, follow [FILM_FLOW.md](FILM_FL
 - Keep changes in film-lab. Publishing, changes in Tin and changes in a product repository need a separate request.
 
 Use short, clear English for saved briefs and notes. Keep source and licence records with the assets.
+
+- Plan the held final frame before animating. Use human sound descriptions, context-specific effect choices, real interface evidence and the shared scene review in FILM_FLOW.md. A clean technical report does not approve the story or the music.
