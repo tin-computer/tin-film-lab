@@ -16,9 +16,21 @@ try{
  const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(pathToFileURL(resolve(process.argv[2]||file)).href);
  assert.equal(await page.locator('select').count(),4);
+ assert.deepEqual(await page.locator('#groups h2').allTextContents(),['Button press','Task completed','Message received','Scene transition']);
+ assert.deepEqual(await page.locator('select').first().locator('option').allTextContents().then(xs=>xs.slice(0,2)),['Not selected','Silence']);
  assert(await page.locator('[data-music]').count()>0);
  assert.deepEqual(await page.locator('select').evaluateAll(xs=>xs.map(x=>x.value)),['','','','']);
- await page.locator('#save').click();assert.match(await page.locator('#status').innerText(),/listener/);
+ if(process.argv[2]){
+  const complete=page.locator('#groups > section').nth(1);
+  await complete.getByRole('button').first().click();
+  await page.waitForFunction(()=>document.querySelectorAll('#groups > section')[1].querySelector('.object').textContent==='Done');
+  await page.evaluate(()=>playing.pause());
+  const audio=page.locator('[data-music] audio').first();
+  await audio.evaluate(element=>element.play());
+  await page.waitForFunction(()=>document.querySelector('[data-music] audio').currentTime>.15);
+  await audio.evaluate(element=>element.pause());
+ }
+ await page.locator('#save').click();assert.match(await page.locator('#status').innerText(),/adını/);
  await page.locator('#listener').fill('Test listener');
  await page.locator('select[data-context="press"]').selectOption('kenney-click-001');
  await page.locator('textarea[data-context="press"]').fill('A short physical press');
@@ -26,17 +38,64 @@ try{
  const read=async file=>{const chunks=[];for await(const c of await file.createReadStream())chunks.push(c);return JSON.parse(Buffer.concat(chunks).toString())};
  assert.equal((await read(download)).press.effect,'kenney-click-001');
  const section=page.locator('[data-music]').first();
- await section.locator('[data-field="feeling"]').fill('Curious and calm');await section.locator('[data-field="progression"]').fill('Quiet then rhythmic');
- await section.locator('[data-field="use_with"]').fill('calm technology');await section.locator('[data-field="avoid_with"]').fill('holiday');
+ assert.equal(await section.locator('input[type="checkbox"]:checked').count(),0);
+ await section.locator('.music-review > summary').click();
+ assert.equal(await section.locator('fieldset').count(),5);
+ assert(await section.locator('[data-choice="feeling"]').count()>=30);
+ for(const label of ['Merak uyandırıyor','Sakin','Az enstrümanla','Yavaşça yükseliyor','Ritim sonradan giriyor','Net bir son vuruşla','Tek özelliği gösteren kısa video','Seslendirmeli anlatım']){
+  // Some descriptions appear in more than one question; pick the intended question below.
+  if(label==='Yavaşça yükseliyor')await section.locator('[data-options="start"]').getByLabel(label,{exact:true}).check();
+  else await section.getByLabel(label,{exact:true}).check();
+ }
+ await section.locator('[data-field="notes"]').fill('Meraklı ve sakin, ortasında açılıyor');
+ await section.locator('[data-field="avoid_with"]').fill('holiday');
  d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
- const notes=await read(download);assert.equal(notes.length,1);assert.deepEqual(notes[0].avoid_with,['holiday']);
+ const notes=await read(download);assert.equal(notes.length,1);
+ assert.deepEqual(notes[0].selections.feeling,['Merak uyandırıyor','Sakin']);
+ assert.deepEqual(notes[0].selections.start,['Az enstrümanla','Yavaşça yükseliyor']);
+ assert.match(notes[0].progression,/Başlangıç:.*Gelişim:.*Bitiş:/);
+ assert.equal(notes[0].notes,'Meraklı ve sakin, ortasında açılıyor');assert.deepEqual(notes[0].avoid_with,['holiday']);
+ assert.equal(notes[0].use_with.length,2);
  const imported=[{...notes[0],listener:'Earlier listener'}];
  await page.locator('#music-import').setInputFiles({name:'notes.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(imported))});
  await page.waitForFunction(()=>document.querySelector('[data-music]').dataset.listener==='Earlier listener');
  d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
- assert.equal((await read(download))[0].listener,'Earlier listener');
- await section.locator('[data-field="feeling"]').fill('My new description');
+ let restored=(await read(download))[0];assert.equal(restored.listener,'Earlier listener');
+ assert.equal(restored.feeling,notes[0].feeling);assert.equal(restored.progression,notes[0].progression);
+ assert.deepEqual(restored.selections,notes[0].selections);
+ await section.getByLabel('Sakin',{exact:true}).uncheck();
  d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
- assert.equal((await read(download))[0].listener,'Test listener');
- assert.deepEqual(errors,[]);console.log('Listening page: empty defaults and both JSON exports passed');
+ restored=(await read(download))[0];assert.equal(restored.listener,'Test listener');assert.deepEqual(restored.selections.feeling,['Merak uyandırıyor']);
+ const legacy={id:notes[0].id,listener:'Original listener',feeling:'ai slop launch',progression:'aynı ritimle başlıyor aynı gidiyor',use_with:['basit motion launch'],avoid_with:['kullanma']};
+ // Import from the initial, closed form too; a hidden parent used to hide imported notes.
+ await section.locator('.music-review').evaluate(el=>el.open=false);
+ await page.locator('#music-import').setInputFiles({name:'legacy.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify([legacy]))});
+ await page.waitForFunction(()=>document.querySelector('[data-music]').dataset.listener==='Original listener');
+ assert.equal(await section.locator('input[type="checkbox"]:checked').count(),0);
+ assert(await section.locator('.legacy').isVisible());
+ assert(await section.locator('[data-legacy="feeling"]').isVisible());
+ assert.equal(await section.locator('[data-legacy="feeling"]').inputValue(),legacy.feeling);
+ assert.match(await page.locator('#music-status').innerText(),/1 müzik notu içe aktarıldı/);
+ assert(await section.evaluate(el=>el.getBoundingClientRect().top>=-1&&el.getBoundingClientRect().top<innerHeight));
+ d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
+ restored=(await read(download))[0];for(const key of Object.keys(legacy))assert.deepEqual(restored[key],legacy[key]);
+ // Reimporting an exported legacy note must not duplicate old or generated prose.
+ await page.locator('#music-import').setInputFiles({name:'again.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify([restored]))});
+ d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
+ assert.deepEqual((await read(download))[0],restored);
+ await section.locator('.music-review').evaluate(el=>el.open=false);
+ await page.locator('#import').setInputFiles({name:'music-via-top-input.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify([legacy]))});
+ await page.waitForFunction(()=>document.querySelector('[data-music] .music-review').open);
+ assert(await section.locator('[data-legacy="feeling"]').isVisible());
+ const partial={id:notes[0].id,listener:'Partial listener',feeling:'',progression:'',use_with:['Küçük güncelleme duyurusu'],avoid_with:[],selections:{feeling:['Özel bir his'],launch:['Küçük güncelleme duyurusu']},notes:''};
+ await page.locator('#music-import').setInputFiles({name:'partial.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify([partial]))});
+ await page.waitForFunction(()=>document.querySelector('[data-music]').dataset.listener==='Partial listener');
+ assert(await section.getByLabel('Özel bir his',{exact:true}).isChecked());
+ await section.getByLabel('Özel bir his',{exact:true}).uncheck();
+ d=page.waitForEvent('download');await page.locator('#music-save').click();download=await d;
+ restored=(await read(download))[0];assert.equal(restored.feeling,'');assert.equal(restored.progression,'');assert.deepEqual(restored.use_with,['Küçük güncelleme duyurusu']);
+ await page.setViewportSize({width:390,height:844});
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile page overflows');
+ if(process.argv[3])await section.screenshot({path:process.argv[3]});
+ assert.deepEqual(errors,[]);console.log('Listening page: multi-select, partial review, old/new round trips, attribution and mobile layout passed');
 }finally{await browser.close();rmSync(dir,{recursive:true,force:true})}

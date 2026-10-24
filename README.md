@@ -5,7 +5,9 @@ with Playwright and ffmpeg, cut to a vetted and bar-mapped music library, review
 
 Start with [HANDOFF.md](HANDOFF.md): what we did, how it works, what's left.
 
-For a new film with your coding agent, start with [FILM_FLOW.md](FILM_FLOW.md): brief questions → saved choices → story and three frames → direction review → music preview → selected render. The repo's `AGENTS.md` and `CLAUDE.md` point agents to this flow.
+For a new film with your coding agent, start with [FILM_FLOW.md](FILM_FLOW.md). Read the product, ask only for missing story choices, save the brief, check the scenes and deliver an MP4 preview. Pause for story approval when the user requests staged review. Read [FILM_LESSONS.md](FILM_LESSONS.md) for lessons from earlier trials. The repo's `AGENTS.md` and `CLAUDE.md` point agents to this flow.
+
+The [sound review tool](music/LISTENING_NOTES.md) records a listener's music descriptions and effect choices. It supports partial reviews and old note files. Audio and personal notes stay local; the HTML template needs the builder and your source catalogue. See [the review and test results](research/launch-feedback-20261022/README.md#24-october-tool-review) for what was checked and what remains open.
 
 | Folder | What |
 |---|---|

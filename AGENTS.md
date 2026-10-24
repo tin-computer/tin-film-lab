@@ -1,16 +1,20 @@
 # Film-lab agent instructions
 
-For a new launch, feature or short marketing film, follow [FILM_FLOW.md](FILM_FLOW.md). Start with the product context and brief questions before writing scenes.
+For a new launch, feature or short marketing film, follow [FILM_FLOW.md](FILM_FLOW.md). Read the product context and resolve only missing story choices before writing scenes.
 
-- Read the product and brand material already provided. Ask only for missing choices.
+- Read the product and brand material already provided. Ask zero to three story-changing questions only when needed. A complete brief needs no questions.
 - Use the coding client's question tool when available; otherwise ask in chat and wait for the answer.
 - Save the answers in the film's `BRIEF.md`. Follow the story, three-frame, preview and final steps in the flow.
-- Keep previous answers and approvals. Ask again when a requested change affects the feature, audience or visual direction.
+- Keep previous answers and approvals for this product and request. Ask again only when a meaningful choice is unclear. Record delegated creative decisions as agent choices.
 - Reuse the existing music, motion, render, mix and review tools. Each frame must depend only on film time.
-- Check on-screen claims against sources; label authored product examples. Inspect the rendered pictures before delivery.
+- Check on-screen claims against sources. Record authored examples in the brief and delivery notes; change misleading scenes instead of adding production labels. Inspect the rendered pictures before delivery.
 - Follow the selected film's local instructions too. Existing unattended film prompts keep their own run mode; the new-film flow is interactive unless the user chooses otherwise.
 - Keep changes in film-lab. Publishing, changes in Tin and changes in a product repository need a separate request.
 
 Use short, clear English for saved briefs and notes. Keep source and licence records with the assets.
 
 - Plan the held final frame before animating. Use human sound descriptions, context-specific effect choices, real interface evidence and the shared scene review in FILM_FLOW.md. A clean technical report does not approve the story or the music.
+
+- Read [FILM_LESSONS.md](FILM_LESSONS.md) and relevant prior film feedback before questions. Describe scene choices without archive IDs or assumed reference knowledge. References and stock are optional.
+- For recognisable third-party UI, search for and inspect a current matching screenshot before recreating it; keep the source, date and state with the scene.
+- After feedback, record the changed question/scene and observed result in the film review. Do not report an instruction change as a verified improvement.

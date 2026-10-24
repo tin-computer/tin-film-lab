@@ -19,7 +19,7 @@ def selected_effect(notes, context, available):
 
 
 def normalize(ffmpeg, source, output):
-    pcm = subprocess.check_output([ffmpeg, '-v', 'error', '-i', str(source), '-t', '3', '-ac', '1', '-ar', '48000', '-f', 's16le', '-'])
+    pcm = subprocess.check_output([ffmpeg, '-v', 'error', '-i', str(source), '-t', '3', '-ac', '2', '-ar', '48000', '-f', 's16le', '-'])
     samples = array('h', pcm)
     if sys.byteorder != 'little':
         samples.byteswap()
@@ -29,19 +29,43 @@ def normalize(ffmpeg, source, output):
     rms = (sum(x*x for x in active)/len(active))**.5
     gain = min(.1/rms, .7/max(active))
     peak_index = max(range(len(samples)), key=lambda i: abs(samples[i]))
-    subprocess.run([ffmpeg, '-y', '-v', 'error', '-i', str(source), '-t', '3', '-af', f'volume={gain},adelay=800:all=1,apad=pad_dur=1', '-ac', '2', '-ar', '48000', '-c:a', 'pcm_s16le', str(output)], check=True)
-    return {'anchor': .8 + peak_index / 48000, 'gain': gain}
+    subprocess.run([ffmpeg, '-y', '-v', 'error', '-f', 's16le', '-ar', '48000', '-ac', '2', '-i', 'pipe:0', '-af', f'volume={gain},adelay=800:all=1,apad=pad_dur=1', '-ac', '2', '-ar', '48000', '-c:a', 'pcm_s16le', str(output)], input=pcm, check=True)
+    return {'anchor': .8 + (peak_index // 2) / 48000, 'gain': gain}
 
 
-def build(index, out, ffmpeg, music_index=None, music_root=None):
+def build(index, out, ffmpeg, music_index=None, music_root=None, catalogue=None, asset_root=None):
     rows = json.loads(index.read_text())
-    by_id = {r['id']: r for r in rows}
+    by_id = {r['id']: dict(r) for r in rows}
+    if catalogue:
+        if not asset_root:
+            raise ValueError('--catalogue requires --asset-root for source_file paths')
+        for row in json.loads(catalogue.read_text()):
+            if row.get('kind') != 'effect':
+                continue
+            key = row['id'].removeprefix('S-').replace('_', '-')
+            if key not in by_id:
+                by_id[key] = {**row, 'id': key, 'audio': str((asset_root/row['source_file']).resolve())}
+    for row in by_id.values():
+        row.setdefault('family', row['id'].removeprefix('kenney-').rsplit('-', 1)[0])
     groups = {
         'press': ['kenney-click-001', 'kenney-click-003', 'kenney-select-001'],
         'complete': ['kenney-confirmation-001', 'kenney-confirmation-002', 'kenney-pluck-001'],
         'message': ['kenney-tick-001', 'kenney-select-001', 'kenney-confirmation-001'],
         'transition': ['kenney-open-001', 'kenney-switch-001', 'kenney-close-001'],
     }
+    families = {
+        'press': ['click', 'select', 'toggle', 'tick'],
+        'complete': ['confirmation', 'glass', 'pluck'],
+        'message': ['tick', 'select', 'bong', 'drop', 'glass'],
+        'transition': ['open', 'close', 'switch', 'maximize', 'minimize'],
+    }
+    # Source families provide listening candidates, not approved emotional fit.
+    for context, names in families.items():
+        queues = [[key for key, row in sorted(by_id.items()) if row['family'] == family and key not in groups[context]] for family in names]
+        while len(groups[context]) < 12 and any(queues):
+            for queue in queues:
+                if queue and len(groups[context]) < 12:
+                    groups[context].append(queue.pop(0))
     out.mkdir(parents=True, exist_ok=True)
     assets = {}
     for key in sorted({key for ids in groups.values() for key in ids}):
@@ -49,7 +73,7 @@ def build(index, out, ffmpeg, music_index=None, music_root=None):
         source = (index.parent/row['audio']).resolve()
         output = out/f'{key}.wav'
         measured = normalize(ffmpeg, source, output)
-        assets[key] = {'file': output.name, **measured, 'source': row['source']}
+        assets[key] = {'file': output.name, 'title': row.get('title', key), **measured, 'source': row['source']}
     music = []
     if music_index:
         if not music_root:
@@ -73,5 +97,5 @@ def build(index, out, ffmpeg, music_index=None, music_root=None):
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--index', type=Path, required=True);p.add_argument('--out', type=Path, required=True)
-    p.add_argument('--ffmpeg', default='ffmpeg');p.add_argument('--music-index',type=Path);p.add_argument('--music-root',type=Path);a=p.parse_args()
-    print(json.dumps(build(a.index, a.out, a.ffmpeg, a.music_index, a.music_root)))
+    p.add_argument('--ffmpeg', default='ffmpeg');p.add_argument('--music-index',type=Path);p.add_argument('--music-root',type=Path);p.add_argument('--catalogue',type=Path);p.add_argument('--asset-root',type=Path);a=p.parse_args()
+    print(json.dumps(build(a.index, a.out, a.ffmpeg, a.music_index, a.music_root, a.catalogue, a.asset_root)))

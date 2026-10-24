@@ -82,12 +82,16 @@ def load_notes(path):
         if not key.strip() or key in seen:
             raise ValueError('Listening note IDs must be nonempty and unique')
         seen.add(key)
-        for field in ('listener', 'feeling', 'progression'):
-            if not isinstance(note.get(field), str) or not note[field].strip():
-                raise ValueError(f'{key}: missing {field}')
+        if not isinstance(note.get('listener'), str) or not note['listener'].strip():
+            raise ValueError(f'{key}: missing listener')
+        for field in ('feeling', 'progression'):
+            if not isinstance(note.get(field), str):
+                raise ValueError(f'{key}: {field} must be text')
         for field in ('use_with', 'avoid_with'):
             if not isinstance(note.get(field), list) or any(not isinstance(v, str) or not words(v) for v in note[field]):
                 raise ValueError(f'{key}: {field} must contain nonempty context labels')
+        if not any((note['feeling'].strip(), note['progression'].strip(), note['use_with'], note['avoid_with'])):
+            raise ValueError(f'{key}: empty listening note')
     return notes
 
 

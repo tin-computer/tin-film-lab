@@ -49,6 +49,12 @@ class MusicChoices(unittest.TestCase):
             self.assertEqual(shortlist.load_notes(path), notes)
             path.write_text(json.dumps(notes+notes))
             with self.assertRaises(ValueError):shortlist.load_notes(path)
+            partial={**notes[0], 'feeling':'', 'progression':'', 'use_with':['feature launch'], 'avoid_with':[]}
+            path.write_text(json.dumps([partial]))
+            self.assertEqual(shortlist.load_notes(path), [partial])
+            self.assertEqual([r['id'] for r in shortlist.shortlist(self.tracks, 'feature', 20, notes=[partial], context='launch')], [1])
+            path.write_text(json.dumps([{**partial, 'use_with':[]}]))
+            with self.assertRaises(ValueError):shortlist.load_notes(path)
 
     def test_real_cli_excludes_previous_track_and_fails_on_missing_cue(self):
         script = Path(__file__).with_name("shortlist.py")

@@ -1,47 +1,120 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Choose sound by the action</title>
+<!doctype html><html lang="tr"><meta charset="utf-8"><title>Duruma göre ses seç</title>
 <style>
-body{font:17px system-ui;max-width:880px;margin:40px auto;padding:20px;background:#f4f2ec;color:#272622}h1{font-size:30px}section{border-top:1px solid #aaa;padding:24px 0}button,input,textarea{font:inherit;margin:8px 8px 8px 0;padding:9px}textarea{display:block;width:90%;height:58px}.stage{height:130px;border:1px solid #aaa;display:grid;place-items:center;background:white;overflow:hidden}.object{padding:12px 20px;border:2px solid #444;border-radius:8px;transition:none}.hit{transform:scale(.94)}.done{border-color:#217740;color:#217740}.message{transform:translateY(50px);opacity:0}.message.done{transform:translateY(0);opacity:1}.moving{transform:translateX(-170px)}.moving.done{transform:translateX(0)}small{display:block}select{font:inherit;padding:8px}audio{display:block;width:100%;margin:12px 0}label{display:block}
+body{font:17px system-ui;max-width:880px;margin:40px auto;padding:20px;background:#f4f2ec;color:#272622}h1{font-size:30px}section{border-top:1px solid #aaa;padding:24px 0}button,input,textarea{box-sizing:border-box;max-width:100%;font:inherit;margin:8px 8px 8px 0;padding:9px}textarea{display:block;width:90%;height:58px}.stage{height:130px;border:1px solid #aaa;display:grid;place-items:center;background:white;overflow:hidden}.object{padding:12px 20px;border:2px solid #444;border-radius:8px;transition:none}.hit{transform:scale(.94)}.done{border-color:#217740;color:#217740}.message{transform:translateY(50px);opacity:0}.message.done{transform:translateY(0);opacity:1}.moving{transform:translateX(-170px)}.moving.done{transform:translateX(0)}small{display:block}select{box-sizing:border-box;max-width:100%;font:inherit;padding:8px}audio{display:block;width:100%;margin:12px 0}label{display:block}
 </style>
-<h1>Choose sound by the action</h1><p>Listen to the same action with different sounds. Nothing is selected yet. Save a choice only after listening. Silence is valid.</p>
-<p>Levels use a shared active-RMS target and a peak limit. This is an approximate level match, not a claim that they feel equally loud.</p>
-<label>Your name <input id="listener" placeholder="Listener"></label><label>Import earlier choices <input id="import" type="file" accept="application/json"></label>
-<div id="groups"></div><button id="save">Download effect choices</button><p id="status" role="status"></p><h1>Describe the music</h1><p>Listen to the whole track or scrub to another section. Write what you hear and which brand/story it fits. No points or quality rating.</p><label>Import earlier music notes <input id="music-import" type="file" accept="application/json"></label><div id="music"></div><button id="music-save">Download music descriptions</button>
+<style>
+.music-review{margin-top:16px}.music-review summary{cursor:pointer;padding:10px 0}.music-review fieldset{border:0;padding:0;margin:22px 0}.music-review legend{font-weight:650;margin-bottom:10px}.options{display:flex;flex-wrap:wrap;gap:8px}.tag{display:flex;align-items:center;gap:7px;border:1px solid #bbb;padding:8px 10px;cursor:pointer;line-height:1.3;max-width:100%;box-sizing:border-box}.tag:has(input:checked){border-color:#272622;background:#e2e6da}.tag:focus-within{outline:2px solid #272622;outline-offset:2px}.tag input{width:17px;height:17px;flex-shrink:0;margin:0;padding:0}.music-review textarea{width:100%;min-height:70px}.legacy{margin:18px 0}.legacy label{margin-top:12px}
+</style>
+<h1>Duruma göre ses seç</h1><p>Aynı hareketi farklı seslerle dinle. Henüz hiçbir ses seçili değil. Dinledikten sonra seçimini kaydet. İstersen sessiz bırakabilirsin. Seçenekler kaynak dosyaların türüne göre gruplandı; hangisinin uyduğuna dinleyerek sen karar ver.</p>
+<p>Karşılaştırmak daha kolay olsun diye ses seviyeleri yaklaşık olarak dengelendi. Yine de bazı sesler kulağına daha yüksek gelebilir.</p>
+<label>Adın <input id="listener" placeholder="Dinleyenin adı"></label><label>Önceki ses seçimlerini içe aktar <input id="import" type="file" accept="application/json"></label>
+<div id="groups"></div><button id="save">Ses seçimlerini indir</button><p id="status" role="status"></p><h1>Müziği tarif et</h1><p>Parçayı dinle, ardından seçeneklerini aç. Her soruda birden fazla seçeneği işaretleyebilirsin. Yalnız emin olduğun kısımları doldur; ek not yazmak isteğe bağlı.</p><label>Önceki müzik notlarını içe aktar <input id="music-import" type="file" accept="application/json"></label><p id="music-status" role="status"></p><div id="music"></div><button id="music-save">Müzik notlarını indir</button>
 <script>
 /* DATA */
-const copy={press:['Press a button','Approve'],complete:['A task finishes successfully','Working…'],message:['A message arrives','Message received'],transition:['One scene moves into the next','Product view']};
+const copy={press:['Button press','Approve'],complete:['Task completed','Working…'],message:['Message received','Message received'],transition:['Scene transition','Product view']};
 let choices={}, playing=null, frame;
 for(const [kind,ids] of Object.entries(DATA.groups)){
  const section=document.createElement('section'),heading=document.createElement('h2');heading.textContent=copy[kind][0];section.append(heading);
  const stage=document.createElement('div');stage.className='stage';const object=document.createElement('div');stage.append(object);section.append(stage);
  const reset=()=>{object.className='object'+(kind==='message'?' message':kind==='transition'?' moving':'');object.textContent=copy[kind][1]};reset();
- const select=document.createElement('select');select.setAttribute('aria-label',kind+' selected sound');select.dataset.context=kind;
- for(const [value,label] of [['','Not chosen'],['silence','Silence'],...ids.map((id,i)=>[id,'Sound '+String.fromCharCode(65+i)])]){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option)}
- ids.forEach((id,i)=>{const button=document.createElement('button');button.textContent='Listen '+String.fromCharCode(65+i);button.onclick=()=>{
+ const select=document.createElement('select');select.setAttribute('aria-label',copy[kind][0]+' için seçilen ses');select.dataset.context=kind;
+ for(const [value,label] of [['','Not selected'],['silence','Silence'],...ids.map(id=>[id,DATA.assets[id].title||id])]){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option)}
+ ids.forEach((id,i)=>{const button=document.createElement('button');button.textContent='Listen '+(DATA.assets[id].title||id);button.onclick=()=>{
   if(playing)playing.pause();cancelAnimationFrame(frame);reset();const audio=new Audio(DATA.assets[id].file);playing=audio;
   const draw=()=>{const dt=audio.currentTime-DATA.assets[id].anchor;object.classList.toggle('hit',kind==='press'&&dt>=0&&dt<.14);object.classList.toggle('done',kind!=='press'&&dt>=0);if(kind==='complete')object.textContent=dt>=0?'Done':'Working…';if(!audio.ended)frame=requestAnimationFrame(draw)};
   audio.play().then(draw).catch(e=>document.querySelector('#status').textContent=e.message);
  };section.append(button)});
  select.addEventListener('change',()=>select.dataset.listener='');
- section.append(select);const note=document.createElement('textarea');note.placeholder='Why does this fit this action? Describe the feeling and where it should not be used.';note.dataset.context=kind;note.addEventListener('input',()=>select.dataset.listener='');section.append(note);
+ section.append(select);const note=document.createElement('textarea');note.placeholder='Bu ses bu harekete neden uyuyor? Nasıl hissettirdiğini ve hangi durumlarda kullanmamamız gerektiğini yaz.';note.dataset.context=kind;note.addEventListener('input',()=>select.dataset.listener='');section.append(note);
  document.querySelector('#groups').append(section);
+}
+const musicQuestions=[
+ ['feeling','Nasıl hissettiriyor?',['Merak uyandırıyor','Heyecanlı','Enerjik','Sakin','Rahatlatıcı','Sıcak','Samimi','Umutlu','Neşeli','Eğlenceli','Oyuncu','Komik','Özgüvenli','Güçlü','Cesur','İddialı','Zarif','Şık','Ciddi','Güven veriyor','Duygusal','Hüzünlü','Nostaljik','Hayal gibi','Gizemli','Karanlık','Gergin','Tedirgin','Asi','Mekanik','Teknolojik','Doğal','Sinematik','Epik','Hafif','Yoğun','Sürükleyici','Monoton','Sıkıcı','Yapay geliyor','Reklam müziği gibi','Fazla neşeli','Fazla dramatik']],
+ ['start','Nasıl başlıyor?',['Sessizlikten geliyor','Çok sakin','Yavaş tempolu','Az enstrümanla','Tek bir sesle','Ortam sesiyle','Vokalle','Melodi önde','Bas önde','Ritim hemen başlıyor','Güçlü bir vuruşla','Hızlı ve yoğun','Gizemli bir girişle','Yavaşça yükseliyor']],
+ ['change','Nasıl değişiyor?',['Ritim sonradan giriyor','Bas sonradan giriyor','Yeni enstrümanlar ekleniyor','Vokal sonradan giriyor','Giderek hızlanıyor','Giderek yoğunlaşıyor','Melodi belirginleşiyor','Yavaşça yükseliyor','Bir anda açılıyor / drop','Kısa bir sessizlik oluyor','Sakinleşip tekrar yükseliyor','Bir anda yön değiştiriyor','Aynı ritimle devam ediyor','Döngü hissi veriyor','Pek değişmiyor','Giderek sakinleşiyor']],
+ ['end','Nasıl bitiyor?',['Net bir son vuruşla','Yankı bırakarak','Yavaşça kısılıyor','Bir anda kesiliyor','Kısa bir sessizlikle','Melodi tek başına kalıyor','Ritim tek başına kalıyor','Enerji yükselerek','Enerji azalarak','Sakin bir çözülmeyle','Gerginliği çözmeden','Döngüye bağlanıyor','Uzun bir kapanışla','Belirgin bir sonu yok']],
+ ['launch','Ne tür launch videolarına uyar?',['Tek özelliği gösteren kısa video','Ürünü ilk kez tanıtan video','Gerçek ekran kaydı / ürün demosu','Kod / CLI / geliştirici aracı','AI agent iş akışı','Önce / sonra dönüşümü','Problemden çözüme giden hikâye','Sonucu önce gösteren hikâye','Bir kullanıcının günlük hikâyesi','Diyalog / mesajlaşma hikâyesi','Karşılaştırma / test','Challenge / yarış / oyun','Komik / absürt fikir','Karakter / maskot hikâyesi','Sanat filmi + ürün','Soyut / deneysel animasyon','Fotoğraf / stok görüntü ağırlıklı','Hızlı ve ritmik kurgu','Yavaş başlayıp açılan kurgu','Sakin ve açıklayıcı anlatım','Seslendirmeli anlatım','Büyük ürün duyurusu','Küçük güncelleme duyurusu','Mobil uygulama tanıtımı','Topluluk / sosyal ürün','Duygusal marka hikâyesi','Şık ve sade ürün sunumu','Sezon / kutlama temalı video']]
+];
+function addMusicOption(section,key,text){
+ const label=document.createElement('label');label.className='tag';
+ const input=document.createElement('input');input.type='checkbox';input.dataset.choice=key;input.value=text;
+ const span=document.createElement('span');span.textContent=text;label.append(input,span);section.querySelector(`[data-options="${key}"]`).append(label);return input;
 }
 for (const track of DATA.music || []) {
  const section=document.createElement('section');section.dataset.music=track.id;
  const title=document.createElement('h2');title.textContent=track.title;section.append(title);
  const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src=track.file;section.append(audio);
- for(const [key,label] of [['feeling','What does it feel like?'],['progression','How does it start and develop?'],['use_with','Fits these brands or stories (one per line)'],['avoid_with','Avoid in these contexts (one per line)']]){const l=document.createElement('label');l.textContent=label;const input=document.createElement('textarea');input.dataset.field=key;input.addEventListener('input',()=>section.dataset.listener='');l.append(input);section.append(l)}
+ const details=document.createElement('details');details.className='music-review';
+ const summary=document.createElement('summary');summary.textContent='Seçenekler ve notlar';details.append(summary);section.append(details);
+ for(const [key,question,options] of musicQuestions){
+  const fieldset=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent=question;fieldset.append(legend);
+  const list=document.createElement('div');list.className='options';list.dataset.options=key;fieldset.append(list);details.append(fieldset);
+  for(const option of options)addMusicOption(section,key,option);
+ }
+ for(const [key,text] of [['notes','Ek his notun (opsiyonel)'],['avoid_with','Uymadığı durumlar veya kullanmama notun (opsiyonel, her satıra bir tane)']]){
+  const label=document.createElement('label');label.textContent=text;const input=document.createElement('textarea');input.dataset.field=key;label.append(input);details.append(label);
+ }
+ const legacy=document.createElement('details');legacy.className='legacy';legacy.hidden=true;
+ const oldSummary=document.createElement('summary');oldSummary.textContent='Önceki serbest notların';legacy.append(oldSummary);
+ for(const [key,text] of [['feeling','Önceki his notu'],['progression','Önceki ilerleyiş notu'],['use_with','Önceki kullanım notları']]){
+  const label=document.createElement('label');label.textContent=text;const input=document.createElement('textarea');input.dataset.legacy=key;label.append(input);legacy.append(label);
+ }
+ summary.after(legacy);
+ section.addEventListener('input',()=>section.dataset.listener='');
  document.querySelector('#music').append(section);
 }
-document.querySelector('#music-import').onchange=async e=>{try{const rows=JSON.parse(await e.target.files[0].text());for(const row of rows){const section=[...document.querySelectorAll('[data-music]')].find(s=>s.dataset.music===String(row.id));if(!section)continue;section.dataset.listener=row.listener||'';for(const key of ['feeling','progression','use_with','avoid_with'])section.querySelector(`[data-field="${key}"]`).value=Array.isArray(row[key])?row[key].join('\n'):row[key]||''}}catch(e){document.querySelector('#status').textContent=e.message}};
+const lines=text=>text.split('\n').map(s=>s.trim()).filter(Boolean);
+async function importMusicNotes(file){if(!file)return;try{
+ const rows=JSON.parse(await file.text());if(!Array.isArray(rows))throw Error('Müzik notları liste biçiminde olmalı. Ses efekti seçimlerini üstteki alandan içe aktar.');
+ // Validate before replacing any visible notes.
+ const seen=new Set();for(const row of rows){
+  if(!row||!['string','number'].includes(typeof row.id)||seen.has(String(row.id)))throw Error('Her not için farklı bir parça kimliği gerekli');seen.add(String(row.id));
+  for(const key of ['feeling','progression','notes','listener'])if(row[key]!==undefined&&typeof row[key]!=='string')throw Error('Geçersiz metin alanı: '+key);
+  for(const key of ['use_with','avoid_with'])if(row[key]!==undefined&&(!Array.isArray(row[key])||row[key].some(v=>typeof v!=='string')))throw Error('Geçersiz seçenek listesi: '+key);
+  if(row.selections!==undefined){if(!row.selections||typeof row.selections!=='object'||Array.isArray(row.selections))throw Error('Geçersiz müzik seçimleri');
+   for(const [key]of musicQuestions){const values=row.selections[key];if(values!==undefined&&(!Array.isArray(values)||values.some(v=>typeof v!=='string')))throw Error('Geçersiz müzik seçimleri: '+key)}
+   if(row.legacy!==undefined&&(!row.legacy||typeof row.legacy!=='object'||typeof row.legacy.feeling!=='string'||typeof row.legacy.progression!=='string'||!Array.isArray(row.legacy.use_with)||row.legacy.use_with.some(v=>typeof v!=='string')))throw Error('Geçersiz önceki notlar');
+  }
+ }
+ let count=0,firstImported;for(const row of rows){
+  const section=[...document.querySelectorAll('[data-music]')].find(s=>s.dataset.music===String(row.id));if(!section)continue;
+  firstImported??=section;
+  section.dataset.listener=row.listener||'';
+  for(const input of section.querySelectorAll('[data-choice]'))input.checked=false;
+  for(const [key]of musicQuestions)for(const value of new Set(row.selections?.[key]||[])){
+   const input=[...section.querySelectorAll(`[data-choice="${key}"]`)].find(input=>input.value===value)||addMusicOption(section,key,value);input.checked=true;
+  }
+  section.querySelector('[data-field="notes"]').value=row.notes||'';
+  section.querySelector('[data-field="avoid_with"]').value=(row.avoid_with||[]).join('\n');
+  const legacy=row.selections?(row.legacy||{}):row;
+  for(const key of ['feeling','progression','use_with'])section.querySelector(`[data-legacy="${key}"]`).value=Array.isArray(legacy[key])?legacy[key].join('\n'):legacy[key]||'';
+  const oldNotes=section.querySelector('.legacy');oldNotes.hidden=![...oldNotes.querySelectorAll('textarea')].some(input=>input.value.trim());oldNotes.open=!oldNotes.hidden;count++;
+  section.querySelector('.music-review').open=true;
+ }
+ document.querySelector('#music-status').textContent=count+' müzik notu içe aktarıldı'+(rows.length>count?'. Bu sayfada bulunmayan '+(rows.length-count)+' parça atlandı':'');
+ firstImported?.scrollIntoView({block:'start'});
+}catch(e){document.querySelector('#music-status').textContent=e.message}}
+document.querySelector('#music-import').onchange=e=>importMusicNotes(e.target.files[0]);
 document.querySelector('#music-save').onclick=()=>{
- const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Add the listener name';return}
- const rows=[];for(const section of document.querySelectorAll('[data-music]')){const row={id:section.dataset.music,listener:section.dataset.listener||listener};for(const field of section.querySelectorAll('[data-field]'))row[field.dataset.field]=field.value.trim();if(!row.feeling&&!row.progression&&!row.use_with&&!row.avoid_with)continue;if(!row.feeling||!row.progression){document.querySelector('#status').textContent='Add feeling and progression for '+row.id;return}for(const key of ['use_with','avoid_with'])row[key]=row[key].split('\n').map(s=>s.trim()).filter(Boolean);rows.push(row)}
- const url=URL.createObjectURL(new Blob([JSON.stringify(rows,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='listening-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent='Downloaded '+rows.length+' descriptions';
+ const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Önce adını yaz';return}
+ const rows=[];for(const section of document.querySelectorAll('[data-music]')){
+  const selections=Object.fromEntries(musicQuestions.map(([key])=>[key,[...section.querySelectorAll(`[data-choice="${key}"]:checked`)].map(input=>input.value)]));
+  const notes=section.querySelector('[data-field="notes"]').value.trim();
+  const legacy=Object.fromEntries(['feeling','progression','use_with'].map(key=>[key,section.querySelector(`[data-legacy="${key}"]`).value.trim()]));legacy.use_with=lines(legacy.use_with);
+  const row={id:section.dataset.music,listener:section.dataset.listener||listener,
+   feeling:[...selections.feeling,notes,legacy.feeling].filter(Boolean).join('; '),
+   progression:[...['start','change','end'].map((key,i)=>selections[key].length?['Başlangıç','Gelişim','Bitiş'][i]+': '+selections[key].join(', '):''),legacy.progression].filter(Boolean).join(' | '),
+   use_with:[...new Set([...selections.launch,...legacy.use_with])],avoid_with:lines(section.querySelector('[data-field="avoid_with"]').value),selections,notes};
+  if(!row.feeling&&!row.progression&&!row.use_with.length&&!row.avoid_with.length)continue;
+  if(legacy.feeling||legacy.progression||legacy.use_with.length)row.legacy=legacy;
+  rows.push(row);
+ }
+ const url=URL.createObjectURL(new Blob([JSON.stringify(rows,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='listening-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent=rows.length+' müzik notu indirildi';
 };
-document.querySelector('#import').onchange=async e=>{try{choices=JSON.parse(await e.target.files[0].text());for(const [key,value]of Object.entries(choices)){const s=document.querySelector(`select[data-context="${key}"]`),n=document.querySelector(`textarea[data-context="${key}"]`);if(s){s.dataset.listener=value.listener||'';s.value=value.effect===null?'silence':value.effect;n.value=value.reason||''}}}catch(e){document.querySelector('#status').textContent=e.message}};
+document.querySelector('#import').onchange=async e=>{if(!e.target.files[0])return;try{const imported=JSON.parse(await e.target.files[0].text());if(Array.isArray(imported)){await importMusicNotes(e.target.files[0]);return}choices=imported;for(const [key,value]of Object.entries(choices)){const s=document.querySelector(`select[data-context="${key}"]`),n=document.querySelector(`textarea[data-context="${key}"]`);if(s){s.dataset.listener=value.listener||'';s.value=value.effect===null?'silence':value.effect;n.value=value.reason||''}}}catch(e){document.querySelector('#status').textContent=e.message}};
 document.querySelector('#save').onclick=()=>{
- const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Add the listener name';return}
- const result={};for(const select of document.querySelectorAll('select')){if(!select.value)continue;const kind=select.dataset.context,reason=document.querySelector(`textarea[data-context="${kind}"]`).value.trim();if(!reason){document.querySelector('#status').textContent='Add a short reason for '+kind;return}result[kind]={effect:select.value==='silence'?null:select.value,listener:select.dataset.listener||listener,reason,source:select.value==='silence'?null:DATA.assets[select.value].source}}
- const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='effect-choices.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent='Downloaded '+Object.keys(result).length+' choices. Unchosen actions stay unchosen.';
+ const listener=document.querySelector('#listener').value.trim();if(!listener){document.querySelector('#status').textContent='Önce adını yaz';return}
+ const result={};for(const select of document.querySelectorAll('select')){if(!select.value)continue;const kind=select.dataset.context,reason=document.querySelector(`textarea[data-context="${kind}"]`).value.trim();if(!reason){document.querySelector('#status').textContent=copy[kind][0]+' için kısa bir neden yaz';return}result[kind]={effect:select.value==='silence'?null:select.value,listener:select.dataset.listener||listener,reason,source:select.value==='silence'?null:DATA.assets[select.value].source}}
+ const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='effect-choices.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#status').textContent=Object.keys(result).length+' ses seçimi indirildi. Seçmediğin durumlar boş bırakıldı.';
 };
 </script></html>

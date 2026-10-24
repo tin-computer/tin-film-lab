@@ -42,3 +42,18 @@ Sources inspected:
 Generated files are under `out/launch-feedback/`: Tin and Cheatcode MP4 previews, encoded-frame contact sheets, scene reports and `interface-comparison.png`. These contain private assets and are not committed. The Tin report keeps its missing-reference warning; the Cheatcode report keeps its failures. Sound measurements are not a listening review. No API was called.
 
 The two film sources were uncommitted work in the separate Claude checkout. This commit includes focused patches and before/after SHA-256 values in patch-sources.json, not the other agent's whole unfinished films. To apply a patch, first check the source hash against the manifest, then run `git apply --unidiff-zero --check` before `git apply --unidiff-zero`. Do not apply to a different source version. This is not a clean-checkout rendering package for those private films; the shared tools and tests are portable.
+
+## 24 October tool review
+
+The music form now has five multi-select questions, optional notes and visible imports of older free-text reviews. Partial reviews keep working with the music shortlist. Effect candidates can come from the wider source catalogue; each action gets up to twelve choices. Stereo previews use the same samples for level measurement and playback.
+
+| Check | Working copy | Clean source copy |
+|---|---|---|
+| Music selection | 4 tests passed | 4 tests passed |
+| Effect selection, stereo timing and catalogue builder | 4 tests passed | 4 tests passed |
+| Frame review | 11 cases passed | 11 cases passed |
+| Browser form | Import/export, partial reviews, listener attribution and mobile layout passed | The same checks passed with synthetic data |
+
+The clean copy used the committed sources plus this diff, with the existing Playwright and ffmpeg dependencies installed separately. No private music archive was needed for those fixture checks. The catalogue expansion test replaces audio normalisation; the stereo test runs real ffmpeg. The local 46-track, 40-effect page also passed the form checks. Its generated page, raw audio and personal notes are not committed. Rebuild with your available files as described in music/LISTENING_NOTES.md; the available count depends on those files.
+
+These checks did not produce a new film or test the hosted Tin workflow. Human listening, the missing interface references and the Cheatcode frame failures above remain open. The new onboarding rules still need a full independent film trial.

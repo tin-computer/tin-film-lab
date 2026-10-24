@@ -8,17 +8,37 @@ To start, ask your coding agent:
 
 ## 1. Read, then ask
 
-Read the supplied product source, feature notes, brand files and reference. List the supported features before recommending one. Use the actual product purpose, not a generic software story.
+Identify the product first. With Tin MCP, use the selected project and its product, feature and brand files; ask which project only when the selection is unclear. Locally, read the supplied project folder, wiki/INDEX.md, brand/BRAND.md, DESIGN.md and relevant product sources when available. Do not search unrelated personal folders. If no product or usable source is available, ask for the product URL or project folder before recommending features. Do not ask for facts already in the available sources.
 
-Ask the missing parts of these three questions together. Use the client's question tool if it has one. Give short choices based on the product, and allow a free answer. Without a question tool, ask in chat and wait.
+Read the actual product purpose and supported features before recommending one. Examples elsewhere in this repo show craft, not this user's feature, audience or preferences. Reuse answers only when they belong to this product and request. Past QA scores, old plan limits and test accounts are not marketing claims; verify any claim needed for the film against current product evidence. Do not rank a feature only because it has more QA notes.
 
-| Question | What to ask |
-|---|---|
-| What are we showing? | Product launch, one feature or marketing. Offer two or three real features and recommend one. |
-| Who is it for, and what should they do? | One viewer group and one next action: try a command, open the product, sign up, or another clear action. |
-| How should it look and sound? | Art, product visuals or a mix; platform, length and shape; spoken narration or a music-led story. Ask for a reference, music or mascot only when it is missing and matters to this film. Offer a compact package such as “X, 20 seconds, horizontal, art + short product example.” |
+Distinguish a website claim, a feature implemented in source and a result actually seen in use. Check relevant supplied source when old notes conflict with it. A feature need not have a previous QA run to be considered, but an untested illustration must not be presented as a live result.
 
-Reuse choices the user already gave. Suggest defaults for open style choices, but wait for answers needed to pick the feature, audience and action. If the user explicitly asks for an unattended run, save the assumptions in the brief and use that run mode. Never record a guessed choice as a user's answer.
+Do not send a fixed questionnaire. Read the request and sources, then identify which missing answer would actually change the story. Ask zero to three short questions in one round, using the client's question tool when available. A complete brief needs no questions. An open creative choice is a directing decision, not automatically a blocker.
+
+Ask for an owner's insight the sources cannot provide: a recognisable customer moment, a common misunderstanding, a real example or the feeling the film should leave. Use the product's words. If choices help, offer two genuinely different story ideas, not a list of features or “art / UI / mixed” packages. Allow a free answer. Choose only the relevant question; these examples are not a script:
+
+- Tone-aware translation: “Should the story turn on a translation that is correct but sounds unlike your brand, or on recognising the same voice across languages?” A real phrase can make either direction more specific.
+- A reading challenge: “Is the moment worth showing the dare from a friend, or the surprise that reading faster is not enough to win?”
+- Remote agent messaging: “What would you most want to ask your agent at the exact moment you have left your desk?”
+
+Ask about the audience only if different plausible viewers would need different explanations. Ask about the platform only if an unknown delivery requirement would change the composition. Reuse supplied format, duration, references and previous answers for this request. A conversion action or CTA is optional; do not invent one for every film.
+
+Do not ask users to direct every production detail. Avoid routine questions such as “Do you want effects?”, “What should we remove?” or a checklist of fonts, music, textures and transitions. A user may supply any of these preferences, and an explicit limit must be followed. Otherwise choose the sound, composition and pacing that serve this particular story. Music alone, effects alone, room sound and silence are all valid. Available effects do not mean effects are wanted.
+
+Before coding a new film, resolve who or what carries the explanation. If it is unanswered and would change the story, include one sound question in the same short round: for example, “Should a person explain why this translation feels wrong, or should we discover it through the customer's reaction?” A narrator, dialogue, music-led action and practical sound are different story choices, not optional polish added after animation. Do not turn an omitted answer into “no voice”. If the user delegates direction or requests unattended work, choose and record the reason. Reuse a clear answer for revisions; do not ask again on every render. Use a supplied authorised recording when available; if a chosen voice needs unavailable tools or permission, report that before promising a voiced film. Do not buy voice generation or copy a reference speaker.
+
+After the answers, continue through the finished preview. Save agent choices as agent choices, not user answers. For an explicit one-shot or unattended request, make reasonable creative choices and do not interrupt with a concept menu or three-frame approval. Stop only for missing product evidence, a true access problem or an action needing separate permission. Use staged approval when the user asks for it.
+
+Keep the question round short. Leave audit history, source citations, QA tables and long brand descriptions in the brief. If the product itself is unknown, ask only for its URL or folder. State an access problem once and try an available read-only alternative before asking the user to supply the same source.
+
+### Describe choices without archive knowledge
+
+Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion.
+
+Keep reference brands, IDs and internal filenames out of onboarding choices. Describe the visible event and its meaning in everyday words. “The table gains a column, then the report uses it” is understandable without “Krea ref 011”. Product evidence still has to support the action. If the user asks for examples, offer a working source link or permitted preview with a short explanation; knowing the reference is never a prerequisite to answering.
+
+When alternatives are useful, consider one built directly from the product with no archive template. Compare events, viewpoint and the order of discovery. Different textures on the same sequence are not different ideas. Choose the clearest fit, including a direct demonstration when appropriate. A complete brief does not need a new choice menu.
 
 ## 2. Save the brief
 
@@ -27,13 +47,15 @@ Create `films/<film-name>/BRIEF.md` before writing animation code. Keep it short
 | Field | Save |
 |---|---|
 | Product / feature | The single promise shown by this film. |
-| Viewer / action | Who watches and what they should do next. |
+| Viewer / purpose | Who watches and what they should understand. Add a next action only when needed. |
 | Format | Platform, seconds, aspect ratio and preview size. |
 | Look / sound | Style, reference, music choice and character choice. |
 | Facts / assets | Sources for claims, commands, UI and images; which parts are authored examples. |
 | Review | User choices, approved direction and later changes; assumptions marked separately. |
 
 Pick music from `music/library/LIBRARY.md`, using the user's track when supplied. Follow [listening notes and effect choices](music/LISTENING_NOTES.md): human descriptions explain feeling and brand/story fit; they are not ratings. Resolve voice versus product action with music when it changes the story and the user has not answered or delegated it. Never silently omit requested narration. Read the track map and use `music/tools/cut.py` to produce `music-cut/CUE.md` and `cue.js`. Plan the largest result on a suitable music hit. Record the choice in the brief; do not force every film onto the same track or style.
+
+Read any supplied owner listening notes before selecting sound. Record the note file in the brief. Pass explicit whole-track rejections through `--avoid`; a contextual word matcher cannot interpret every natural-language “do not use” note. A positive note makes a track a candidate for that owner, not an automatic choice for all films. Never import another customer's taste.
 
 ## 3. Show the story and three real frames
 
@@ -47,7 +69,7 @@ Do not format authored promotional copy as disconnected words or claims separate
 
 ### Use real interface evidence
 
-For a recognisable interface such as iMessage, WhatsApp or the product itself, use an actual current screenshot or recording. Start with supplied product material, then official public sources. If needed, build the available product repo locally with safe test data and capture the real screen. Keep the UI version and source URL/commit with the image. A public landing screen does not prove the layout or behaviour of a signed-in feature.
+For a recognisable interface such as YouTube, iMessage, WhatsApp or the product itself, verify its current appearance during this film's research. Use Google/web image search to find the relevant official product page, help page or recent screenshot, then open and inspect the source image. A search thumbnail, date filter or model memory alone does not establish the current UI. Prefer a current capture of the real application when available. Match the depicted device, web/app version, language, theme and signed-in state; do not mix mobile controls with a desktop layout. A platform mentioned only in dialogue or copy needs no UI capture unless its interface is shown. Record the source URL, capture/access date and depicted state with the local reference image. If needed, build the available product repo locally with safe test data and capture the real screen. Keep the UI version and source URL/commit with the image. A public landing screen does not prove the layout or behaviour of a signed-in feature.
 
 Compare the same UI version and state side by side: layout, type, spacing, controls, icons, message direction, colour and state changes. For message apps, inspect the header, back control, sender identity, bubble shape/tail, delivery labels and composer. Cropping and staging may simplify a scene; changing product behaviour may not. No invented “95% accurate” score. A vision model can flag confusing states or layout problems from these same frames, but its judgement is another review, not proof. If evidence is missing, record that exact scene as unverified and ask for the missing view instead of inventing it. Do not add an on-screen disclaimer to cover a false action.
 
@@ -58,11 +80,11 @@ Build `src/index.html` with `window.FILM` and a pure `window.seek(t)`. Reuse `fi
 
 Render three frames with `films/tin-launch/tools/render.mjs stills`: the opening, the product result and the ending. Put them in `out/story/`, inspect them and link them from `STORY.md`.
 
-Show the story and frames together. Ask whether the feature and visual direction are right. Wait before making the full preview, unless that direction was already approved or the user chose an unattended run. Carry existing approval forward; do not ask for it twice.
+Inspect the story and frames internally. Show them and wait when the user asked for staged review; otherwise continue to the preview. Carry existing approval forward; do not ask for it twice.
 
 ## 4. Make and review a music preview
 
-After direction approval, render a small full-motion preview with the existing renderer and mixer. Use the music grid for main reveals and state changes. Reuse real product material when useful, and mark authored examples.
+After the internal story check, or direction approval when requested, render a small full-motion preview with the existing renderer and mixer. Use the music grid for main reveals and state changes. Reuse real product material when useful, and record authored examples in the brief and delivery notes.
 
 Use `tools/sheets.sh` from `films/tin-launch/` for a contact sheet, a phone sheet and strips around fast transitions. Inspect the pictures. Check missing assets, text fit, repeated-frame behaviour, audio mix and the complete video decode. Save the results and the few issues worth fixing in the film's README.
 
@@ -84,9 +106,13 @@ Share the actual music preview. The user's visual and sound feedback is separate
 
 ## 5. Deliver the selected film
 
-After the user accepts the preview, render at the agreed size and frame rate. Keep the whole picture when adding audio. Check the full decode and final transitions. Save setup/render commands, source records, test results and limits in the README.
+For staged review, render at the agreed size and frame rate after the user accepts the preview. For a one-shot request, include that output in the same run. Keep the whole picture when adding audio. Check the full decode and final transitions. Save setup/render commands, source records, test results and limits in the README.
 
 Verify a fresh checkout can restore the inputs and render. Commit only the selected sources and redistributable assets; keep downloaded music, intermediate frames and logs out of Git. Commit, push or open a PR when requested.
+
+## Learn from the trial
+
+Treat each onboarding and preview as a chance to test the flow. Use the short feedback row in [FILM_LESSONS.md](FILM_LESSONS.md) inside the existing film review. Record what the user said, the exact question/scene changed and the next observed result. Keep a pending result pending until it has been checked. Read relevant unresolved feedback before starting another film. Save general lessons separately from owner-specific taste; do not reuse a personal rejection or preference for every customer.
 
 ## Working examples
 
