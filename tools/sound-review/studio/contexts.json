@@ -1,0 +1,22 @@
+{
+  "press": {"label": "Tıklama", "title": "Bir düğmeye basıldığında", "groups": ["press"]},
+  "complete": {"label": "Tamamlanma", "title": "Bir iş tamamlandığında", "groups": ["complete"]},
+  "message": {"label": "Bildirim", "title": "Yeni mesaj geldiğinde", "groups": ["message"]},
+  "transition": {"label": "Geçiş", "title": "Sahne değiştiğinde", "groups": ["transition"]},
+  "typing": {"label": "Yazı yazma", "title": "Bir metin yazılırken", "groups": ["press"]},
+  "hover": {"label": "Üzerine gelme", "title": "İmleç bir seçeneğe geldiğinde", "groups": ["press"]},
+  "toggle": {"label": "Açma kapama", "title": "Bir ayar açılıp kapandığında", "groups": ["press"]},
+  "error": {"label": "Hata", "title": "Bir hata oluştuğunda", "groups": ["message", "complete"]},
+  "send": {"label": "Gönderme", "title": "Mesaj veya dosya gönderildiğinde", "groups": ["message", "transition"]},
+  "search": {"label": "Arama", "title": "Bir arama yapıldığında", "groups": ["press", "message"]},
+  "loading": {"label": "Yükleme", "title": "Bir işlem yüklenirken", "groups": ["complete"]},
+  "progress": {"label": "İlerleme", "title": "Bir işlem adım adım ilerlerken", "groups": ["press", "complete"]},
+  "reveal": {"label": "Ortaya çıkma", "title": "Ürün veya görsel ortaya çıktığında", "groups": ["transition", "complete"]},
+  "hide": {"label": "Kaybolma", "title": "Bir nesne ekrandan çıktığında", "groups": ["transition", "press"]},
+  "move": {"label": "Kaydırma", "title": "Bir nesne yer değiştirirken", "groups": ["transition"]},
+  "zoom": {"label": "Yakınlaşma", "title": "Bir detaya yaklaşırken", "groups": ["transition"]},
+  "impact": {"label": "Güçlü vurgu", "title": "Önemli bir anda vurgu yapıldığında", "groups": ["transition", "complete"]},
+  "count": {"label": "Sayı artışı", "title": "Bir sayı yükselirken", "groups": ["press", "complete"]},
+  "transform": {"label": "Dönüşüm", "title": "Bir nesne başka bir şeye dönüştüğünde", "groups": ["transition", "complete"]},
+  "build": {"label": "Yükseliş", "title": "Beklenti yavaşça yükselirken", "groups": ["transition"]}
+}

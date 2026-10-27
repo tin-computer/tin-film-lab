@@ -1,0 +1,322 @@
+{
+  "checkedAt": "2026-10-27T22:20:11.126745+00:00",
+  "method": "GET first 128 bytes, HTTP Range request, no full downloads",
+  "results": [
+    {
+      "id": "1029",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1141",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1150",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1210",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1254",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "298",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "694",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "772",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "846",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "488",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "726",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "275",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "367",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "431",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101811",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "627733662",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "267",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "719",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "986",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "685",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "606",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1039",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "725",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "690",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "194",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101813",
+      "host": "zero-project.gr",
+      "status": 206,
+      "type": "application/octet-stream",
+      "bytesChecked": 128
+    },
+    {
+      "id": "183",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1077",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1140",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "201",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "698217811",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "745",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1280",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "133",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "1012",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "800",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101801",
+      "host": "upload.wikimedia.org",
+      "status": 206,
+      "type": "application/ogg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "933",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101812",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2000000002",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101804",
+      "host": "prod-1.storage.jamendo.com",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "107",
+      "host": "assets.mixkit.co",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "435758553",
+      "host": "archive.org",
+      "status": 206,
+      "type": "audio/mpeg",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101814",
+      "host": "zero-project.gr",
+      "status": 206,
+      "type": "application/octet-stream",
+      "bytesChecked": 128
+    },
+    {
+      "id": "2026101815",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "id": "2026101816",
+      "error": "HTTP Error 406: Not Acceptable"
+    }
+  ]
+}

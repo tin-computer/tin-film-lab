@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-27T22:22:42.957Z",
+  "passed": true,
+  "checks": [
+    "106 entries with correct local/provider/source playback modes",
+    "supplied export loaded without loss",
+    "bundled Ogg byte-range playback",
+    "Neon provider audio plays in Chromium",
+    "source-only music shows a usable source link instead of a broken player",
+    "all 20 effect situations appear",
+    "bundled effect plays with the situation preview",
+    "browsing and listening do not save decisions",
+    "JSON keeps original records and Markdown includes human notes and separate AI attribution",
+    "five ranked effect choices save in click order",
+    "ranked choices survive reload",
+    "effect board has no horizontal page overflow at 390px",
+    "no browser JS errors; live desk notes unchanged"
+  ],
+  "modes": {
+    "local": 40,
+    "provider": 44,
+    "source": 22
+  },
+  "browserErrors": [],
+  "realNotesUnchanged": true
+}

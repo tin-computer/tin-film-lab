@@ -7,7 +7,9 @@ Start with [HANDOFF.md](HANDOFF.md): what we did, how it works, what's left.
 
 For a new film with your coding agent, start with [FILM_FLOW.md](FILM_FLOW.md). Read the product, ask only for missing story choices, save the brief, check the scenes and deliver an MP4 preview. Pause for story approval when the user requests staged review. Read [FILM_LESSONS.md](FILM_LESSONS.md) for lessons from earlier trials. The repo's `AGENTS.md` and `CLAUDE.md` point agents to this flow.
 
-The [sound review tool](music/LISTENING_NOTES.md) records a listener's music descriptions and effect choices. It supports partial reviews and old note files. Audio and personal notes stay local; the HTML template needs the builder and your source catalogue. See [the review and test results](research/launch-feedback-20261022/README.md#24-october-tool-review) for what was checked and what remains open.
+The [sound desk](tools/sound-review/studio/README.md) has a shared review snapshot: 54 music entries, 52 effects, 20 animated situations and JSON/Markdown export. It keeps human choices separate from AI suggestions. A clean clone includes 40 CC0 effect previews; other sounds use provider playback or source-page links. Setup and playback limits are in its README. The [older listening tool](music/LISTENING_NOTES.md) still supports existing local audio and legacy note files.
+
+For story choices, use [STORY_DIRECTIONS.md](STORY_DIRECTIONS.md). It turns broad styles into concrete scenes, including over-engineering, dry humour and physical metaphors. Offer two ideas that fit the product, not a long style menu.
 
 | Folder | What |
 |---|---|

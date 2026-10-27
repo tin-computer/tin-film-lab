@@ -34,6 +34,8 @@ Keep the question round short. Leave audit history, source citations, QA tables 
 
 ### Describe choices without archive knowledge
 
+Use [story and scene directions](STORY_DIRECTIONS.md) as a private idea pool. Start with a visible event, then offer two product-specific alternatives and explain the recommendation. The pool includes grounded stories, over-engineering, dry documentary humour and physical metaphors; do not present its labels as a fixed questionnaire or ask customers to identify with a generation. Combine story and filming choices freely, and keep the product action and result readable.
+
 Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion.
 
 Keep reference brands, IDs and internal filenames out of onboarding choices. Describe the visible event and its meaning in everyday words. “The table gains a column, then the report uses it” is understandable without “Krea ref 011”. Product evidence still has to support the action. If the user asks for examples, offer a working source link or permitted preview with a short explanation; knowing the reference is never a prerequisite to answering.

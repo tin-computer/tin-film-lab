@@ -1,0 +1,3760 @@
+{
+  "version": 1,
+  "revision": 170,
+  "listener": "hamit",
+  "updatedAt": "2026-10-27T22:00:34.488Z",
+  "reviews": {
+    "107": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Soyut / deneysel animasyon",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Şık ve sade ürün sunumu",
+          "Hızlı ve ritmik kurgu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:35:18.344368+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Teknolojik",
+              "Yoğun"
+            ],
+            "reason": "Bozuk (glitch) sesler, derin baslar ve atmosferik katmanlar mekanik ve gizemli bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Parça, ilk saniyeden itibaren karmaşık ve kesik kesik bir ritimle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Zamanla katmanlar artıyor, bozuk vokal sample'ları ve ek synth sesleri dokuyu kalınlaştırıyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Müzik, net bir kapanış vuruşu yerine atmosferik bir gürültü içinde kayboluyor veya döngüye dönüyor gibi hissettiriyor."
+          }
+        },
+        "notes": "Parça, kesik kesik bir ritimle başlayıp zamanla daha yoğun ve katmanlı bir elektronik dokuya dönüşüyor. Vokal sample'ları anlaşılır bir dil yerine doku unsuru olarak kullanılıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Komik / absürt fikir"
+        ],
+        "caveat": "Seslerin heavily processed (ağır işlenmiş) olması nedeniyle enstrümanları ve vokal içeriğini tam olarak ayırt etmek zor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve 'glitch' estetiği, teknolojik, dijital veya hızlı kurgulanmış görsellerle uyumlu bir zemin sağlıyor."
+      }
+    },
+    "133": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Tek özelliği gösteren kısa video",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:12.806069+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Hızlı ve ritmik kurgu",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Teknolojik"
+            ],
+            "reason": "Sabit ve sürükleyici bir beat ile sentetik ses dokuları, mekanik ve teknolojik bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, giriş süslemesi olmadan doğrudan davul ve bas ritmiyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Temel ritim değişmeden katmanlar eklenip çıkarılarak hipnotik bir döngü oluşturuluyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Müzik, geleneksel bir kapanış kadansı yerine aniden kesiliyor veya döngü noktasında bitiyor."
+          }
+        },
+        "notes": "Kayıt, baştan sona tutarlı bir tempo ve yoğunlukta ilerliyor; synth katmanları ile zenginleşiyor ancak temel ritim sabit kalıyor. Son bölümde enerji ani bir kesintiyle veya belirsiz bir şekilde sonlanıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Tekrarlayan yapı, uzun süreli dinlemede monoton gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Mekanik ve yüksek enerjili elektronik yapısı, teknik süreçleri veya hızlı montajları destekleyen bir arka plan müziği olarak uygun."
+      }
+    },
+    "183": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Yavaş başlayıp açılan kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Büyük ürün duyurusu",
+          "Şık ve sade ürün sunumu",
+          "Seslendirmeli anlatım"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:54.680440+00:00",
+        "launch": [
+          "Tek özelliği gösteren kısa video",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sürükleyici",
+              "Teknolojik",
+              "Hayal gibi"
+            ],
+            "reason": "Elektronik dokular ve hipnotik ritim, dinleyiciyi içine çeken modern ve atmosferik bir his yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça, yumuşak pad'ler ve basit bir melodi ile minimal bir şekilde başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Sakinleşip tekrar yükseliyor"
+            ],
+            "reason": "Beat ilerleyen dakikalarda devreye giriyor, katmanlar artıyor ve ortada ritmin düştüğü bir bölüm var."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik, doğal bir bitiş yerine aniden duruyor."
+          }
+        },
+        "notes": "Parça atmosferik synth'lerle başlayıp derin bir house ritmine evrilıyor. Ortadaki breakdown sonrası tekrar güçlenerek devam ediyor ve sona erdirilmeden kesiliyor.",
+        "avoid_with": [
+          "Akustik çalma listesi",
+          "Canlı konser kaydı",
+          "Sessizlik gerektiren odaklanma"
+        ],
+        "caveat": "Bitişin ani kesilmesi, parçanın tamamlanmamış bir bölüm veya excerpt olabileceğini düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Stabil ve dikkat dağıtmayan elektronik groove, teknolojik veya soyut görsellerle iyi eşleşir."
+      }
+    },
+    "194": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video",
+          "Soyut / deneysel animasyon",
+          "Önce / sonra dönüşümü"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:27.755917+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Mobil uygulama tanıtımı",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Şık",
+              "Sürükleyici"
+            ],
+            "reason": "Modern elektronik beat'i ve steady ritmi ile dinamik ve şık bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde"
+            ],
+            "reason": "Parça, davullar girmeden önce sentetik bir melodi ile başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Başlangıç meledisinin üzerine davul ve bas katmanları eklenerek yoğunluk artıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt, müzikal bir kapanış yerine aniden duruyor."
+          }
+        },
+        "notes": "Parça sentetik bir melodi ile başlıyor, ardından trap esintili davullar ve bas devreye giriyor. Vokal sample'ları ve perküsyon katmanlarıyla enerji korunarak loop benzeri bir yapıda ilerliyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Komik / absürt fikir"
+        ],
+        "caveat": "Son kısımdaki kesilme, parçanın bir döngünün ortasında bitmiş olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sabit ve modern beat'i, görsel medyada ritmik geçişler veya ürün tanıtımları için uygun bir altyapı sunuyor."
+      }
+    },
+    "201": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Tek özelliği gösteren kısa video",
+          "Kod / CLI / geliştirici aracı",
+          "Ürünü ilk kez tanıtan video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:33:12.896437+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Önce / sonra dönüşümü"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Sürükleyici",
+              "Mekanik"
+            ],
+            "reason": "Davul makinesi ritmi ve tekrarlayan synth katmanları sürekli bir hareket ve teknolojik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, giriş süslemesi olmadan doğrudan dörtlük vuruşlarla başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Vokal örnekleri ve bas线 katmanları eklenerek enerji artıyor ancak temel groove korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik, doğal bir kapanış veya fade-out yerine dosya sonunda aniden duruyor."
+          }
+        },
+        "notes": "Parça, 'go' vokal örnekleri ve derin bir bas hattıyla karakterize edilen bir tech-house ritmi üzerine kurulu. Aranjman, yeni katmanların eklenmesiyle hafifçe zenginleşiyor ancak genel yapı döngüsel kalıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Akustik canlı performans"
+        ],
+        "caveat": "Sonlandırmanın ani kesilmesi, parçanın tam bir müzikal cümle olarak bittiğini düşündürmüyor; bu bir loop veya excerpt olabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sabit ve sürükleyici temposu, hızlı kurgulara ve teknolojik süreçlerin görselleştirilmesine uygun bir zemin sağlıyor."
+      }
+    },
+    "267": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Sakin ve açıklayıcı anlatım",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Şık ve sade ürün sunumu",
+          "Seslendirmeli anlatım"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:04.942633+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Sakin ve açıklayıcı anlatım",
+          "Şık ve sade ürün sunumu",
+          "Fotoğraf / stok görüntü ağırlıklı"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Rahatlatıcı",
+              "Monoton"
+            ],
+            "reason": "Track, düşük tempolu ve tekrarlayan bir lo-fi hip hop ritmine sahip, bu da sakin ve monoton bir his yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Müzik, giriş kısmında beklemeden davul ve bas ritmiyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Pek değişmiyor"
+            ],
+            "reason": "Parça boyunca belirgin bir yapısal değişiklik yok; aynı melodik ve ritmik döngü tekrarlanıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik doğal bir bitiş veya fade-out yerine dosya sonunda aniden duruyor."
+          }
+        },
+        "notes": "Kayıt, baştan sona tutarlı bir lo-fi groove sunuyor. Düzenleme minimal tutulmuş ve sona doğru herhangi bir yoğunluk artışı olmadan aniden bitiyor.",
+        "avoid_with": [
+          "Yüksek enerjili spor videoları",
+          "Dramatik film sahneleri",
+          "Canlı performans kayıtları"
+        ],
+        "caveat": "Parçanın döngüsel yapısı ve ani bitişi, onun tam bir şarkıdan ziyade bir loop veya arka plan müziği parçası olduğunu düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Tekrarlayan ve dikkat dağıtmayan yapısı, arka planda odaklanma gerektiren teknik veya tanıtım videoları için uygun."
+      }
+    },
+    "275": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Yavaş başlayıp açılan kurgu",
+          "Tek özelliği gösteren kısa video",
+          "Mobil uygulama tanıtımı",
+          "Şık ve sade ürün sunumu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:30:03.473572+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Sakin ve açıklayıcı anlatım",
+          "Tek özelliği gösteren kısa video",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Rahatlatıcı",
+              "Hafif"
+            ],
+            "reason": "Davul ve basLine'ın dengeli, yorucu olmayan yapısı dinleyiciyi sakinleştiriyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça sadece sentezleyici melodisiyle başlıyor, ritim bölümü sonra dahil oluyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Bas sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Başta sadece melodi varken davullar ve 808 bas devreye giriyor ve ardından tekrarlayan bir yapı oluşuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik doğal bir kapanışla bitmiyor, dosya sonunda aniden duruyor."
+          }
+        },
+        "notes": "Parça, uzaylı bir sentezleyici melodisiyle başlıyor ve kısa süre sonra trap tarzı davullar ile derin bir bas line ekleniyor. Müzik boyunca belirgin bir gelişim yerine döngüsel bir yapı korunuyor ve kayıt sona erdiğinde aniden kesiliyor.",
+        "avoid_with": [
+          "Yüksek enerjili spor videosu",
+          "Dramatik film sahnesi",
+          "Canlı konser kaydı"
+        ],
+        "caveat": "Parçanın sonundaki ani kesilme, bunun tamamlanmış bir şarkıdan ziyade bir loop veya demo olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Lo-fi/trap esintili bu beat, dikkat dağıtmayan yapısıyla teknik videolar veya ekran kayıtları için ideal bir fon oluşturuyor."
+      }
+    },
+    "298": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Sakin ve açıklayıcı anlatım",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Kod / CLI / geliştirici aracı",
+          "Küçük güncelleme duyurusu",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:04.113677+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Hızlı ve ritmik kurgu",
+          "Soyut / deneysel animasyon",
+          "Şık ve sade ürün sunumu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Karanlık",
+              "Gizemli",
+              "Sürükleyici"
+            ],
+            "reason": "Tekrarlayan melodik örnek ve derin bas, karanlık ve hipnotik bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde"
+            ],
+            "reason": "Parça, belirgin ve biraz bozuk/tılsımlı duyulan melodik döngüyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Müzikal yapı boyunca belirgin bir gelişim veya değişim olmadan aynı motifler tekrarlanıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Dosya, müzikal bir çözümleme olmadan aniden sona eriyor."
+          }
+        },
+        "notes": "Parça, atmosferik bir melodik sample ve trap tarzı davullar üzerine kurulu sabit bir beat. Enerji seviyesi baştan sona aynı kalıyor ve dinamik bir değişim göstermiyor.",
+        "avoid_with": [
+          "Canlı akustik performans",
+          "Neşeli ve parlak çocuk içeriği",
+          "Yüksek tempolu dans pisti"
+        ],
+        "caveat": "Kaydın ani kesilmesi nedeniyle, bunun bir döngünün parçası mı yoksa eksik bir kayıt mı olduğu tam olarak anlaşılamıyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Lo-fi/trap estetiği ve döngüsel yapısı, teknoloji videoları ve ritmik montajlar için uygun bir arka plan sağlıyor."
+      }
+    },
+    "367": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Soyut / deneysel animasyon",
+          "Yavaş başlayıp açılan kurgu",
+          "Hızlı ve ritmik kurgu",
+          "Şık ve sade ürün sunumu",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:30:32.907742+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Tek özelliği gösteren kısa video",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Monoton",
+              "Teknolojik"
+            ],
+            "reason": "Küçük tonlu sentezleyici melodisi ve tekrarlayan elektronik beat gizemli ve mekanik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça sadece tek bir sentezleyici sesiyle başlıyor, ritim section'ı henüz yok."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Davullar ve bas girdikten sonra müzik belirgin bir değişim göstermeden aynı pattern üzerinde dönüp duruyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Kayıt, müzikal bir kapanış yapılmadan, döngü devam ediyormuş gibi sona eriyor."
+          }
+        },
+        "notes": "Başlangıçta yalnızca melodi duyulurken, kısa süre sonra trap benzeri davul ve bas ekleniyor. Parça boyunca arrangement neredeyse hiç değişmiyor ve aynı döngü sürüyor.",
+        "avoid_with": [
+          "Canlı akustik performans",
+          "Yüksek enerjili spor montajı",
+          "Duygusal diyalog sahneleri"
+        ],
+        "caveat": "Müzik çok tekrarlı olduğu için uzun süreli dinlemede sıkıcı bulunabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sabit ve tekrarlayan elektronik ritim, dikkat dağıtmadan teknik süreçleri veya soyut görselleri desteklemek için uygun."
+      }
+    },
+    "431": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Mobil uygulama tanıtımı",
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:30:28.745164+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "AI agent iş akışı",
+          "Sakin ve açıklayıcı anlatım",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Rahatlatıcı",
+              "Hafif"
+            ],
+            "reason": "Yavaş tempolu döngüsel beat ve yumuşak synth tonları sakin bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça, davullar gelmeden önce sadece synth melodisi ve pad'lerle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Giriş bölümünden sonra beat devreye giriyor ve parça boyunca tekrarlayan bir yapı sunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik doğal bir kapanış yapmadan aniden duruyor."
+          }
+        },
+        "notes": "Başta rüyamsı bir synth melodisi duyulur, ardından hafif bir trap/lo-fi beat girer. Parça boyunca ritim ve melodi büyük değişiklikler göstermeden döngü halinde devam eder.",
+        "avoid_with": [
+          "Yüksek enerjili aksiyon sahneleri",
+          "Duygusal doruk noktası olan filmler",
+          "Canlı performans kayıtları"
+        ],
+        "caveat": "Sonsuz döngü (loop) gibi durduğu için tam bir şarkı yapısından ziyade arka plan müziği parçası olabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Lo-fi hip hop tarzı, dikkat dağıtmayan yapısıyla teknoloji ve eğitim içerikleri için ideal bir fon müziği."
+      }
+    },
+    "488": {
+      "status": "unreviewed",
+      "selections": {},
+      "notes": "",
+      "avoid_with": [
+        "kullanma"
+      ],
+      "listener": "hamit",
+      "legacy": {
+        "feeling": "ai slop launch",
+        "progression": "aynı ritimle başlıyor aynı gidiyor",
+        "use_with": [
+          "basit motion launch"
+        ]
+      },
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:30:01.146108+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Mobil uygulama tanıtımı"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Teknolojik",
+              "Sürükleyici"
+            ],
+            "reason": "Düzenli elektronik ritim, bas ve synth katmanları hareketli ve modern bir izlenim veriyor; bu yorum işitsel kanıtlara dayalı."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Az enstrümanla",
+              "Melodi önde"
+            ],
+            "reason": "Girişte belirgin bir vurmalı desen ve öne çıkan synth melodisi, nispeten az katmanla başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Bas sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "İlerleyen bölümde kalın bas ve ek davul/synth katmanları giriyor; sonrasında tekrar eden bir döngü devam ediyor."
+          },
+          "end": {
+            "choices": [
+              "Enerji azalarak",
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Son bölümde ritmik katmanlar çekilerek enerji düşüyor ve kalan malzeme kayıt bitiminde kesiliyor."
+          }
+        },
+        "notes": "Başta sade bir synth ve ritim dokusu var; ilerleyen bölümde bas ve davul katmanları eklenerek döngüsel bir yoğunluk oluşuyor. Sonda ritmik katmanlar çekilip enerji düşüyor ve kayıt doğal bir kapanış yerine kesintiyle bitiyor.",
+        "avoid_with": [
+          "Yavaş ve duygusal anlatım",
+          "Yoğun diyalog altı",
+          "Akustik/doğal içerik"
+        ],
+        "caveat": "Duygu etiketleri öznel; kesinti yorumu kayıt sonundaki ani duruşa dayanıyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik groove ve vokalsiz yapı, hızlı kurgu ile teknik demo anlatılarına kolay uyum sağlıyor."
+      }
+    },
+    "606": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Problemden çözüme giden hikâye",
+          "Yavaş başlayıp açılan kurgu",
+          "Büyük ürün duyurusu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:59.504861+00:00",
+        "launch": [
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Yavaş başlayıp açılan kurgu",
+          "Fotoğraf / stok görüntü ağırlıklı",
+          "Sakin ve açıklayıcı anlatım"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Duygusal",
+              "Sinematik",
+              "Hüzünlü"
+            ],
+            "reason": "Piyano ve yaylıların oluşturduğu melankolik ve dramatik atmosfer, film müziği estetiği taşıyor."
+          },
+          "start": {
+            "choices": [
+              "Az enstrümanla",
+              "Melodi önde",
+              "Yavaş tempolu"
+            ],
+            "reason": "Parça sadece piyanonun yavaş ve belirgin melodisiyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Davulların girişiyle ritim oluşuyor, ardından yaylıların eklenmesiyle arrangement zenginleşiyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor",
+              "Sakin bir çözülmeyle"
+            ],
+            "reason": "Müzik son bölümlerde enerji kaybederek yavaşça sönümleniyor."
+          }
+        },
+        "notes": "Piyano solosuyla başlayan parça, davul ve yaylıların katılmasıyla epik bir yoğunluğa ulaşıyor. Finalde ise sesler yavaşça azalarak sessizliğe karışıyor.",
+        "avoid_with": [
+          "Hızlı ve ritmik kurgu",
+          "Komik / absürt fikir",
+          "Teknolojik"
+        ],
+        "caveat": "Müzikal tür tam olarak tanımlanamasa da, genel olarak dramatik bir film müziği havası veriyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Enstrümantal ve sinematik yapısı, görsel anlatımlara ve duygusal metinlere güçlü bir alt zemin sağlıyor."
+      }
+    },
+    "685": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Sakin ve açıklayıcı anlatım",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:27.852718+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "Sakin ve açıklayıcı anlatım",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Fotoğraf / stok görüntü ağırlıklı",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Rahatlatıcı",
+              "Hafif"
+            ],
+            "reason": "Parça, yavaş tempolu bir hip-hop beat'i ve yumuşak melodilerle huzurlu bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Yavaş tempolu"
+            ],
+            "reason": "Girişte davullar yerine öncelikle sentetik bir melodi duyuluyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Beat girişten kısa süre sonra dahil oluyor ve parça boyunca tekrar eden bir yapıda ilerliyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor"
+            ],
+            "reason": "Parça ani bir kesilme yerine ses seviyesi düşerek sonlanıyor."
+          }
+        },
+        "notes": "Parça, melodik bir intro ile başlar ve ardından sabit bir drum patternine oturur. Ortalarda ritmik değişiklikler olsa da genel enerji seviyesi korunur.",
+        "avoid_with": [
+          "Hızlı ve ritmik kurgu",
+          "Komik / absürt fikir",
+          "Büyük ürün duyurusu"
+        ],
+        "caveat": "Tür olarak çok yaygın bir lo-fi örneği olduğu için spesifik bir duygusal derinlik beklememek gerekir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Lo-fi hip-hop tarzı, odaklanma gerektiren veya sakin anlatımlı videolar için ideal bir arka plan müziğidir."
+      }
+    },
+    "690": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Tek özelliği gösteren kısa video",
+          "Şık ve sade ürün sunumu",
+          "Seslendirmeli anlatım"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:25.510034+00:00",
+        "launch": [
+          "Mobil uygulama tanıtımı",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video",
+          "Şık ve sade ürün sunumu",
+          "Sakin ve açıklayıcı anlatım"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Neşeli",
+              "Enerjik",
+              "Umutlu"
+            ],
+            "reason": "Parlak tonlar, hızlı tempolu davul ritmi ve majör akorlar pozitif ve hareketli bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Az enstrümanla",
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Girişte zil benzeri ana melodi ve hafif bir perküsyon döngüsü hemen duyuluyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Bas ve fuller davul sesleri eklenerek katmanlar zenginleşiyor ancak temel ritim ve melodi döngüsü korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt, müzik devam ederken dosya sonunda aniden bitiyor; bestelenmiş bir kapanış yok."
+          }
+        },
+        "notes": "Parça, parlak bir melodi ve hafif vurmalı çalgılarla başlıyor. İlerleyen bölümlerde bas ve davul katmanları eklenerek istikrarlı, döngüsel bir enerjiye ulaşıyor.",
+        "avoid_with": [
+          "Ciddi bir haber bülteni",
+          "Hüzünlü bir drama sahnesi",
+          "Ağır ve karanlık bir atmosfer"
+        ],
+        "caveat": "Müzik oldukça genel amaçlı bir arka plan parçası olduğu için spesifik bir duygusal derinlik veya öykünme sunmuyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Bu tür neşeli ve dikkat dağıtmayan enstrümantal müzikler, genellikle teknoloji ürünleri veya yaşam tarzı videolarında seslendirmeyi desteklemek için idealdir."
+      }
+    },
+    "694": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Büyük ürün duyurusu",
+          "Mobil uygulama tanıtımı",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:09.093872+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Ürünü ilk kez tanıtan video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Teknolojik"
+            ],
+            "reason": "Sabit ve hızlı bir elektronik ritim, sentetik ses dokuları ve yoğun bir bas hattı parçaya mekanik ve teknolojik bir hava katıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Bas önde"
+            ],
+            "reason": "Girişte davul ritmi ve bas synthesizer'ı hemen duyuluyor, beklemeden enerji veriyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Temel ritim korunurken üzerine katman katman sentezleyiciler ekleniyor ve tekrarlayan bir yapı oluşuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik kompoze edilmiş bir bitiş veya fade-out olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça baştan sona yüksek enerjili elektronik bir ritim üzerine kurulu; katmanlar eklenerek yoğunluk artırılıyor ancak temel döngü değişmiyor. Kayıt, müzikal bir çözümleme olmadan ani bir kesintiyle sona eriyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Ani bitiş, parçanın tam bir şarkıdan ziyade bir döngü (loop) veya kesit olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Yüksek tempolu ve 'teknolojik' hissiyatı, yazılım demoları, hızlı montajlar veya dijital ürün tanıtımları için uygun bir arka plan sağlıyor."
+      }
+    },
+    "719": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Soyut / deneysel animasyon",
+          "Yavaş başlayıp açılan kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Sanat filmi + ürün",
+          "Şık ve sade ürün sunumu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:00.175244+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Ürünü ilk kez tanıtan video",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Teknolojik",
+              "Sürükleyici"
+            ],
+            "reason": "Elektronik dokular ve karanlık atmosfer, teknolojik ve gizemli bir his yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Parça, yükselen atmosferik bir sesle başlıyor ve dinleyiciyi içine çekiyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Girişin ardından beat devreye giriyor ve katmanlar artarak yoğunlaşıyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor"
+            ],
+            "reason": "Müzik, ani bir kesilme yerine sesin yavaşça azalmasıyla sona eriyor."
+          }
+        },
+        "notes": "Başlangıçta yükselen synth pad'ler yer alıyor, ardından elektronik bir ritim giriyor. Katmanlar birikerek hipnotik bir döngü oluşturuyor ve parça yavaşça sönümlenerek bitiyor.",
+        "avoid_with": [
+          "Neşeli çocuk içerikleri",
+          "Yüksek enerjili spor videoları",
+          "Komik veya absürt skeçler"
+        ],
+        "caveat": "Tür tam olarak net değil ancak elektronik/ambient arası bir tonda.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Teknolojik ve atmosferik yapısı, yazılım, yapay zeka veya soyut görsellerle iyi eşleşir."
+      }
+    },
+    "725": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Fotoğraf / stok görüntü ağırlıklı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:59.820525+00:00",
+        "launch": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Ürünü ilk kez tanıtan video",
+          "Yavaş başlayıp açılan kurgu",
+          "Sanat filmi + ürün"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Umutlu",
+              "Sinematik",
+              "Sakin"
+            ],
+            "reason": "Piyano melodisi ve yavaş katmanlanma umutlu ve sinematik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Az enstrümanla",
+              "Melodi önde"
+            ],
+            "reason": "Parça sadece piyanoyla ve belirgin bir melodikle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Zamanla elektronik ritimler ve pad sesleri eklenerek yoğunluk artıyor."
+          },
+          "end": {
+            "choices": [
+              "Yankı bırakarak"
+            ],
+            "reason": "Son notalar çaldıktan sonra yankı kuyruğu duyuluyor."
+          }
+        },
+        "notes": "Piyano ile başlayıp elektronik dokuların eklendiği bir düzenleme var. Parça, son akorun yankısıyla doğal bir şekilde sonlanıyor.",
+        "avoid_with": [
+          "Hızlı ve ritmik kurgu",
+          "Komik / absürt fikir"
+        ],
+        "caveat": "Elektronik öğelerin tam kaynağı (sentezleyici mi yoksa işlenmiş akustik mi) net değil.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Kademeli olarak yükselen yapısı, seslendirme veya görsel açılımlar için uygun bir zemin hazırlıyor."
+      }
+    },
+    "726": {
+      "status": "unreviewed",
+      "selections": {},
+      "notes": "",
+      "avoid_with": [],
+      "listener": "hamit",
+      "legacy": {
+        "feeling": "launch videosu gibi",
+        "progression": "heyecan verici başlıyor daha sonra daha anlatıma geçer gibi sesler doluşuyor güzel bir ses",
+        "use_with": []
+      },
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:59.110447+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Soyut / deneysel animasyon",
+          "Şık ve sade ürün sunumu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Teknolojik",
+              "Sakin",
+              "Merak uyandırıyor"
+            ],
+            "reason": "Sentetik sesler ve glitch efektleri teknolojik bir hava katarken, tempo sakin ve hipnotik bir dinleme deneyimi sunuyor."
+          },
+          "start": {
+            "choices": [
+              "Az enstrümanla",
+              "Melodi önde"
+            ],
+            "reason": "Parça, basit bir synthesizer melodisiyle minimal bir şekilde başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Giriş bölümünden sonra elektronik davul patterni ve ek katmanlar devreye girerek düzeni zenginleştiriyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor",
+              "Enerji azalarak"
+            ],
+            "reason": "Ritimik unsurlar çekilip geriye sadece atmosferik pad'ler kalıyor ve ses yavaşça sönümleniyor."
+          }
+        },
+        "notes": "Parça, minimal bir synth girişiyle başlayıp zamanla davul ve bas katmanlarıyla dolgunlaşıyor. Son bölümde ritim durup atmosferik seslere yer bırakarak sakin bir kapanış yapıyor.",
+        "avoid_with": [
+          "Akustik enstrüman ağırlıklı içerik",
+          "Yüksek enerjili spor montajı",
+          "Duygusal diyalog sahneleri"
+        ],
+        "caveat": "Tekrarlayan yapısı nedeniyle uzun süre dinlendiğinde monoton gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve biraz mekanik dokusu, teknoloji odaklı veya dijital süreçleri gösteren videolar için uygun bir arka plan oluşturuyor."
+      }
+    },
+    "745": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Şık ve sade ürün sunumu",
+          "Tek özelliği gösteren kısa video",
+          "Hızlı ve ritmik kurgu",
+          "Yavaş başlayıp açılan kurgu",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:33:36.243845+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Şık ve sade ürün sunumu",
+          "Tek özelliği gösteren kısa video",
+          "Soyut / deneysel animasyon"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Teknolojik",
+              "Şık"
+            ],
+            "reason": "Düzenli elektronik ritim ve atmosferik synth sesleri modern ve sakin bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Az enstrümanla",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça yumuşak bir synth pad ile başlıyor ve katmanlar yavaş yavaş ekleniyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Davullar ve bas line'ı girişten sonra ekleniyor ve parça tekrarlayan bir yapıda ilerliyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt doğal bir fade-out yerine aniden duruyor."
+          }
+        },
+        "notes": "Girişteki ambient sesler yerini steady bir house beat'ine bırakıyor. Parça boyunca enerji seviyesi sabit tutuluyor ve sonunda kesiliyor.",
+        "avoid_with": [
+          "Akustik canlı performans",
+          "Yüksek enerjili spor montajı",
+          "Duygusal film sahnesi"
+        ],
+        "caveat": "Müzikal gelişim sınırlı olduğu için uzun dinlemelerde monoton gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik, minimal ve düzenli yapısı teknolojik veya modern görsellerle iyi eşleşir."
+      }
+    },
+    "772": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Sakin ve açıklayıcı anlatım",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Mobil uygulama tanıtımı",
+          "Gerçek ekran kaydı / ürün demosu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:28.155973+00:00",
+        "launch": [
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Sakin ve açıklayıcı anlatım",
+          "Şık ve sade ürün sunumu",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sakin",
+              "Hayal gibi",
+              "Nostaljik"
+            ],
+            "reason": "Sentetizer katmanları ve yumuşak ritim, huzurlu ve biraz retro bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Az enstrümanla",
+              "Melodi önde"
+            ],
+            "reason": "Parça sadece akorlarla başlıyor, ritim ve diğer katmanlar sonra ekleniyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Davul girişiyle enerji artıyor ancak yapı tekrarlayan bir döngü üzerine kurulu."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Müzik dramatik bir bitiş yapmadan, sanki döngünün ortasındaymış gibi kesiliyor."
+          }
+        },
+        "notes": "Parça, yumuşak sentetizer pad'leri ve düzenli bir elektro beat ile başlıyor. Zamanla katmanlar eklense de genel hava sakin ve tutarlı kalıyor.",
+        "avoid_with": [
+          "Yüksek tempolu spor montajları",
+          "Korku veya gerilim sahneleri",
+          "Yoğun diyalog içeren dramatik filmler"
+        ],
+        "caveat": "Müzik oldukça tekdüze olabilir; uzun süre dinlendiğinde sıkıcı bulunma riski var.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Arka planda kalabilen, dikkat dağıtmayan ve modern bir his veren elektronik bir altyapı sunuyor."
+      }
+    },
+    "800": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Önce / sonra dönüşümü",
+          "Ürünü ilk kez tanıtan video",
+          "Büyük ürün duyurusu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:18.317976+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Challenge / yarış / oyun",
+          "Önce / sonra dönüşümü"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Neşeli",
+              "Özgüvenli"
+            ],
+            "reason": "Hızlı tempolu blues-rock ritmi ve gitar riffleri canlı ve kendinden emin bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, davul ve gitarın birlikte çaldığı güçlü bir groove ile anında başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Lider gitar soloları gelse de temel ritim bölümü ve tempo boyunca sabit kalıyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla"
+            ],
+            "reason": "Müzik, finalde belirgin bir akor çalınarak ve sustain ile sona eriyor."
+          }
+        },
+        "notes": "Elektrikli gitar, bas ve davulun oluşturduğu boogie-woogie tarzı bir ritim üzerine kurulu. Parça boyunca enerji yüksek tutuluyor ve gitar sololarıyla zenginleşiyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Hüzünlü sahneler"
+        ],
+        "caveat": "Enstrümantal olması ve spesifik rock tarzı, diyalog ağırlıklı veya çok kurumsal içeriklerde dikkat dağıtıcı olabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Enerjik ve sürükleyici yapısı, hareketli sahneleri veya hızlı geçişleri desteklemek için idealdir."
+      }
+    },
+    "846": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Sanat filmi + ürün",
+          "Hızlı ve ritmik kurgu",
+          "Problemden çözüme giden hikâye",
+          "Karakter / maskot hikâyesi"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:41.741115+00:00",
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Yavaş başlayıp açılan kurgu",
+          "Hızlı ve ritmik kurgu",
+          "Sanat filmi + ürün",
+          "Karakter / maskot hikâyesi"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Epik",
+              "Gergin"
+            ],
+            "reason": "Orkestral düzenleme, güçlü vurmalı çalgılar ve dramatik yükselişler parçaya sinematik ve epik bir hava katıyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Müzik, düşük tonlu yaylılar ve üflemelilerle yavaş bir tırmanışla başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "İlk bölümün ardından belirgin bir ritim devreye giriyor ve enstrüman sayısı artarak yoğunluk yükseliyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla"
+            ],
+            "reason": "Parça, tam orkestranın güçlü bir akoruyla net bir şekilde sonlanıyor."
+          }
+        },
+        "notes": "Girişte yavaşça büyüyen orkestral doku, ortada ritmik ve hareketli bir bölüme dönüşüyor. Finalde tüm enstrümanların birleşmesiyle zirve yapıp ani ama tam bir sonla bitiyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Komik / absürt fikir",
+          "Kod / CLI / geliştirici aracı"
+        ],
+        "caveat": "Müzikal olarak net bir son verse de, kaydın en ucundaki sessizlik kısmı bazen kesinti izlenimi verebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Epik ve dramatik yapısı, büyük lansmanlar veya hikaye anlatımı gerektiren videolar için ideal bir altlık sunuyor."
+      }
+    },
+    "933": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:37.746335+00:00",
+        "launch": [
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Kod / CLI / geliştirici aracı",
+          "Hızlı ve ritmik kurgu",
+          "Mobil uygulama tanıtımı"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Teknolojik",
+              "Sürükleyici"
+            ],
+            "reason": "Yüksek tempolu elektronik beat ve sentetizör sesleri dinamik ve modern bir hava katıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Hızlı ve yoğun"
+            ],
+            "reason": "Parça girişte herhangi bir yavaşlama veya intro olmadan doğrudan davul ve bas ile başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Temel ritim sabit kalırken üzerine melodik katmanlar eklenerek bir döngü yapısı oluşturuluyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik doğal bir fade-out veya final vuruşu olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça baştan itibaren yüksek tempolu bir elektronik ritimle başlıyor. Katmanlar eklenerek yoğunluk artıyor ancak yapı temel olarak döngüsel kalıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Sondaki ani kesilme, parçanın tam bir beste sonu olmadığını, muhtemelen bir döngü veya kesit olduğunu düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve ritmik yapısı teknoloji tanıtımları ve hızlı kurgular için uygun bir zemin oluşturuyor."
+      }
+    },
+    "986": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:32.399787+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Özgüvenli",
+              "Güçlü",
+              "Sürükleyici"
+            ],
+            "reason": "Ağır bas ve kararlı ritim, kendine güvenen ve enerjik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde"
+            ],
+            "reason": "Parça, dikkat çekici bir melodik döngü ile başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Bas sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Tam davul ve bas seti girişten biraz sonra devreye giriyor ve thereafter tekrarlayan bir yapı sunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt, müzikal bir çözülme olmadan aniden sona eriyor."
+          }
+        },
+        "notes": "Başta melodik bir sample ile başlayan parça, kısa süre sonra ağır 808 bas ve net davullarla tam bir hip-hop beat'ine dönüşüyor. Yapı boyunca belirgin bir değişim olmadan aynı groove üzerinde ilerliyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Akustik canlı performans"
+        ],
+        "caveat": "Tekrarlayan döngü yapısı, uzun dinlemelerde monoton gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Trap esintili, modern ve teknolojik hissi veren ritmi, hızlı kurgular ve dijital ürün tanıtımları için uygundur."
+      }
+    },
+    "1012": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Büyük ürün duyurusu",
+          "Ürünü ilk kez tanıtan video",
+          "Sezon / kutlama temalı video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:14.423875+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Sezon / kutlama temalı video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Heyecanlı",
+              "Sürükleyici"
+            ],
+            "reason": "Hızlı tempolu elektronik beat ve tekrarlayan vokal sample'ları yüksek enerji veriyor."
+          },
+          "start": {
+            "choices": [
+              "Vokalle",
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça bir geri sayım ve İspanyolca sayılarla başlıyor, ardından hemen güçlü bir ritme geçiyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Temel beat sabit kalırken katmanlar ve vokal efektleri eklenerek döngüsel bir yapı oluşturuluyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla",
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik son bir vuruşla bitiyor ancak kayıtta ani bir kesilme izlenimi de var."
+          }
+        },
+        "notes": "Geri sayımla başlayan parça, güçlü bir elektronik dans ritmine dönüşüyor. 'Take this higher' gibi vokal sample'ları tekrarlanarak enerjiyi yüksek tutuyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal dram sahneleri",
+          "Uyku veya meditasyon içerikleri"
+        ],
+        "caveat": "Kaydın sonundaki bitişin bestelenmiş bir kapanış mı yoksa dosya kesilmesi mi olduğu tam olarak net değil.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Yüksek enerjili dans müziği yapısı, hızlı geçişler ve eğlence odaklı içerikler için ideal bir zemin sunuyor."
+      }
+    },
+    "1029": {
+      "status": "rejected",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Ürünü ilk kez tanıtan video",
+          "Komik / absürt fikir",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:28:28.380582+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Challenge / yarış / oyun"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Eğlenceli",
+              "Şık"
+            ],
+            "reason": "Davul-bas groove'u ve tekrarlayan motifler hareketli, eğlenceli bir hava veriyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Bas önde"
+            ],
+            "reason": "Girişte ritmik çekirdek ve öne çıkan bas hattı hemen duyuluyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Katmanlar eklenip çıkıyor ama tempolu groove büyük ölçüde aynı kalıyor."
+          },
+          "end": {
+            "choices": [],
+            "reason": "Kapanışın bestelenmiş bir son mu yoksa kaydın kesilmesi mi olduğunu net ayırt edemedim."
+          }
+        },
+        "notes": "Kayıt baştan sona sabit tempolu, bas ve davul odaklı bir groove üzerinde ilerliyor; katmanlar eklenip çıkarılıyor. Son bölümde belirgin bir çözülme ya da net bir bitiş hissi yerine döngünün sürebileceği bir izlenim var.",
+        "avoid_with": [
+          "Ciddi veya hüzünlü anlatımlar",
+          "Sakin seslendirmeli açıklamalar",
+          "Gerilim ağırlıklı sinematik sahneler"
+        ],
+        "caveat": "Enstrüman adlarını ve kapanışın kesinti mi beste mi olduğunu kesin olarak ayırt edemedim.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Enerjik ve döngüsel funk hissi, hızlı kesimler ve kısa vurgu videoları için uygun bir alt zemin sunuyor."
+      },
+      "updatedAt": "2026-10-27T21:59:31.727Z"
+    },
+    "1039": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Seslendirmeli anlatım",
+          "Tek özelliği gösteren kısa video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:51.463730+00:00",
+        "launch": [
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Sakin ve açıklayıcı anlatım",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sıcak",
+              "Rahatlatıcı",
+              "Enerjik"
+            ],
+            "reason": "Latin esintili ritmi ve yumuşak melodi hattı hem hareketli hem de huzurlu bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, davul ve bas groove'u ile doğrudan ritmik bir giriş yapıyor."
+          },
+          "change": {
+            "choices": [
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Melodik detaylarda küçük değişiklikler olsa da temel ritim ve enerji seviyesi boyunca korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik doğal bir kapanış yapmadan, aniden duruyor."
+          }
+        },
+        "notes": "Parça, perküsyon ağırlıklı bir groove üzerine klavye ve gitar benzeri melodilerle ilerliyor. Düzenleme boyunca tempo sabit kalırken, enstrümanların ön plana çıkışıyla hafif bir dinamik değişim yaşanıyor.",
+        "avoid_with": [
+          "Yüksek tempolu aksiyon sahneleri",
+          "Ciddi veya dramatik haber içerikleri",
+          "Tamamen sessizlik gerektiren meditasyon videoları"
+        ],
+        "caveat": "Sondaki ani kesilme, parçanın tamamlanmış bir beste değil, bir döngü (loop) veya örnek kayıt olabileceğini düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Dikkat dağıtmayan ancak izleyiciyi tutan ritmik yapısı, görsel odaklı tanıtım ve demo videoları için ideal bir arka plan sunuyor."
+      }
+    },
+    "1077": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video",
+          "Karşılaştırma / test",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:59.219081+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Challenge / yarış / oyun",
+          "Mobil uygulama tanıtımı",
+          "Önce / sonra dönüşümü"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Eğlenceli",
+              "Özgüvenli"
+            ],
+            "reason": "Funk-rock esinli gitar riffleri ve sürükleyici ritim bölümü canlı ve kendinden emin bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, davul ve bas ile birlikte ana gitar riffinin anında duyulmasıyla başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "İlerleyen dakikalarda vokal benzeri sample'lar ve daha karmaşık gitar soloları eklenerek enerji artırılıyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla"
+            ],
+            "reason": "Müzik, gitarın son bir notu ve ritim bölümünün kesilmesiyle belirgin bir şekilde bitiyor."
+          }
+        },
+        "notes": "Kayıt, catchey bir gitar temasıyla başlıyor ve katmanlı bir düzenlemeyle ilerliyor. Ortalarda vokal dokunuşları ve solo çalışmalarıyla zenginleşerek finalde güçlü bir şekilde kapanıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Uyku veya meditasyon içeriği"
+        ],
+        "caveat": "Vokal benzeri sesler daha çok ritmik süsleme olarak kullanılmış, lirik bir şarkı değil.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Yüksek enerjisi ve net ritmi, dinamik görselleri ve hızlı geçişleri desteklemek için idealdir."
+      }
+    },
+    "1140": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Şık ve sade ürün sunumu",
+          "Challenge / yarış / oyun",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:52.462551+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Challenge / yarış / oyun",
+          "Tek özelliği gösteren kısa video",
+          "Komik / absürt fikir"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Eğlenceli",
+              "Sürükleyici"
+            ],
+            "reason": "Funk tarzı bas ve gitar riffleri, davulun sabit ritmiyle birleşince hareketli ve neşeli bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, davul fill'i ile doğrudan ritmik bir giriş yaparak başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Enstrümantal katmanlar değişse de temel funk groovu ve tempo boyunca korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik herhangi bir kapanış motifi veya fade-out olmadan aniden duruyor."
+          }
+        },
+        "notes": "Kayıt, davul girişiyle başlayıp bas ve elektrik gitarın funk uyumuyla ilerliyor. Son bölümde enerji düşmeden aniden kesiliyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Uyku / meditasyon"
+        ],
+        "caveat": "Sonsuzluk hissi veren döngü yapısı ve ani kesiliş, parçanın tam bir şarkıdan ziyade bir loop veya snippet olduğunu düşündürebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Parçanın enerjik ve dans edilebilir yapısı, hızlı kurgulara ve eğlenceli içeriklere uygun bir zemin sağlıyor."
+      }
+    },
+    "1141": {
+      "status": "rejected",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Kod / CLI / geliştirici aracı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:28:08.405717+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Tek özelliği gösteren kısa video",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Özgüvenli",
+              "Eğlenceli"
+            ],
+            "reason": "Funk tarzı gitar riffleri ve sürükleyici davul ritmi yüksek bir enerji ve hareket hissi veriyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde"
+            ],
+            "reason": "Parça, belirgin bir elektrik gitar melodisiyle başlıyor ve ritim bölümü hemen arkasından geliyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Ritmik yapı ve gitar motifleri tekrarlanarak sabit bir groove oluşturuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik herhangi bir fade-out veya kapanış vuruşu olmadan aniden duruyor."
+          }
+        },
+        "notes": "Elektrik gitarın dominant olduğu parça, davul ve bas ile birlikte dans edilebilir bir ritme oturuyor. Düzenleme boyunca yeni katmanlar eklense de temel groove korunuyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş tempolu video"
+        ],
+        "caveat": "Ani bitiş, parçanın tam bir şarkıdan ziyade bir döngü (loop) veya örnek (sample) olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Enerjik ve modern funk yapısı, hızlı kurgulara ve teknoloji odaklı içeriklere uygun bir zemin sağlıyor."
+      },
+      "updatedAt": "2026-10-27T21:59:35.396Z"
+    },
+    "1150": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Soyut / deneysel animasyon",
+          "Büyük ürün duyurusu",
+          "Mobil uygulama tanıtımı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:28:37.844749+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Teknolojik",
+              "Yoğun"
+            ],
+            "reason": "Tekrarlayan elektronik dokular ve sürekli vurmalı his, hareketli ve yoğun bir izlenim veriyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Açılışta öne çıkan sentetik bir figür ve erken gelen vurmalı destek duyuluyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Tekrar eden elektronik kalıbın üzerine katmanlar eklenerek yoğunluk artıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor",
+              "Gerginliği çözmeden"
+            ],
+            "reason": "Son efekt sonrası ses çözümlü bir kapanış yapmadan kesiliyor; bu bestelenmiş bir bitişten çok kayıt kesintisi gibi duyuluyor."
+          }
+        },
+        "notes": "Kayıt, tekrar eden sentetik bir figür ve vurmalı desenle başlıyor; ilerledikçe katmanlar ve alçak frekanslı destek yoğunlaşıyor. Sona doğru bir efekt/süzülüş hissediliyor ve ardından ses, bestelenmiş bir çözümleme yerine ani biçimde kesiliyor.",
+        "avoid_with": [
+          "Sakin anlatımlı eğitim videosu",
+          "Akustik/doğal sahne",
+          "Duygusal diyalog sahnesi"
+        ],
+        "caveat": "Etiketler işitsel ipuçlarına dayalı yorumdur; kesin enstrüman listesi, tempo ve bestelenmiş bitiş yapısı doğrulanamadı.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik, yoğun ve ritmik karakteri hızlı kurgu ve teknoloji odaklı kısa videolarla uyumlu görünüyor."
+      }
+    },
+    "1210": {
+      "status": "shortlist",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Mobil uygulama tanıtımı",
+          "Büyük ürün duyurusu",
+          "Challenge / yarış / oyun",
+          "Fotoğraf / stok görüntü ağırlıklı"
+        ],
+        "feeling": [
+          "Enerjik",
+          "Heyecanlı",
+          "Sürükleyici",
+          "Hayal gibi",
+          "Gizemli",
+          "Epik"
+        ],
+        "start": [
+          "Yavaşça yükseliyor",
+          "Gizemli bir girişle"
+        ],
+        "change": [
+          "Bir anda açılıyor / drop",
+          "Yeni enstrümanlar ekleniyor"
+        ],
+        "end": [
+          "Bir anda kesiliyor"
+        ]
+      },
+      "notes": "Parça atmosferik bir girişle başlayıp 0:25'te güçlü bir drop ile yüksek enerjiye geçiyor. Kayıt, müzik ortadayken aniden kesiliyor.",
+      "avoid_with": [
+        "Sakin bir meditasyon videosu",
+        "Hüzünlü bir drama sahnesi",
+        "Yavaş tempolu bir belgesel"
+      ],
+      "listener": "hamit",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:28:36.571322+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Challenge / yarış / oyun",
+          "Tek özelliği gösteren kısa video",
+          "Soyut / deneysel animasyon"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Heyecanlı",
+              "Sürükleyici"
+            ],
+            "reason": "Hızlı tempolu davul ve yoğun synth melodileri yüksek enerji veriyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Parça atmosferik synthlerle ve build-up hissi veren bir girişle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Bir anda açılıyor / drop",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "0:25 civarında beat tam olarak giriyor ve ana melodi belirginleşiyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt müzik devam ederken aniden duruyor, doğal bir bitiş yok."
+          }
+        },
+        "notes": "Parça atmosferik bir girişle başlayıp 0:25'te güçlü bir drop ile yüksek enerjiye geçiyor. Kayıt, müzik ortadayken aniden kesiliyor.",
+        "avoid_with": [
+          "Sakin bir meditasyon videosu",
+          "Hüzünlü bir drama sahnesi",
+          "Yavaş tempolu bir belgesel"
+        ],
+        "caveat": "Bitişin ani kesilmesi, parçanın tam bir şarkı yapısından ziyade bir loop veya excerpt olabileceğini düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Yüksek enerjisi ve net drop'u ile hızlı kurgulara veya dinamik tanıtımlara uygun."
+      },
+      "updatedAt": "2026-10-27T22:00:33.878Z"
+    },
+    "1254": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Soyut / deneysel animasyon",
+          "Önce / sonra dönüşümü",
+          "Büyük ürün duyurusu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:29:07.802381+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Ürünü ilk kez tanıtan video",
+          "Soyut / deneysel animasyon",
+          "Büyük ürün duyurusu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Yoğun",
+              "Mekanik"
+            ],
+            "reason": "Ağır baslar, hızlı ritimler ve robotik synth sesleri yüksek enerji ve mekanik bir his yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Hızlı ve yoğun",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Parça glitch efektleri ve hızlı bir ritimle doğrudan yüksek enerjiyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Bir anda açılıyor / drop",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Giriş bölümünden sonra ağır bir bas dropp'u gerçekleşiyor ve ardından tekrarlayan bir ritim döngüsü devam ediyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla"
+            ],
+            "reason": "Müzik, son bir bas vuruşu ve efektle belirgin şekilde kapanıyor."
+          }
+        },
+        "notes": "Parça, elektronik glitch sesleriyle başlayıp ağır bir bas ritmine geçiyor. Boyunca yüksek tempolu, yoğun ve mekanik elektronik sesler dominant.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Müzik tarzı çok spesifik (dubstep/brostep benzeri) olduğu için her tür içerikle uyumlu olmayabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Yüksek tempolu ve agresif yapısı, hızlı kesipler içeren videolar ve oyun/teknoloji temalı lansmanlar için ideal."
+      }
+    },
+    "1280": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Ürünü ilk kez tanıtan video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:33:37.674312+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Önce / sonra dönüşümü"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Yoğun"
+            ],
+            "reason": "Hızlı tempolu, tekrarlayan synth döngüleri ve sert davul vuruşları mekanik ve yoğun bir enerji yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Hızlı ve yoğun"
+            ],
+            "reason": "Parça, girizgah beklemeden doğrudan sürükleyici bir elektronik ritimle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Müzik boyunca temel ritim ve bass hattı korunarak küçük varyasyonlarla döngüsel bir yapı sergiliyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Parça, doğal bir bitiş veya fade-out olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça, baştan sona yüksek enerjili, tekrarlayan bir techno/elektronik ritim üzerine kurulu. Ortalarda katmanlar değişse de temel sürükleyici yapı korunuyor ve kayıt aniden sonlanıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Kaydın aniden bitmesi, bunun tam bir şarkıdan ziyade bir döngü veya kesit olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Mekanik ve sürükleyici elektronik yapısı, teknoloji odaklı veya hızlı tempolu görsellerle uyumlu bir arka plan sunuyor."
+      }
+    },
+    "435758553": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu",
+          "Sanat filmi + ürün"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:35:40.608878+00:00",
+        "launch": [
+          "Yavaş başlayıp açılan kurgu",
+          "Büyük ürün duyurusu",
+          "Sanat filmi + ürün",
+          "Soyut / deneysel animasyon",
+          "Fotoğraf / stok görüntü ağırlıklı"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gergin",
+              "Epik",
+              "Sinematik"
+            ],
+            "reason": "Yüksek frekanslı tekrarlayan seslerle gerilim yaratıp, orkestral vurmalı çalgılarla destansı bir zirveye ulaşıyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Tekrarlayan tiz bir synth sesiyle başlıyor ve alt katmanlar yavaşça ekleniyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Zamanla davullar, yaylılar ve koru benzeri sentezler eklenerek ses duvarı büyüyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla"
+            ],
+            "reason": "Müzik büyük bir perküsyon darbesiyle aniden kesiliyor."
+          }
+        },
+        "notes": "Kayıt, başta yalnızca tiz ve mekanik bir ses döngüsü içerirken, ilerleyen dakikalarda ağır bas ve orkestral öğelerle dolup taşıyor. Son bölümde tempo ve hacim maksimuma ulaşarak güçlü bir final yapıyor.",
+        "avoid_with": [
+          "Sakin meditasyon",
+          "Komik vlog",
+          "Arka plan sohbeti"
+        ],
+        "caveat": "Enstrümanların canlı orkestra mı yoksa yüksek kaliteli sample'lar mı olduğu tam olarak ayırt edilemiyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Parçanın yavaş inşası ve dramatik zirvesi, görsel olarak büyüyen veya etkileyici sahneler için idealdir."
+      }
+    },
+    "627733662": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Problemden çözüme giden hikâye",
+          "Sanat filmi + ürün",
+          "Yavaş başlayıp açılan kurgu",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:31:16.164850+00:00",
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Yavaş başlayıp açılan kurgu",
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Problemden çözüme giden hikâye"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Epik",
+              "Duygusal"
+            ],
+            "reason": "Orkestral dizilim ve büyük dinamik geçişler film müziği hissini ve epik bir duyguyu güçlendiriyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor",
+              "Az enstrümanla",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Parça atmosferik, belirsiz seslerle ve çok az enstrümanla sessizce başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor",
+              "Yeni enstrümanlar ekleniyor",
+              "Ritim sonradan giriyor"
+            ],
+            "reason": "Zamanla davullar, yaylılar ve piyano katmanları eklenerek ses duvarı örülüyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor",
+              "Uzun bir kapanışla"
+            ],
+            "reason": "Zirve noktasından sonra sesler yavaşça çekilerek uzun bir rezonansla sonlanıyor."
+          }
+        },
+        "notes": "Ses başta sadece atmosferik dokularla ilerlerken, ritmin girmesiyle birlikte orkestral katmanlar eklenerek devasa bir sese dönüşüyor. Finalde tüm enstrümanlar durup geriye sadece uzayan bir yankı kalıyor.",
+        "avoid_with": [
+          "Komik / absürt fikir",
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı"
+        ],
+        "caveat": "Parça çok uzun ve dinamik olduğu için, kısa veya hafif içeriklerde kesilip kısaltılması gerekebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Girişteki sakinlikten doruktaki güce uzanan yapı, dramatik açılışlar ve hikaye anlatımı için idealdir."
+      }
+    },
+    "698217811": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Yavaş başlayıp açılan kurgu",
+          "AI agent iş akışı",
+          "Problemden çözüme giden hikâye",
+          "Soyut / deneysel animasyon"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:33:32.635211+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Büyük ürün duyurusu",
+          "Soyut / deneysel animasyon"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Teknolojik",
+              "Epik"
+            ],
+            "reason": "Katmanlı sentezleyiciler ve sürükleyici elektronik ritim, fütüristik ve büyük ölçekli bir atmosfer oluşturuyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça atmosferik pad sesleriyle başlayıp kademeli olarak melodik ve ritmik katmanlar ekliyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Giriş bölümünde vurmalı çalgılar yokken, ilerleyen dakikalarda güçlü bir beat devreye girerek enerjiyi artırıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt, müzik hala devam ederken aniden sessizliğe düşüyor; doğal bir fade-out veya final vuruşu yok."
+          }
+        },
+        "notes": "Parça, atmosferik bir girişten sonra ritmik bir bölüme geçiyor, ortada bir sakinleşme (breakdown) yaşıyor ve tekrar ana temaya dönüyor. Kaydın sonunda müzik net bir kompozisyon bitişi yapmadan kesiliyor.",
+        "avoid_with": [
+          "Komik veya absürt videolar",
+          "Doğal akustik enstrümanların öne çıktığı sahneler",
+          "Çok yavaş ve meditasyon amaçlı içerikler"
+        ],
+        "caveat": "Sonlardaki ani kesilmenin bestelenmiş bir tercih mi yoksa dosyanın eksik olmasından mı kaynaklandığını kesin olarak ayırt etmek zor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve sinematik karakteri, teknoloji, yazılım ve gelecek temalı görsel anlatımlarla güçlü bir uyum sağlıyor."
+      }
+    },
+    "2000000002": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Soyut / deneysel animasyon",
+          "AI agent iş akışı",
+          "Büyük ürün duyurusu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:35:06.682125+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Teknolojik",
+              "Yoğun"
+            ],
+            "reason": "Sürekli tekrarlayan elektronik ritim ve katmanlı synthesizer sesleri yüksek enerji ve teknolojik bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça belirgin bir synth melodisiyle başlıyor ve ritim katmanları eklenerek yavaş yavaş güçleniyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Zamanla bas ve perküsyon katmanları eklenerek ses duvarı kalınlaşıyor ve tekrar eden bir yapı oluşuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik herhangi bir fade-out veya çözüm olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça, başlangıçtaki melodi üzerine inşa edilen ritim katmanlarıyla sürekli bir ivme kazanıyor. Yüksek能量 korunarak ilerliyor ancak kayıt beklenmedik bir şekilde sona eriyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Kaydın aniden bitmesi, bunun tam bir parça yerine bir kesit veya döngü olduğunu düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve mekanik yapısı, teknoloji odaklı veya hızlı tempolu görsel içerikler için uygun bir zemin sağlıyor."
+      }
+    },
+    "2026101801": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Ürünü ilk kez tanıtan video",
+          "Tek özelliği gösteren kısa video",
+          "Şık ve sade ürün sunumu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:49.267674+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Hızlı ve ritmik kurgu",
+          "Şık ve sade ürün sunumu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Teknolojik",
+              "Gizemli",
+              "Sürükleyici"
+            ],
+            "reason": "Sentetik sesler ve düzenli elektronik ritim, modern ve biraz esrarengiz bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça atmosferik pad'ler ve hafif bir ritmik tik tak sesiyle başlayıp enerjiyi kademeli olarak artırıyor."
+          },
+          "change": {
+            "choices": [
+              "Sakinleşip tekrar yükseliyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Orta bölümde ritim geçici olarak durup sadece atmosferik sesler kalıyor, ardından tekrar canlanıyor; genel yapı tekrarlayan bir döngüye sahip."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor"
+            ],
+            "reason": "Müzik sona ererken ses seviyesi kademeli olarak düşerek sessizliğe karışıyor."
+          }
+        },
+        "notes": "Parça, atmosferik sentezleyicilerle başlayıp düzenli bir elektronik davul ritmine dönüşüyor. Ortada bir duraklama yaşansa da ana groove korunarak sonunda yavaşça sönümleniyor.",
+        "avoid_with": [
+          "Akustik enstrüman ağırlıklı sahneler",
+          "Çok duygusal veya dramatik anlatılar",
+          "Doğal ortam sesleri içeren videolar"
+        ],
+        "caveat": "Müzik oldukça tekrarlayıcı olduğu için uzun süre dinlendiğinde monoton gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve mekanik hissiyatı, teknoloji odaklı videolar ve ekran kayıtları için ideal bir zemin sağlıyor."
+      }
+    },
+    "2026101804": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Ürünü ilk kez tanıtan video",
+          "Hızlı ve ritmik kurgu",
+          "Tek özelliği gösteren kısa video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:35:30.168613+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Karanlık",
+              "Mekanik"
+            ],
+            "reason": "Ürkütücü sentezleyici melodisi ve ağır, distorte bas hattı karanlık ve endüstriyel bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça, yalnızca tekrarlayan ve biraz tedirgin edici bir synth melodisiyle, başka enstrüman olmadan başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Bas sonradan giriyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Yaklaşık 27. saniyede ağır bir davul ve bas girişi oluyor ve ardından müzik hipnotik bir döngüye giriyor."
+          },
+          "end": {
+            "choices": [
+              "Melodi tek başına kalıyor",
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Sona doğru ritim kesilip sadece melodi duyuluyor, ardından kayıt beklenmedik bir şekilde aniden bitiyor."
+          }
+        },
+        "notes": "Kayıt, yalnızca ürkütücü bir sentezleyici melodisiyle başlıyor ve yaklaşık 27. saniyede ağır, bozuk bir bas ve davul ritmi devreye giriyor. Müzik, tekrarlayan bir döngü halinde ilerliyor ve sonunda ritim kesilip melodi tek başına kaldıktan sonra aniden bitiyor.",
+        "avoid_with": [
+          "Neşeli veya komik videolar",
+          "Romantik sahneler",
+          "Çocuk içerikleri"
+        ],
+        "caveat": "Sesin sonundaki ani kesilme, parçanın tamamlanmamış bir döngü veya örnek olduğunu düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Mekanik ve teknolojik hissiyatı, yazılım veya veri odaklı görsellerle iyi eşleşir."
+      }
+    },
+    "2026101811": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Soyut / deneysel animasyon",
+          "AI agent iş akışı",
+          "Ürünü ilk kez tanıtan video"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:30:39.589731+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Soyut / deneysel animasyon",
+          "AI agent iş akışı",
+          "Kod / CLI / geliştirici aracı",
+          "Büyük ürün duyurusu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Yoğun"
+            ],
+            "reason": "Hızlı tempolu davul makineleri ve distorte edilmiş sentetik sesler sürekli bir hareket ve gerginlik yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça, giriş beklemeden doğrudan perküsif bir döngüyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Zamanla yeni synth katmanları ve işlenmiş vokal sample'ları eklenerek ses duvarı kalınlaşıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik herhangi bir fade-out veya kapanış cümlesi olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça, tekrarlayan bir ritim üzerine katmanlanan sentetik sesler ve parçalanmış vokallerle ilerliyor. Enerji seviyesi baştan sona yüksek tutuluyor ve dinamik bir düşüş yaşanmıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Akustik canlı performans"
+        ],
+        "caveat": "Vokaller çok fazla işlendiği için lyrical içerik net değil, sadece doku olarak kullanılıyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Glitchy ve endüstriyel elektronik yapısı, teknolojik süreçleri veya hızlı görsel geçişleri vurgulamak için ideal."
+      }
+    },
+    "2026101812": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Hızlı ve ritmik kurgu",
+          "Ürünü ilk kez tanıtan video",
+          "Gerçek ekran kaydı / ürün demosu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:34:48.128729+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Teknolojik",
+              "Gizemli",
+              "Sürükleyici"
+            ],
+            "reason": "Arpejli synth sesleri ve ilerleyen dakikalarda giren davul ritmi, fütüristik ve sürükleyici bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Melodi önde",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça, tek bir synth melodisiyle ve minimal bir düzenlemeyle başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Yaklaşık 1:14 civarında davul beat'i devreye giriyor ve katmanlar artıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Kayıt, müzik devam ederken aniden duruyor; doğal bir bitiş yok."
+          }
+        },
+        "notes": "Başta yalnızca synth melodisi varken, zamanla bas ve pad sesleri eklenerek yoğunluk artıyor. İkinci yarıda giren ritimle enerji yükseliyor ancak kayıt beklenmedik bir şekilde sona eriyor.",
+        "avoid_with": [
+          "Duygusal marka hikâyesi",
+          "Sakin ve açıklayıcı anlatım",
+          "Komik / absürt fikir"
+        ],
+        "caveat": "Parçanın sonu tamamlanmamış gibi görünüyor, bu yüzden bir döngünün parçası olabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik ve teknolojik sound'u, yazılım veya dijital ürün tanıtımları için uygun bir zemin sağlıyor."
+      }
+    },
+    "2026101813": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Ürünü ilk kez tanıtan video",
+          "Yavaş başlayıp açılan kurgu",
+          "Sanat filmi + ürün",
+          "Duygusal marka hikâyesi"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:32:29.680508+00:00",
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Sanat filmi + ürün",
+          "Problemden çözüme giden hikâye",
+          "Yavaş başlayıp açılan kurgu",
+          "Duygusal marka hikâyesi"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Epik",
+              "Güçlü"
+            ],
+            "reason": "Ağır orkestral vuruşlar ve koro kullanımı büyük, dramatik bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça düşük frekanslı bir uğultuyla başlıyor ve giderek şiddetleniyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Giriş bölümünden sonra davullar devreye giriyor ve katmanlar artıyor."
+          },
+          "end": {
+            "choices": [
+              "Yankı bırakarak",
+              "Sakin bir çözülmeyle"
+            ],
+            "reason": "Müzik ani bir kesinti yerine uzun bir reverb kuyruğuyla sönümleniyor."
+          }
+        },
+        "notes": "Başlangıçtaki ambient sesler yerini ağır perküsyonlu bir orkestral yapıya bırakıyor. Parça boyunca enerji yüksek tutuluyor ve finalde yavaşça dağılıyor.",
+        "avoid_with": [
+          "Komik / absürt fikir",
+          "Hızlı ve ritmik kurgu"
+        ],
+        "caveat": "Enstrümanların tamamen akustik mi yoksa sentetik katmanlı mı olduğu tam olarak ayırt edilemiyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Epik ve sinematik yapısı, dramatik vurgu gerektiren tanıtım ve hikaye anlatımları için uygundur."
+      }
+    },
+    "2026101814": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Soyut / deneysel animasyon",
+          "Sonucu önce gösteren hikâye"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:36:06.877981+00:00",
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Fotoğraf / stok görüntü ağırlıklı",
+          "Soyut / deneysel animasyon"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Epik",
+              "Sinematik",
+              "Güçlü"
+            ],
+            "reason": "Büyük bir koro ve orkestra kullanımı, film müziklerini andıran görkemli ve etkileyici bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Vokalle",
+              "Güçlü bir vuruşla"
+            ],
+            "reason": "Parça, hemen başında yüksek sesli bir koro ve orkestralı dramatik bir girişle açılıyor."
+          },
+          "change": {
+            "choices": [
+              "Sakinleşip tekrar yükseliyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Orta bölümde sesler kısılıp yaylılar öne çıkarken, sona doğru tekrar tüm güçle yükseliyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla",
+              "Yankı bırakarak"
+            ],
+            "reason": "Müzik, büyük bir akorla sona eriyor ve uzun bir yankı (reverb) kuyruğu bırakarak kesiliyor."
+          }
+        },
+        "notes": "Kayıt, başta ve sonda yoğun koro kullanımıyla dikkat çekerken, ortada daha melankolik ve sakin bir yaylı geçişine sahip. Dinamik aralık çok geniş; fısıltıdan tam orkestra gürine kadar değişiyor.",
+        "avoid_with": [
+          "Komik veya hafif içerikler",
+          "Sakin meditasyon videoları",
+          "Gündelik vloglar"
+        ],
+        "caveat": "Koro'nun söylediği metin Latince benzeri olsa da tam olarak anlaşılır değil; bu da müziğin evrensel ama biraz gizemli kalmasına neden oluyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Görkemli ve dramatik yapısı, yüksek bütçeli tanıtımlar veya duygusal derinliği olan görsel anlatılar için uygundur."
+      }
+    },
+    "2026101815": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Yavaş başlayıp açılan kurgu",
+          "Büyük ürün duyurusu",
+          "Seslendirmeli anlatım",
+          "Sanat filmi + ürün",
+          "Duygusal marka hikâyesi"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:36:19.249500+00:00",
+        "launch": [
+          "Sanat filmi + ürün",
+          "Büyük ürün duyurusu",
+          "Yavaş başlayıp açılan kurgu",
+          "Soyut / deneysel animasyon",
+          "Duygusal marka hikâyesi"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Sinematik",
+              "Yoğun"
+            ],
+            "reason": "Düşük frekanslı drone ile başlayan ve zamanla kalınlaşan doku, gizemli ve sinematik bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Yavaşça yükseliyor",
+              "Bas önde",
+              "Tek bir sesle"
+            ],
+            "reason": "Parça, tek bir düşük frekanslı sesle başlayıp yavaşça katmanlanarak yükseliyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Süreç boyunca ses katmanları artıyor ve yoğunluk giderek yükseliyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok",
+              "Uzun bir kapanışla"
+            ],
+            "reason": "Yüksek yoğunlukta susturulan ses, net bir bitiş vuruşu olmadan kaydı sonlandırıyor."
+          }
+        },
+        "notes": "Düşük frekanslı bir drone ile başlayan ses, zamanla katmanlanarak yoğun ve orkestral bir dokuya dönüşüyor. Kayıt, yüksek bir tonda susturularak ve belirgin bir çözülme olmadan sona eriyor.",
+        "avoid_with": [
+          "Hızlı tempolu aksiyon sahneleri",
+          "Komik veya hafif içerikler",
+          "Ritmik dans videoları"
+        ],
+        "caveat": "Enstrümanların gerçek mi yoksa sentetik mi olduğu tam olarak ayırt edilemiyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Epik ve sinematik yapısı, dramatik görsellerle ve yavaş tempolu açılışlarla güçlü bir uyum sağlar."
+      }
+    },
+    "2026101816": {
+      "status": "unreviewed",
+      "selections": {
+        "launch": [
+          "Duygusal marka hikâyesi",
+          "Sanat filmi + ürün",
+          "Yavaş başlayıp açılan kurgu",
+          "Soyut / deneysel animasyon",
+          "Şık ve sade ürün sunumu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:36:11.890932+00:00",
+        "launch": [
+          "Sanat filmi + ürün",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu",
+          "Fotoğraf / stok görüntü ağırlıklı",
+          "Sakin ve açıklayıcı anlatım"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Duygusal",
+              "Hayal gibi"
+            ],
+            "reason": "Parça, geniş bir atmosfer yaratan katmanlı sesler ve yaylılarla duygusal bir film müziği havası taşıyor."
+          },
+          "start": {
+            "choices": [
+              "Çok sakin",
+              "Az enstrümanla",
+              "Gizemli bir girişle"
+            ],
+            "reason": "Başlangıçta sadece piyano ve hafif ambient dokular var, çok yavaş ve gizemli bir hava oluşturuyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor",
+              "Sakinleşip tekrar yükseliyor"
+            ],
+            "reason": "Zamanla yaylılar ve diğer katmanlar eklenerek yoğunluk artıyor, ortada kısa bir sakinleşme olup tekrar yükseliyor."
+          },
+          "end": {
+            "choices": [
+              "Yavaşça kısılıyor",
+              "Sakin bir çözülmeyle"
+            ],
+            "reason": "Müzik doruk noktasından sonra yavaşça azalarak baştaki sakin atmosfere dönüyor ve kayboluyor."
+          }
+        },
+        "notes": "Kayıt, minimal piyano motifleriyle başlayıp zamanla orkestral bir genişlemeye ulaşıyor. İkinci yarıda yoğunlaşan duygu, sonunda tekrar sadeleşerek huzurlu bir kapanış yapıyor.",
+        "avoid_with": [
+          "Hızlı ve ritmik kurgu",
+          "Komik / absürt fikir",
+          "Kod / CLI / geliştirici aracı"
+        ],
+        "caveat": "Tempo değişikliği belirgin olmasa da, dinamik değişimler (yoğunluk artışı/azalışı) algısal bir hızlanma hissi yaratabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Müziğin hikâye anlatan yapısı ve duygusal derinliği, görsel odaklı veya anlatımlı videolar için ideal bir zemin sunuyor."
+      }
+    },
+    "kenney-bong-001": {
+      "status": "unreviewed",
+      "selections": {},
+      "notes": "",
+      "avoid_with": [],
+      "listener": "hamit",
+      "updatedAt": "2026-10-26T23:34:09.370Z"
+    },
+    "soundza-cmv1dr81z006206l8xd1qktu9": {
+      "status": "shortlist",
+      "selections": {
+        "feeling": [
+          "Heyecanlı",
+          "Enerjik",
+          "Eğlenceli"
+        ],
+        "start": [
+          "Ortam sesiyle",
+          "Ritim hemen başlıyor",
+          "Hızlı ve yoğun"
+        ],
+        "change": [
+          "Giderek hızlanıyor",
+          "Giderek yoğunlaşıyor",
+          "Yeni enstrümanlar ekleniyor",
+          "Melodi belirginleşiyor",
+          "Bir anda açılıyor / drop"
+        ],
+        "end": [
+          "Belirgin bir sonu yok"
+        ],
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Soyut / deneysel animasyon",
+          "Gerçek ekran kaydı / ürün demosu",
+          "Tek özelliği gösteren kısa video"
+        ]
+      },
+      "notes": "eğlenceli bir ritim",
+      "avoid_with": [],
+      "listener": "hamit",
+      "updatedAt": "2026-10-27T21:06:58.719Z",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:26:24.749153+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu",
+          "AI agent iş akışı",
+          "Tek özelliği gösteren kısa video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Sürükleyici"
+            ],
+            "reason": "Tekrarlayan davul patternleri ve sentetik sesler sürekli bir hareket ve makinevari bir his yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Kayıt başladığı anda kick ve hi-hat sesleriyle dolu bir ritim duymaya başlıyoruz."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Zamanla farklı perküsyon ve synth katmanları ekleniyor ancak temel ritmik yapı hep aynı kalıyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik herhangi bir yavaşlama veya fade-out olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça basit bir davul döngüsüyle başlayıp katmanlı synth ve perküsyon ekleyerek yoğunlaşıyor. Sonunda herhangi bir fade-out olmadan aniden kesiliyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Kayıt sonu ani kesildiği için tam bir beste yapısı mı yoksa bir döngü mü olduğu tam olarak anlaşılamıyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sürekli tekrar eden mekanik ritim ve sentetik sesler, hızlı kurgu veya teknik demolar için uygun bir zemin oluşturuyor."
+      }
+    },
+    "soundza-cmv1doczx005106l862d73jed": {
+      "status": "shortlist",
+      "selections": {
+        "feeling": [
+          "Ciddi",
+          "Gergin",
+          "Tedirgin",
+          "Karanlık",
+          "Gizemli"
+        ],
+        "start": [
+          "Sessizlikten geliyor",
+          "Yavaş tempolu",
+          "Gizemli bir girişle"
+        ],
+        "change": [
+          "Giderek hızlanıyor",
+          "Ritim sonradan giriyor",
+          "Giderek yoğunlaşıyor",
+          "Bas sonradan giriyor",
+          "Aynı ritimle devam ediyor"
+        ],
+        "end": [
+          "Yankı bırakarak",
+          "Yavaşça kısılıyor",
+          "Kısa bir sessizlikle",
+          "Ritim tek başına kalıyor",
+          "Melodi tek başına kalıyor",
+          "Enerji azalarak",
+          "Gerginliği çözmeden",
+          "Uzun bir kapanışla"
+        ],
+        "launch": [
+          "Sonucu önce gösteren hikâye",
+          "Bir kullanıcının günlük hikâyesi",
+          "Sanat filmi + ürün",
+          "Büyük ürün duyurusu",
+          "Şık ve sade ürün sunumu",
+          "Yavaş başlayıp açılan kurgu"
+        ]
+      },
+      "notes": "fena değil gerici bir ses",
+      "avoid_with": [],
+      "listener": "hamit",
+      "updatedAt": "2026-10-27T20:26:31.636Z",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:26:18.705172+00:00",
+        "launch": [
+          "Soyut / deneysel animasyon",
+          "Kod / CLI / geliştirici aracı",
+          "Hızlı ve ritmik kurgu",
+          "Sanat filmi + ürün",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Karanlık",
+              "Gergin",
+              "Mekanik"
+            ],
+            "reason": "Ağır bas, metalik vuruşlar ve tekrarlayan synth döngüleri endüstriyel ve tedirgin edici bir atmosfer oluşturuyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça, seyrek yankılı vuruşlar ve düşük frekanslı uğultularla başlayarak belirsiz bir hava yaratıyor."
+          },
+          "change": {
+            "choices": [
+              "Ritim sonradan giriyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Giriş bölümünün ardından davul makinesi ve ek synth katmanları devreye girerek enerjiyi artırıyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Müzik, ritmik yoğunluktan sıyrılıp baştaki seyrek dokuya dönerek net bir kapanış yapmadan sonlanıyor."
+          }
+        },
+        "notes": "Yankılı metalik seslerle başlayan parça, zamanla ağır ve hipnotik bir endüstriyel tekno ritmine dönüşüyor. Yüksek enerjili bu döngü, sonunda tekrar minimal seslere inerek kayboluyor.",
+        "avoid_with": [
+          "Neşeli veya çocuklara yönelik içerikler",
+          "Romantik veya duygusal sahneler",
+          "Sakinleştirici veya meditasyon videoları"
+        ],
+        "caveat": "Türü oldukça spesifik (endüstriyel/dark techno) olduğu için genel ticari kullanımlarda fazla sert veya soğuk gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Mekanik ve karanlık tonu, teknoloji, siber güvenlik veya avangard görsel projelerle uyumlu."
+      }
+    },
+    "soundza-cmv1dly01004f06l8gckbj6v3": {
+      "status": "shortlist",
+      "selections": {
+        "feeling": [
+          "Reklam müziği gibi",
+          "Yapay geliyor",
+          "Enerjik"
+        ],
+        "start": [
+          "Ritim hemen başlıyor",
+          "Hızlı ve yoğun"
+        ],
+        "change": [
+          "Aynı ritimle devam ediyor",
+          "Döngü hissi veriyor",
+          "Pek değişmiyor"
+        ],
+        "end": [
+          "Net bir son vuruşla",
+          "Enerji yükselerek"
+        ],
+        "launch": [
+          "Challenge / yarış / oyun",
+          "Komik / absürt fikir",
+          "Karakter / maskot hikâyesi",
+          "Hızlı ve ritmik kurgu",
+          "Topluluk / sosyal ürün",
+          "Küçük güncelleme duyurusu"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "hamit",
+      "updatedAt": "2026-10-27T20:27:37.437Z",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:11.684448+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Ürünü ilk kez tanıtan video"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Mekanik",
+              "Teknolojik"
+            ],
+            "reason": "Yüksek tempolu davul patternleri ve sentetik sesler dinamik ve robotik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor"
+            ],
+            "reason": "Parça girişte herhangi bir yavaşlama veya intro olmadan doğrudan beat ile başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Melodik ve ritmik öğeler tekrar eden yapılar halinde ilerliyor, belirgin bir köprü veya drop yok."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik fade-out olmadan aniden duruyor."
+          }
+        },
+        "notes": "Parça, agresif bir elektronik beat ve glitch efektleriyle başlıyor. Ortalarda katmanlar değişse de temel enerji korunuyor ve kayıt ani bir kesintiyle sonlanıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "caveat": "Ani bitiş, parçanın tam bir şarkıdan ziyade bir loop veya demo segmenti olabileceğine işaret ediyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sürükleyici ve teknolojik sesi, hızlı kurgular veya dijital süreçlerin gösterimi için uygun."
+      }
+    },
+    "soundza-cmv5o298f02j306l450addmvg": {
+      "status": "shortlist",
+      "selections": {
+        "feeling": [
+          "Epik",
+          "Asi",
+          "İddialı",
+          "Cesur"
+        ],
+        "start": [
+          "Melodi önde",
+          "Güçlü bir vuruşla"
+        ],
+        "change": [
+          "Pek değişmiyor",
+          "Giderek hızlanıyor"
+        ],
+        "end": [
+          "Enerji azalarak",
+          "Uzun bir kapanışla",
+          "Gerginliği çözmeden"
+        ],
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Duygusal marka hikâyesi",
+          "Sakin ve açıklayıcı anlatım",
+          "Yavaş başlayıp açılan kurgu",
+          "Önce / sonra dönüşümü",
+          "Sonucu önce gösteren hikâye",
+          "AI agent iş akışı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "hamit",
+      "updatedAt": "2026-10-27T20:29:15.088Z",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:20.429060+00:00",
+        "launch": [
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Soyut / deneysel animasyon",
+          "Hızlı ve ritmik kurgu",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Gizemli",
+              "Karanlık",
+              "Mekanik"
+            ],
+            "reason": "Tekrarlayan synth melodisi ve minor tonaliteleri gizemli ve mekanik bir hava yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Melodi önde"
+            ],
+            "reason": "Parça baştan itibaren belirgin bir davul ritmi ve öne çıkan bir synth melodisiyle giriyor."
+          },
+          "change": {
+            "choices": [
+              "Döngü hissi veriyor",
+              "Aynı ritimle devam ediyor"
+            ],
+            "reason": "Ortadaki bölümde melodi değişse de temel ritim ve döngüsel yapı korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Belirgin bir sonu yok"
+            ],
+            "reason": "Kayıt, müzikal bir kapanış yerine döngünün devam edeceği bir noktada kesiliyor gibi duruyor."
+          }
+        },
+        "notes": "Başta sürükleyici bir beat ve parlak bir synth melodisi var. Ortalarda melodi çekilip daha bas ağırlıklı, hipnotik bir bölüm geliyor, sonra ana melodi geri dönüyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Komik / absürt fikir"
+        ],
+        "caveat": "Kaydın sonu net bir fade-out veya bitiş vuruşu içermediği için döngü mü yoksa kesilmiş bir parça mı olduğu tam olarak anlaşılmıyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Elektronik, tekrarlayan ve biraz soğuk havası teknolojik veya soyut görsellerle iyi eşleşir."
+      }
+    },
+    "soundza-cmv5my3y200nv06l4b4pkcizk": {
+      "status": "shortlist",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Kod / CLI / geliştirici aracı",
+          "Mobil uygulama tanıtımı",
+          "Ürünü ilk kez tanıtan video",
+          "Sanat filmi + ürün",
+          "Komik / absürt fikir",
+          "Karakter / maskot hikâyesi"
+        ],
+        "feeling": [
+          "Enerjik",
+          "Oyuncu",
+          "Nostaljik",
+          "Sürükleyici",
+          "Teknolojik",
+          "Eğlenceli"
+        ],
+        "start": [
+          "Ritim hemen başlıyor",
+          "Bas önde",
+          "Yavaşça yükseliyor"
+        ],
+        "change": [
+          "Yeni enstrümanlar ekleniyor",
+          "Giderek yoğunlaşıyor",
+          "Melodi belirginleşiyor",
+          "Giderek hızlanıyor"
+        ],
+        "end": [
+          "Bir anda kesiliyor",
+          "Belirgin bir sonu yok"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:05.636087+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "Kod / CLI / geliştirici aracı",
+          "Tek özelliği gösteren kısa video",
+          "Önce / sonra dönüşümü"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Oyuncu",
+              "Nostaljik"
+            ],
+            "reason": "Hızlı tempo ve 8-bit benzeri sentetik sesler oyun müziği hissi veriyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Bas önde"
+            ],
+            "reason": "Parça baştan itibaren belirgin bir davul ve bas hattıyla giriyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor"
+            ],
+            "reason": "Temel ritim üzerine katman katman melodik synth sesleri ekleniyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik cümle ortasında aniden duruyor, doğal bir bitiş yok."
+          }
+        },
+        "notes": "Parça, sabit ve hızlı bir ritim üzerine inşa edilen katmanlı synth melodileriyle ilerliyor. Enerji seviyesi hiç düşmeden devam ederken kayıt aniden sonlanıyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Yavaş tempolu video"
+        ],
+        "caveat": "Kaydın aniden kesilmesi, bunun tam bir şarkıdan ziyade bir döngü veya片段 olduğunu düşündürüyor.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Retro video oyunu estetiği ve yüksek enerji, hızlı kurgu veya teknoloji/oyun içerikleri için uygun."
+      },
+      "updatedAt": "2026-10-27T21:58:08.460Z"
+    },
+    "soundza-l7acsbqd9xfvwvxc6kmzdfko": {
+      "status": "rejected",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Challenge / yarış / oyun",
+          "AI agent iş akışı",
+          "Kod / CLI / geliştirici aracı",
+          "Büyük ürün duyurusu"
+        ],
+        "feeling": [
+          "Enerjik",
+          "Karanlık",
+          "Güçlü"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:27.805784+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Kod / CLI / geliştirici aracı",
+          "AI agent iş akışı",
+          "Challenge / yarış / oyun",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Enerjik",
+              "Karanlık",
+              "Güçlü"
+            ],
+            "reason": "Sert baslar ve hızlı tempo yoğun bir enerji ve karanlık bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Güçlü bir vuruşla"
+            ],
+            "reason": "Parça ilk saniyeden itibaren ağır ve belirgin bir davul ritmiyle açılıyor."
+          },
+          "change": {
+            "choices": [
+              "Giderek yoğunlaşıyor",
+              "Yeni enstrümanlar ekleniyor"
+            ],
+            "reason": "Zamanla katmanlı sentetizör sesleri ve distorsiyon eklenerek ses duvarı büyüyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Müzik son vuruşun ardından ani bir şekilde sessizliğe geçiyor."
+          }
+        },
+        "notes": "Parça, baştan sona yüksek tempolu ve mekanik bir ritim üzerine kurulu. Ortalarda kısa breakdown'lar olsa da genel olarak yoğunluğunu koruyarak ilerliyor.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Duygusal marka hikâyesi",
+          "Nostaljik içerikler"
+        ],
+        "caveat": "Tarzı oldukça spesifik (dark techno/industrial) olduğu için geniş kitlelere hitap eden genel içeriklerde yorucu olabilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Endüstriyel ve teknolojik havası, hızlı kurgular veya yazılım/teknoloji demoları için uygun bir zemin sağlıyor."
+      },
+      "updatedAt": "2026-10-27T21:58:26.594Z"
+    },
+    "soundza-nxs1vhk04zeqbaeqbuzzm4e7": {
+      "status": "shortlist",
+      "selections": {
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Problemden çözüme giden hikâye",
+          "Hızlı ve ritmik kurgu",
+          "Sonucu önce gösteren hikâye",
+          "Sanat filmi + ürün",
+          "Önce / sonra dönüşümü",
+          "Yavaş başlayıp açılan kurgu"
+        ],
+        "feeling": [
+          "Sinematik",
+          "Epik",
+          "Güçlü",
+          "Özgüvenli",
+          "Cesur",
+          "Ciddi",
+          "Şık"
+        ],
+        "start": [
+          "Gizemli bir girişle",
+          "Yavaşça yükseliyor"
+        ],
+        "change": [
+          "Yeni enstrümanlar ekleniyor",
+          "Giderek yoğunlaşıyor",
+          "Ritim sonradan giriyor",
+          "Yavaşça yükseliyor"
+        ],
+        "end": [
+          "Net bir son vuruşla",
+          "Yankı bırakarak"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:38.272568+00:00",
+        "launch": [
+          "Büyük ürün duyurusu",
+          "Sanat filmi + ürün",
+          "Hızlı ve ritmik kurgu",
+          "Problemden çözüme giden hikâye",
+          "Karakter / maskot hikâyesi"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Sinematik",
+              "Epik",
+              "Güçlü"
+            ],
+            "reason": "Tam orkestra düzenlemesi ve dinamik yükselişi büyük ölçekli bir atmosfer yaratıyor."
+          },
+          "start": {
+            "choices": [
+              "Gizemli bir girişle",
+              "Yavaşça yükseliyor"
+            ],
+            "reason": "Parça düşük frekanslı, atmosferik bir sesle başlıyor ve giderek belirginleşiyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Giderek yoğunlaşıyor",
+              "Ritim sonradan giriyor"
+            ],
+            "reason": "Başlangıçtaki sessizlik bozulup hızlı yaylılar ve vurmalılar devreye girerek enerjiyi artırıyor."
+          },
+          "end": {
+            "choices": [
+              "Net bir son vuruşla",
+              "Yankı bırakarak"
+            ],
+            "reason": "Müzik güçlü bir orkestral akorla bitiyor ve ardından kısa bir yankı sönümleniyor."
+          }
+        },
+        "notes": "Atmosferik bir girişle başlayıp hızlı yaylı ostinatolar üzerinden tam orkestra gücüne ulaşır. Finalde belirgin bir vuruşla sona erer.",
+        "avoid_with": [
+          "Sakin ve açıklayıcı anlatım",
+          "Komik / absürt fikir",
+          "Günlük vlog"
+        ],
+        "caveat": "Yoğun ve dramatik doğası, hafif veya samimi içeriklerde baskın gelebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Dramatik yapısı ve epik tonu, önemli anları vurgulayan veya aksiyon içeren videolar için uygundur."
+      },
+      "updatedAt": "2026-10-27T21:59:13.561Z"
+    },
+    "soundza-ice1zv2gxou2uxt7yy0l13ns": {
+      "status": "rejected",
+      "selections": {
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Soyut / deneysel animasyon",
+          "Şık ve sade ürün sunumu",
+          "Tek özelliği gösteren kısa video",
+          "Kod / CLI / geliştirici aracı"
+        ]
+      },
+      "notes": "",
+      "avoid_with": [],
+      "listener": "",
+      "aiSuggestion": {
+        "model": "qwen/qwen3.8-omni-flash",
+        "createdAt": "2026-10-27T21:27:47.535400+00:00",
+        "launch": [
+          "Hızlı ve ritmik kurgu",
+          "Soyut / deneysel animasyon",
+          "Şık ve sade ürün sunumu",
+          "Kod / CLI / geliştirici aracı",
+          "Gerçek ekran kaydı / ürün demosu"
+        ],
+        "answers": {
+          "feeling": {
+            "choices": [
+              "Teknolojik",
+              "Gizemli",
+              "Sürükleyici"
+            ],
+            "reason": "Minimal techno tarzı, tekrarlayan ritimler ve atmosferik synth'ler bu hisleri veriyor."
+          },
+          "start": {
+            "choices": [
+              "Ritim hemen başlıyor",
+              "Az enstrümanla"
+            ],
+            "reason": "Parça doğrudan davul vuruşuyla ve sade bir dokuyla başlıyor."
+          },
+          "change": {
+            "choices": [
+              "Yeni enstrümanlar ekleniyor",
+              "Döngü hissi veriyor"
+            ],
+            "reason": "Katmanlar yavaş yavaş ekleniyor ancak temel ritim döngüsü korunuyor."
+          },
+          "end": {
+            "choices": [
+              "Bir anda kesiliyor"
+            ],
+            "reason": "Parça uzun bir fade-out yerine aniden duruyor."
+          }
+        },
+        "notes": "Parça başta sade bir ritimle başlayıp katmanlar ekleyerek yoğunlaşıyor. Sonunda belirgin bir kapanış olmadan kesiliyor.",
+        "avoid_with": [
+          "Duygusal marka hikâyesi",
+          "Komik / absürt fikir",
+          "Sakin ve açıklayıcı anlatım"
+        ],
+        "caveat": "Türü oldukça spesifik (minimal techno) olduğu için genel kitleye hitap etmeyebilir.",
+        "method": "Tam ses dosyası analiz edildi; parça adı ve kişisel notlar verilmedi. Sabit ve sürükleyici beat, teknolojik veya modern görsellerle iyi eşleşir."
+      },
+      "updatedAt": "2026-10-27T21:59:21.410Z"
+    }
+  },
+  "contextChoices": {
+    "press": {
+      "effect": "soundza-cmujgtspqwqxwhjy5va760bl0",
+      "alternatives": [
+        "soundza-cmujgu4p31k3l8albb85uljkm",
+        "kenney-click-001"
+      ],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Soundza",
+        "sourceUrl": "https://soundza.com/sound/short-ui-click",
+        "licenseUrl": "https://soundza.com/license",
+        "licenseName": "Soundza Standard License",
+        "ai": false
+      }
+    },
+    "complete": {
+      "effect": "kenney-confirmation-003",
+      "alternatives": [
+        "soundza-cmuk5abedtqw2p0i04i2q64sp",
+        "kenney-confirmation-001",
+        "soundza-cmujgkrykafn0ey4eqtv1vs0e"
+      ],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Kenney",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licenseName": "CC0",
+        "ai": false
+      }
+    },
+    "message": {
+      "effect": "kenney-drop-001",
+      "alternatives": [
+        "soundza-cmujgvl6fqovv61gp1y2lmttc",
+        "kenney-bong-001",
+        "soundza-p9nmqfgfo7kdtgqg78mbok18"
+      ],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Kenney",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licenseName": "CC0",
+        "ai": false
+      }
+    },
+    "transition": {
+      "effect": "soundza-cmujfcieycprc9quqp291fx15",
+      "alternatives": [
+        "soundza-cmvl6hzhtig134ug4ku2f1bmz"
+      ],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Soundza",
+        "sourceUrl": "https://soundza.com/sound/fast-whoosh-chop",
+        "licenseUrl": "https://soundza.com/license",
+        "licenseName": "Soundza Standard License",
+        "ai": false
+      }
+    },
+    "hover": {
+      "effect": null,
+      "listener": "hamit",
+      "reason": "",
+      "source": null
+    },
+    "toggle": {
+      "effect": "kenney-click-001",
+      "alternatives": [
+        "kenney-click-002",
+        "kenney-toggle-002"
+      ],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Kenney",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licenseName": "CC0",
+        "ai": false
+      }
+    },
+    "send": {
+      "effect": "kenney-confirmation-001",
+      "alternatives": [],
+      "listener": "hamit",
+      "reason": "",
+      "source": {
+        "provider": "Kenney",
+        "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licenseName": "CC0",
+        "ai": false
+      }
+    }
+  }
+}

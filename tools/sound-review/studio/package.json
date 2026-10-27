@@ -1,0 +1,32 @@
+{
+  "name": "film-lab-sound-desk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "test": "node --test contexts.test.mjs setup.test.mjs",
+    "prepare:audio": "node prepare-catalogue.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server.mjs",
+    "dev": "node server.mjs --dev"
+  },
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.3.0",
+    "@radix-ui/react-slider": "^1.3.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@tanstack/react-query": "^5.0.0",
+    "@tanstack/react-router": "^1.0.0",
+    "@tanstack/react-table": "^8.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.8.0",
+    "vite": "^7.0.0"
+  }
+}

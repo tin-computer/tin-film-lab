@@ -1,5 +1,7 @@
 # Describe music before selecting it
 
+The [sound desk](../tools/sound-review/studio/README.md) is the newer UI. It includes Hamit’s explicitly shared [dated snapshot](../tools/sound-review/studio/starter/README.md), 20 effect situations, ranked choices and separate AI suggestions for all five music questions. Its version-1 JSON is separate from the legacy array below. New edits stay local until the owner exports and shares them. The instructions below still describe the older HTML tool and shortlist format.
+
 Keep one project/owner's listening notes in a JSON file outside the shared catalogue. Do not apply Hamit's taste to every customer. No ratings are needed. Ask the listener to describe the feeling, the progression, suitable stories/brands and contexts to avoid. Empty notes mean unknown, not approved.
 
 The listening page offers multiple checkboxes for feeling, beginning, development, ending and launch type. All start unchecked; any group can stay unanswered. Extra feeling notes and exclusions are optional. Each track's choices open below its player.
