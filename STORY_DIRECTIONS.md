@@ -1,6 +1,6 @@
 # Start with something that happens
 
-Use these as private prompts for the agent, not a menu to send to every customer. Read the product first. Offer two ideas that fit its action, audience and available material, with a short reason for the recommendation. Offer a third only when it adds a different story. Accept a free answer. An answered or delegated brief needs no extra question.
+Use these as private prompts for the agent, not a menu to send to every customer. Read the product first. Offer two ideas that fit its action, audience and available material, with a short reason for the recommendation. Offer a third only when it adds a different story. Accept a free answer. Fit these alternatives into the four-question onboarding in FILM_FLOW.md. An answered or delegated brief needs no extra question.
 
 Changing a heading does not make a familiar template original. Describe who does what, what changes and why the viewer cares. Write customer-facing options in their language. Do not show labels such as “Gen Z”, “cracked founder”, archive IDs or production terms as a personality test.
 
