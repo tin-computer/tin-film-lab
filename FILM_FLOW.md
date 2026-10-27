@@ -34,7 +34,9 @@ Keep the question round short. Leave audit history, source citations, QA tables 
 
 ### Describe choices without archive knowledge
 
-Use [story and scene directions](STORY_DIRECTIONS.md) as a private idea pool. Start with a visible event, then offer two product-specific alternatives and explain the recommendation. The pool includes grounded stories, over-engineering, dry documentary humour and physical metaphors; do not present its labels as a fixed questionnaire or ask customers to identify with a generation. Combine story and filming choices freely, and keep the product action and result readable.
+Read [story and scene directions](STORY_DIRECTIONS.md) before suggesting a direction or writing scenes. Keep the user's requested structure, including problem/solution, before/after and a direct feature demonstration. The eight story moves and six filming approaches are starting points; accept combinations and new ideas. A complete or delegated brief needs no extra menu.
+
+When direction is open, offer two product-specific ideas with a short recommendation. Each option describes what happens, how we see it and how sound helps; keep it short enough for the existing zero-to-three question round. Choose routine camera, material and sound details as agent decisions. Ask about filming only when a missing preference would change the story. Do not send the pool's internal labels or ask customers to identify with a generation. Carry the chosen action and result into the brief, shot plan and rendered review.
 
 Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion.
 
@@ -51,7 +53,8 @@ Create `films/<film-name>/BRIEF.md` before writing animation code. Keep it short
 | Product / feature | The single promise shown by this film. |
 | Viewer / purpose | Who watches and what they should understand. Add a next action only when needed. |
 | Format | Platform, seconds, aspect ratio and preview size. |
-| Look / sound | Style, reference, music choice and character choice. |
+| Story | Who acts, what gets in the way or raises a question, what the product does and the visible result. Record who chose this direction and why. |
+| Filming / sound | How framing, movement, materials, characters, speech and music support that story; include supplied style and reference choices. Record user choices separately from agent decisions. |
 | Facts / assets | Sources for claims, commands, UI and images; which parts are authored examples. |
 | Review | User choices, approved direction and later changes; assumptions marked separately. |
 
@@ -76,7 +79,7 @@ For a recognisable interface such as YouTube, iMessage, WhatsApp or the product 
 Compare the same UI version and state side by side: layout, type, spacing, controls, icons, message direction, colour and state changes. For message apps, inspect the header, back control, sender identity, bubble shape/tail, delivery labels and composer. Cropping and staging may simplify a scene; changing product behaviour may not. No invented “95% accurate” score. A vision model can flag confusing states or layout problems from these same frames, but its judgement is another review, not proof. If evidence is missing, record that exact scene as unverified and ask for the missing view instead of inventing it. Do not add an on-screen disclaimer to cover a false action.
 
 
-Write `STORY.md`: one short story and a table of shots, their music bars, action and on-screen words. Link every factual claim to the brief. Keep text short and let the pictures carry the feature.
+Write `STORY.md` from the brief's chosen story and filming decisions: one short story and a table of shots, their times/music bars, visible action and result, framing/movement, sound and on-screen words. Show how each handoff leads to the next action. Link every factual claim to the brief. Keep text short and let the pictures carry the feature. If the planned treatment is unavailable, choose a feasible treatment that preserves the user's intent; ask only when the change would alter an agreed direction.
 
 Build `src/index.html` with `window.FILM` and a pure `window.seek(t)`. Reuse `films/tin-launch/tools/lib/motion.js` and `music/tools/music.js`.
 
@@ -101,6 +104,8 @@ New films declare ordered `FILM.scenes` with `name`, `from`, `to` covering the w
 The review checks every source frame for text overflow, treats code/pre blocks as strict without opt-in, and catches invalid scene order. Mark authored prose with `data-film-copy`; dot-separated labels and known production labels are review warnings, not bans on real UI text. Intentional clipping needs a named reason with `data-film-review-ignore` and stays visible in the report.
 
 Open the generated `index.html`. Inspect every scene's start, middle and end; event frames before/at/after; and the final two seconds at phone width. Reference images appear beside their scene. Repair overflow, overlaps, unsupported actions and confusing handoffs, then rerun. Use the existing contact-sheet tool on the encoded MP4 as well: source checks cannot prove the final encoding is correct. A technical check never approves the story, interface fidelity or listening. Keep those three results separate in the film README, with timestamps and remaining limits. Do not hide warnings to obtain a green report.
+
+Compare the encoded preview with the brief and shot plan: does the opening invite attention, can a new viewer name the product action and result, and do movement and sound explain those events? Check that any joke or physical metaphor leads back to the supported product behaviour. Record what was actually inspected and any unresolved clarity or listening issue. Changing a style name or passing timing checks is not proof of a better story.
 
 For sound, use the measured waveform and selected cut to align important actions. Do not place every action on a beat. Preserve silence and intelligible voice. Reuse existing Cinetic/Earshot reviews when installed; their metrics cannot choose emotional fit or replace human listening.
 

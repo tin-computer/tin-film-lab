@@ -4,6 +4,19 @@ Use these as private prompts for the agent, not a menu to send to every customer
 
 Changing a heading does not make a familiar template original. Describe who does what, what changes and why the viewer cares. Write customer-facing options in their language. Do not show labels such as “Gen Z”, “cracked founder”, archive IDs or production terms as a personality test.
 
+## Keep the requested structure
+
+A user can ask for a familiar structure, a combination or a new idea. Keep that choice in plain language; matching it to a pool name is optional. Do not add humour, characters or a physical metaphor merely to make a direct demonstration look different.
+
+| Requested structure | A possible starting point |
+| --- | --- |
+| Problem to solution | Show the obstacle, then the supported product action and its useful result |
+| Before and after | Repeat the same task with a meaningful change; “Try that again” can help |
+| Direct feature demonstration | Follow the input, product action and output; “Follow it all the way” can help |
+| Result first | Open on the result, then show its cause; “Start with the strange result” can help |
+
+Choose a filming approach that helps that particular story. Save the actual events and treatment in `BRIEF.md`, carry them into `STORY.md` and review the rendered result through [FILM_FLOW.md](FILM_FLOW.md). The pool is not a limit on which stories can be made.
+
 ## Story moves
 
 | Working name | What happens | Where it earns its place |
