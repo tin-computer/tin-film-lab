@@ -1,0 +1,37 @@
+{
+ "query": "ink water",
+ "options": {
+  "media": "video",
+  "sources": [
+   "commons"
+  ],
+  "licences": [
+   "pd",
+   "cc0",
+   "by"
+  ],
+  "orientation": null,
+  "minWidth": 640,
+  "width": 1920,
+  "res": 720,
+  "maxMb": 25,
+  "limit": 3,
+  "checked": true
+ },
+ "sources": [
+  {
+   "source": "commons",
+   "name": "Wikimedia Commons",
+   "total": null,
+   "error": null,
+   "skipped": {
+    "licence": 3,
+    "small": 0,
+    "shape": 0,
+    "dead": 0,
+    "alike": 0
+   },
+   "items": []
+  }
+ ]
+}

@@ -13,7 +13,8 @@ try{
  assert(clean.snapshots.some(s=>s.name==='scene-1-middle'));assert(clean.snapshots.some(s=>s.name==='ending-0'));
  const overflow=await run('overflow','<pre>really-long-command-that-does-not-fit</pre>');assert(overflow.errors.some(e=>e.code==='element_overflow'||e.code==='text_clipped_by_container'));
  const copy=await run('copy','<p data-film-copy>example.com · free in open beta</p>');assert(copy.warnings.some(e=>e.code==='decorative_copy'));
- const real=await run('ui','<p>Messages · today</p>');assert(!real.warnings.some(e=>e.code==='decorative_copy'));
+ const production=await run('production-label','<p data-film-copy>Illustrated example</p>');assert(production.errors.some(e=>e.code==='production_label'));
+ const real=await run('ui','<p>1 of 5 questions</p><div id="speech-captions">Example session</div>');assert(!real.errors.some(e=>e.code==='production_label'));assert(!real.warnings.some(e=>e.code==='decorative_copy'));
  const early=await run('early','<p>Logo</p>',[{...scene[0],kind:'closing'},scene[1]]);assert(early.errors.some(e=>e.message?.includes('closing scene')));
  const gaps=await run('gap','<p>Ready</p>',[{...scene[0],to:.1},scene[1]]);assert(gaps.errors.some(e=>e.message?.includes('gaps')));
  const reference=await run('reference','<p>UI</p>',[{...scene[0],kind:'product'},scene[1]]);assert(reference.warnings.some(e=>e.code==='missing_interface_reference'));
@@ -25,5 +26,5 @@ try{
  assert(readFileSync(join(dir,'referenced/index.html'),'utf8').includes('reference-0.svg'));assert.equal(referenced.interface_review,'pending');
  const remote=await run('remote','<p>UI</p>',[{...scene[0],reference:{image:'https://example.com/image.png',source:'https://example.com'}},scene[1]]);
  assert(remote.errors.some(e=>e.code==='review_failed'));
- console.log('11 frame-review cases passed');
+ console.log('12 frame-review cases passed');
 }finally{rmSync(dir,{recursive:true,force:true})}

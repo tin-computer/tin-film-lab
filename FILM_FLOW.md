@@ -18,7 +18,7 @@ Read the request and sources, then start a new interactive brief with four short
 
 1. The feature or customer moment the viewer should understand; include an unknown audience or purpose only when it matters.
 2. The story: two concrete alternatives and a short recommendation, with room for the user's own idea.
-3. The filming approach and delivery: a relevant visual choice, with unknown platform, format or duration when needed.
+3. The filming approach and delivery: a relevant visual choice, with unknown platform, format or duration when needed. Consider real product captures, licensed stock video/photos and authored motion. When stock can show the chosen context or physical metaphor, include one concrete stock-backed choice in this question; do not add a fifth question or require stock in every film.
 4. The sound: how speech, music or practical sound carries the story; include a conditional caption preference when speech is considered.
 
 Reuse known answers. If one area is settled, use its question for another meaningful creative choice rather than asking for the same facts again. A completed brief, a revision with clear feedback or a delegated one-shot needs no repeated onboarding. Do not invent filler questions to reach four when all decisions are already supplied.
@@ -45,7 +45,11 @@ Read [story and scene directions](STORY_DIRECTIONS.md) before suggesting a direc
 
 When direction is open, offer two product-specific ideas with a short recommendation. Each option describes what happens, how we see it and how sound helps; keep it short enough for the four-question onboarding round. Choose routine camera, material and sound details as agent decisions. Ask about filming only when a missing preference would change the story. Do not send the pool's internal labels or ask customers to identify with a generation. Carry the chosen action and result into the brief, shot plan and rendered review.
 
-Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion.
+Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion. Use stock only for a concrete human or use context, or a physical metaphor tied to a real product action; reference media is not reusable stock without permission.
+
+Check the [reviewed stock shortlist](tools/stock-review/index.html) and its blocked/rejected entries before using saved stock. MK32085’s free rendition is personal-use only as checked on 28 October; do not use it in commercial films.
+
+When a scene needs stock, follow [fresh and archive stock discovery](research/stock-discovery-20261028/README.md). Search for the actual action first, compare new candidates with suitable saved material, and keep source, licence and prior-use evidence. Never treat a keyword match or a reference film as cleared footage.
 
 Keep reference brands, IDs and internal filenames out of onboarding choices. Describe the visible event and its meaning in everyday words. “The table gains a column, then the report uses it” is understandable without “Krea ref 011”. Product evidence still has to support the action. If the user asks for examples, offer a working source link or permitted preview with a short explanation; knowing the reference is never a prerequisite to answering.
 
@@ -77,7 +81,9 @@ Write what the viewer should remember and what stays on the final frame. Make th
 
 A logo-only shot reads as a finish. Do not put it between completed product work and another important action. Carry the product action into its result, then finish. Keep the last few seconds intentional; do not pad a finished story to fill music bars.
 
-Do not format authored promotional copy as disconnected words or claims separated by middle dots or bullets, such as “domain · free in open beta” or “Fast . Free”. Use one short natural sentence, or remove the extra claim. Remove decorative eyebrow labels such as “illustrated example” and “example session”. Preserve punctuation in code, URLs, real product controls and required disclosures.
+Before rendering, check the opening without sound: show a recognisable problem or product action in the first two seconds, then show what changes because of the product. Do not replace that explanation with stock, texture or a slogan. Use the brand font and actual UI where available; avoid a generic card grid, pill labels and glowing gradients unless the real product uses them. Each added text line must explain something the action cannot. Remove repeated headings and do not add a CTA when none was requested. These are editorial checks, not proof of viewer understanding.
+
+Do not format authored promotional copy as disconnected words or claims separated by middle dots or bullets, such as “domain · free in open beta” or “Fast . Free”. Use one short natural sentence, or remove the extra claim. Remove decorative eyebrow labels such as “illustrated example” and “example session”. Preserve punctuation in code, URLs, real product controls and required disclosures. Selected subtitles for spoken words support understanding. Keep them when applying the rules against decorative eyebrows, stacked promotional copy and extra text.
 
 ### Use real interface evidence
 
@@ -108,7 +114,7 @@ node review_frames.mjs --page films/example/src/index.html --fps 30 --outdir fil
 
 New films declare ordered `FILM.scenes` with `name`, `from`, `to` covering the whole duration. Mark only the final scene `kind: "closing"`; use `kind: "product"` for real UI. Attach a reference as `{image: "refs/screen.png", source: "https://official-source/page", captured_at: "YYYY-MM-DD"}` relative to the HTML. The reference image must be local to this checkout. Events retain the existing named times and one `role: "result"`.
 
-The review checks every source frame for text overflow, treats code/pre blocks as strict without opt-in, and catches invalid scene order. Mark authored prose with `data-film-copy`; dot-separated labels and known production labels are review warnings, not bans on real UI text. Intentional clipping needs a named reason with `data-film-review-ignore` and stays visible in the report.
+The review checks every source frame for text overflow, treats code/pre blocks as strict without opt-in, and catches invalid scene order. Mark authored prose with `data-film-copy`; dot-separated marketing copy is a warning; known production labels such as “illustrated example”, “example session” and “1 of 5 questions” are errors in authored film copy. Real UI text and speech subtitles remain intact. Intentional clipping needs a named reason with `data-film-review-ignore` and stays visible in the report.
 
 Open the generated `index.html`. Inspect every scene's start, middle and end; event frames before/at/after; and the final two seconds at phone width. Reference images appear beside their scene. Repair overflow, overlaps, unsupported actions and confusing handoffs, then rerun. Use the existing contact-sheet tool on the encoded MP4 as well: source checks cannot prove the final encoding is correct. A technical check never approves the story, interface fidelity or listening. Keep those three results separate in the film README, with timestamps and remaining limits. Do not hide warnings to obtain a green report.
 

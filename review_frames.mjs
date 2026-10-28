@@ -116,7 +116,10 @@ function inspectText() {
   for (const el of document.querySelectorAll('[data-film-copy]')) {
     if (!visible(el) || el.closest('pre,code')) continue;
     const text = el.innerText.trim();
-    if (/\S\s+[·•.]\s+\S|\b(?:illustrated example|example session|\d+ of \d+ questions)\b/i.test(text)) {
+    if (/\b(?:illustrated example|example session|\d+ of \d+ questions)\b/i.test(text)) {
+      findings.push({level: 'error', code: 'production_label', selector: name(el), text: text.slice(0, 160)});
+    }
+    if (/\S\s+[·•.]\s+\S/.test(text)) {
       findings.push({level: 'warning', code: 'decorative_copy', selector: name(el), text: text.slice(0, 160)});
     }
   }

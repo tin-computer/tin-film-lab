@@ -1,0 +1,49 @@
+{
+  "records": 28,
+  "shortlisted": 11,
+  "blocked": 9,
+  "rejected": 8,
+  "uniqueIds": true,
+  "filter": true,
+  "search": true,
+  "mediaMetadata": [
+    {
+      "ok": true,
+      "duration": 10.26025
+    },
+    {
+      "ok": true,
+      "duration": 16.324
+    },
+    {
+      "ok": true,
+      "duration": 11.469792
+    },
+    {
+      "ok": true,
+      "duration": 12.012
+    },
+    {
+      "ok": true,
+      "duration": 21.495
+    },
+    {
+      "ok": true,
+      "duration": 12.045367
+    },
+    {
+      "ok": true,
+      "duration": 17.5175
+    },
+    {
+      "ok": true,
+      "duration": 29.334
+    },
+    {
+      "ok": true,
+      "duration": 11.720042
+    }
+  ],
+  "mobileOverflow": false,
+  "pageErrors": []
+}
