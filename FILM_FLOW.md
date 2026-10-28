@@ -17,11 +17,13 @@ Distinguish a website claim, a feature implemented in source and a result actual
 Read the request and sources, then start a new interactive brief with four short questions in one round, using the client's question tool when available. Tailor the wording and suggestions to this product:
 
 1. The feature or customer moment the viewer should understand; include an unknown audience or purpose only when it matters.
-2. The story: two concrete alternatives and a short recommendation, with room for the user's own idea.
-3. The filming approach and delivery: a relevant visual choice, with unknown platform, format or duration when needed. Consider real product captures, licensed stock video/photos and authored motion. When stock can show the chosen context or physical metaphor, include one concrete stock-backed choice in this question; do not add a fifth question or require stock in every film.
+2. The story and filming approach: two concrete alternatives and a short recommendation, with room for the user's own idea. Consider real product captures, licensed stock video/photos and authored motion. When stock can show the chosen context or physical metaphor, include one concrete stock-backed choice here; do not add a fifth question or require stock in every film.
+3. Delivery: always ask where this new film will be shared, its frame shape and its duration. Use plain names with ratios: horizontal (16:9), vertical (9:16), square (1:1), or a custom format. Confirm an already supplied choice within this question; do not silently skip it or replace this question with another topic. Recommend a duration with a short story-specific reason and a meaningfully shorter or longer alternative; accept the user's own length.
 4. The sound: how speech, music or practical sound carries the story; include a conditional caption preference when speech is considered.
 
-Reuse known answers. If one area is settled, use its question for another meaningful creative choice rather than asking for the same facts again. A completed brief, a revision with clear feedback or a delegated one-shot needs no repeated onboarding. Do not invent filler questions to reach four when all decisions are already supplied.
+Reuse known answers for this request. For a new interactive brief, keep the delivery question even when it can simply confirm supplied settings. Do not inherit another film's format or length. A completed brief, a revision with clear feedback or a delegated one-shot needs no repeated onboarding. In an unattended request, record any delegated delivery choice as the agent's decision. Do not invent filler questions to reach four when all decisions are already supplied.
+
+Do not default to about 20 seconds. Base length on the action, explanation, speech and time needed to understand the result. For example, a single reveal might need 8–12 seconds, a short product story 25–40 seconds, and a narrated use case 45–60 seconds. These are examples, not fixed packages or limits: offer only the relevant alternatives, allow any suitable duration and keep frame shape independent of length. Music supports the chosen length; it does not set it. If later speech or scenes would exceed the agreed length, trim the story or ask before changing the delivery.
 
 Ask for an owner's insight the sources cannot provide: a recognisable customer moment, a common misunderstanding, a real example or the feeling the film should leave. Use the product's words. If choices help, offer two genuinely different story ideas, not a list of features or “art / UI / mixed” packages. Allow a free answer. Choose only the relevant question; these examples are not a script:
 
@@ -29,7 +31,7 @@ Ask for an owner's insight the sources cannot provide: a recognisable customer m
 - A reading challenge: “Is the moment worth showing the dare from a friend, or the surprise that reading faster is not enough to win?”
 - Remote agent messaging: “What would you most want to ask your agent at the exact moment you have left your desk?”
 
-Ask about the audience only if different plausible viewers would need different explanations. Ask about the platform only if an unknown delivery requirement would change the composition. Reuse supplied format, duration, references and previous answers for this request. A conversion action or CTA is optional; do not invent one for every film.
+Ask about the audience only if different plausible viewers would need different explanations. Always include delivery in a new interactive brief: naming a platform such as X does not select its aspect ratio for the user. Reuse supplied references and confirm this request's format and length in question 3. A conversion action or CTA is optional; do not invent one for every film.
 
 Do not ask users to direct every production detail. Avoid routine questions such as “Do you want effects?”, “What should we remove?” or a checklist of fonts, music, textures and transitions. A user may supply any of these preferences, and an explicit limit must be followed. Otherwise choose the sound, composition and pacing that serve this particular story. Music alone, effects alone, room sound and silence are all valid. Available effects do not mean effects are wanted.
 
@@ -44,6 +46,8 @@ Keep the question round short. Leave audit history, source citations, QA tables 
 Read [story and scene directions](STORY_DIRECTIONS.md) before suggesting a direction or writing scenes. Keep the user's requested structure, including problem/solution, before/after and a direct feature demonstration. The eight story moves and six filming approaches are starting points; accept combinations and new ideas. A complete or delegated brief needs no extra menu.
 
 When direction is open, offer two product-specific ideas with a short recommendation. Each option describes what happens, how we see it and how sound helps; keep it short enough for the four-question onboarding round. Choose routine camera, material and sound details as agent decisions. Ask about filming only when a missing preference would change the story. Do not send the pool's internal labels or ask customers to identify with a generation. Carry the chosen action and result into the brief, shot plan and rendered review.
+
+The [cinematic examples](STORY_DIRECTIONS.md#cinematic-examples-to-adapt) include a small task treated like a movie trailer, a suspenseful wait for a reply and a musical build interrupted by an ordinary useful result. Consider one when the product and tone fit, or when the user requests it. Suggest the actual event in the user's language; do not require a cinematic-style question, reuse the same trailer or hide the product behind genre cues. Keep the explicit format and duration question.
 
 Read the relevant [film lessons](FILM_LESSONS.md) and this product's previous feedback first. Form ideas from the actual product before looking for examples. Use the reference archive only when it can answer a specific story, movement or sound question. Do not make an archive clip or stock montage the default suggestion. Use stock only for a concrete human or use context, or a physical metaphor tied to a real product action; reference media is not reusable stock without permission.
 
@@ -63,7 +67,7 @@ Create `films/<film-name>/BRIEF.md` before writing animation code. Keep it short
 |---|---|
 | Product / feature | The single promise shown by this film. |
 | Viewer / purpose | Who watches and what they should understand. Add a next action only when needed. |
-| Format | Platform, seconds, aspect ratio and preview size. |
+| Format | Platform, agreed seconds, aspect ratio and preview size. Record the user's answer/confirmation, or an explicitly delegated agent choice. |
 | Story | Who acts, what gets in the way or raises a question, what the product does and the visible result. Record who chose this direction and why. |
 | Filming / sound | How framing, movement, materials, characters, speech and music support that story; include supplied style and reference choices. Record user choices separately from agent decisions. |
 | Facts / assets | Sources for claims, commands, UI and images; which parts are authored examples. |

@@ -47,6 +47,20 @@ Mix these with a story; they are not fixed story/style packages. Use only the ch
 
 Use music, effects and narration as parts of this scene. A waveform helps place an event; it cannot decide whether the emotion fits. Read the owner's listening notes and exclusions. Do not reuse another owner's preferences as defaults. Keep essential product text and chosen speech captions; remove decorative eyebrows, filler headings and an unrequested CTA.
 
+## Cinematic examples to adapt
+
+Consider these when the product has a clear obstacle, a useful surprise or a funny difference between the size of a task and how seriously people treat it. Offer one when it fits, or use it when the user asks. Keep the user's preferred tone; a serious product does not need a joke. These examples extend the pool, not a fixed menu or the default for every film.
+
+| Approach | What could happen | Picture and sound |
+| --- | --- | --- |
+| A movie trailer for a tiny task | An agent finishes its work, but its owner has left the desk. Treat this small obstacle like a major film event, then reveal the useful phone message and the owner's reply. | Serious framing and a restrained opening build to a strong music hit when the actual product action appears. End on a short human exchange or useful result, not a list of claims. |
+| Wait for the reply | Follow a person away from their computer while a familiar task stays unresolved. Hold on the question; the product delivers the answer and we see what the person can do next. | Close details, a held shot and sparse sound create anticipation. A notification or other relevant practical sound introduces the answer; leave time to understand it. Do not invent a crisis, countdown or instant-result claim. |
+| The music stops for something ordinary | Build a grand expectation around a real user problem. Cut the music just before a small, helpful product action resolves it; let the ordinary reply provide the surprise. | A musical build gives way to silence or room sound. The product action and its effect remain readable. Use a final hit only if it serves the ending; no compulsory drop, logo card or repeated punchline. |
+
+For the messaging example, a customer-facing suggestion could be: “Let's make leaving your agent at the desk feel like a movie trailer. As the music builds, your phone gets a simple ‘Ready to ship?’ message; you reply and the work continues.” Offer a different direction beside it when the brief is open. A viewer should understand the idea without knowing our Claw film.
+
+Keep the familiar genre useful without copying a reference film's shots, dialogue, music or branding. Do not copy the old “IN A WORLD” cards or turn cinematic pacing into a wall of text. The opening can be a visual action, sound or reaction. Adapt the events and music to the agreed duration and aspect ratio; do not inherit the Claw trailer's 30 seconds, music, lettering or ending. Save the chosen variation in the brief and check the product action and result in the actual preview.
+
 ## What the customer should actually see
 
 Instead of “Problem–solution, cinematic, Gen Z”, offer two concrete alternatives for the current product. For example, if the product evidence supports code-to-translation files:

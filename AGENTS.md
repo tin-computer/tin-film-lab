@@ -2,7 +2,7 @@
 
 For a new launch, feature or short marketing film, follow [FILM_FLOW.md](FILM_FLOW.md). Read the product context and resolve only missing story choices before writing scenes.
 
-- Read the product and brand material already provided. Start a new interactive brief with four short, product-specific questions covering the feature/customer moment, story, filming/format and sound. Reuse known answers; a completed brief or delegated one-shot needs no repeated onboarding.
+- Read the product and brand material already provided. Start a new interactive brief with four short, product-specific questions covering the feature/customer moment, story/filming, delivery and sound. Question 3 must ask for the publishing destination, aspect ratio and duration; confirm a supplied choice there instead of silently skipping it. Recommend length from the story, not a default 20 seconds or an earlier film. A revision or delegated one-shot needs no repeated onboarding; record any delegated delivery choice as the agent's decision.
 - Read [STORY_DIRECTIONS.md](STORY_DIRECTIONS.md) before suggesting a story or filming approach. Keep a requested problem/solution, before/after or direct demonstration. Use the pool for product-specific ideas when direction is open; save the chosen story, filming and sound decisions in the brief and carry them into the shot plan and review.
 - Use the coding client's question tool when available; otherwise ask in chat and wait for the answer.
 - Save the answers in the film's `BRIEF.md`. Follow the story, three-frame, preview and final steps in the flow.

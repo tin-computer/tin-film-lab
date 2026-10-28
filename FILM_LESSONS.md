@@ -4,6 +4,8 @@ Read this with FILM_FLOW.md before asking questions. These are working rules fro
 
 ## Questions people can answer
 
+28 Oct delivery feedback: repeated suggestions around 20 seconds and optional format questions limited the films. Keep an explicit delivery question in each new interactive brief; suggest length from the story and confirm frame shape with the user. The instructions have changed; a fresh onboarding and render trial is still needed to check the resulting behaviour.
+
 Start with the current product's action and the viewer's reason to care. An archive is optional research for the agent. Do not ask the user to pick an archive video or recognise a source brand, number, filename or storytelling term.
 
 If a choice would change the story, describe what happens on screen and what the viewer understands. For example, replace “Krea ref 011 structure” with “We follow one table as a new column fills, then see the report use that column”, only when the product evidence supports that action. The option must work without opening a reference. Offer a source link and a short explanation only when the user wants to compare references.
